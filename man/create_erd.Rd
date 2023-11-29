@@ -14,20 +14,20 @@ names of the entities.}
 \item{relationships}{A nested named list describing the relationships between
 entities. The top-level names in this list should correspond to the names
 in `df_list.` Each element of this list is itself a list, describing
-relationships that the corresponding entity has with other entities.
-Possible values in each element of the list include:}
+relationships that the corresponding entity has with other entities. The list of acceptable values is specified in "Details."}
 }
 \value{
 An ERD object
 }
 \description{
-This function serves as a constructor for an Entity-Relationship
-Diagram (ERD) object. This object encapsulates both the data frames
-representing the entities and the relationships between these entities. The
-function takes as its arguments a list of data frames and a list of
-relationships and returns a list object of class "ERD".
+This function serves as a constructor for an Entity-Relationship Diagram
+(ERD) object. This object encapsulates both the data frames representing the
+entities and the relationships between these entities. The function takes as
+its arguments a list of data frames and a list of relationships and returns a
+list object of class "ERD".
 }
 \details{
+Possible values in each relationship element of the list include:
 \itemize{
  \item{ "||" }{ which indicates one and only one}
  \item{">|" }{ which indicates one or more (left table)}
