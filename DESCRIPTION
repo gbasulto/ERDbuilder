@@ -1,9 +1,8 @@
 Package: ERDbuilder
 Type: Package
-Title: Build Entity Relationship Diagrams
+Title: Entity Relationship Diagrams Build
 Version: 0.1.0
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Build Entity Relationship Diagrams (ERD).
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
