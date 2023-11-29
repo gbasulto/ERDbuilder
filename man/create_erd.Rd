@@ -27,6 +27,17 @@ representing the entities and the relationships between these entities. The
 function takes as its arguments a list of data frames and a list of
 relationships and returns a list object of class "ERD".
 }
+\details{
+\itemize{
+ \item{ "||" }{ which indicates one and only one}
+ \item{">|" }{ which indicates one or more (left table)}
+ \item{"|<" }{ which indicates one or more (right table)}
+ \item{">0" }{ which indicates zero or more (left table)}
+ \item{"0<" }{ which indicates zero or more (right table)}
+ \item{"|0" }{ which indicates zero or one (left table)}
+ \item{"0|" }{ which indicates zero or one (right table)}
+}
+}
 \examples{
 NULL
 }
