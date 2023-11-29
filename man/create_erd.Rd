@@ -13,7 +13,7 @@ names of the entities.}
 
 \item{relationships}{A nested named list describing the relationships between
 entities. The top-level names in this list should correspond to the names
-in `df_list.` Each element of this list is itself a list, describing
+in \code{df_list}. Each element of this list is itself a list, describing
 relationships that the corresponding entity has with other entities. The list of acceptable values is specified in "Details."}
 }
 \value{
