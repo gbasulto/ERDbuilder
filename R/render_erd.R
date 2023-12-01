@@ -39,7 +39,7 @@ render_erd <- function(erd_object, label_distance = 2.5, label_angle = 45, n = 1
       } else {
         ""
       }
-      if (attr %in% unlist(lapply(relationships[[frame]], function(x) x$join_column))) {
+      if (attr %in% unlist(lapply(relationships[[frame]], \(x) x$join_column))) {
         return(paste0("<i>", attr, nbsp_str, "</i>"))
       } else {
         return(paste0(attr, nbsp_str))
@@ -53,24 +53,37 @@ render_erd <- function(erd_object, label_distance = 2.5, label_angle = 45, n = 1
     num_columns <- ceiling(num_attributes / n)
 
     # Partition the attributes into num_columns subsets
-    attributes_split <- split(attributes, ceiling(seq_along(attributes) / (num_attributes / num_columns)))
+    attributes_split <-
+      split(
+        attributes,
+        ceiling(seq_along(attributes) / (num_attributes / num_columns))
+      )
 
     # Generate HTML for each column
-    attribute_columns <- sapply(attributes_split, function(column) {
-      column_attributes <- paste(column, collapse="</td></tr><tr><td>")
-      paste0("<td><table border='0' cellborder='0' cellspacing='0'><tr><td>",
-             column_attributes, "</td></tr></table></td>")
-    })
+    attribute_columns <- sapply(
+      X = attributes_split,
+      FUN = \(column) {
+        column_attributes <- paste(column, collapse="</td></tr><tr><td>")
+        paste0("<td><table border='0' cellborder='0' cellspacing='0'><tr><td>",
+               column_attributes, "</td></tr></table></td>")
+      })
 
     # Combine the generated HTML for all columns
     attribute_columns <- paste(attribute_columns, collapse = "")
 
     # Generate HTML for the table node
     frame_code <- paste0(
-      frame, " [shape=none, fontsize=10, label=<",
+      frame,
+      " [shape=none, fontsize=10, label=<",
       "<table border='0' cellborder='1' cellspacing='0'>",
-      "<tr><td colspan='", num_columns, "' bgcolor='lightgrey'><b>", frame, "</b></td></tr>",
-      "<tr>", attribute_columns, "</tr>",
+      "<tr><td colspan='",
+      num_columns,
+      "' bgcolor='lightgrey'><b>",
+      frame,
+      "</b></td></tr>",
+      "<tr>",
+      attribute_columns,
+      "</tr>",
       "</table>>];\n"
     )
 
@@ -84,8 +97,13 @@ render_erd <- function(erd_object, label_distance = 2.5, label_angle = 45, n = 1
       rel_detail <- rel_info[[rel_item]]
       edge_label <- paste0(
         "[taillabel=\"", rel_detail$relationship[1],
-        "\", headlabel=\"", rel_detail$relationship[2],
-        "\", labeldistance=", label_distance, ", labelangle=", label_angle, "]"
+        "\", headlabel=\"",
+        rel_detail$relationship[2],
+        "\", labeldistance=",
+        label_distance,
+        ", labelangle=",
+        label_angle,
+        "]"
       )
       erd_code <- paste0(
         erd_code,
