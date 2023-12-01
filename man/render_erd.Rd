@@ -25,7 +25,14 @@ columns to show all of the variables in the tables such that there are only
 A `DiagrammeR` graph object representing the ERD.
 }
 \description{
-Render ERD
+The \code{\link{render_erd}} function graphically renders ERD using
+\code{DiagrammeR}, incorporating pseudo-nodes to depict traditional ERD
+notations such as cardinality. This function uses edge attributes to append
+text labels near the end of the edge lines. Specifically, the `DiagrammeR`
+label attribute is leveraged to include text labels at the ends of the edges,
+which effectively convey the intended cardinality and relationship
+information. The `render_erd` function constructs edge labels from two
+strings representing the left and right relationship attributes.
 }
 \examples{
 NULL
