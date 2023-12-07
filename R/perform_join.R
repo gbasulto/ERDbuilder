@@ -1,3 +1,37 @@
+#' Use inner join (unless the other is specified)
+#'
+#' The perform_join function uses an inner join unless the user specifies the
+#' join type.
+#'
+#' The perform_join function orchestrates the joining of multiple tables based
+#' on a specified Entity-Relationship Diagram (ERD) object. This function
+#' extracts the relationships and join criteria defined within the ERD object
+#' and executes the appropriate join operations using R's dplyr package.
+#'
+#' The function can operate in two modes: automated and user-specified joins. In
+#' automated mode, join types are determined by the relationship symbols in the
+#' ERD object. In user-specified mode, the types of joins are explicitly
+#' provided by the user.
+#'
+#' @param erd_object An object of class "ERD", which encapsulates the data
+#'   frames and the relationships between them. This object is generated using
+#'   the `create_erd` function.
+#' @param tables_to_join A character vector listing the names of tables to join.
+#'   The first table in this list serves as the main table to which subsequent
+#'   tables are joined. The tables are joined in the order specified and utilize
+#'   the relationships defined with the first table.
+#' @param specified_joins An optional named list where each element's name
+#'   corresponds to a table in `tables_to_join` and the value specifies the type
+#'   of join to perform with that table. The default value is `NULL`, which
+#'   activates automated mode (which uses inner joins).
+#'
+#' @return A data frame resulting from the join operations conducted between the
+#'   specified tables, consistent with the relationships indicated in the ERD
+#'   object. Additionally, the types of joins used are printed to the console.
+#' @export
+#'
+#' @examples
+#' NULL
 perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
   relationships <- erd_object$relationships
   data_frames <- erd_object$data_frames
