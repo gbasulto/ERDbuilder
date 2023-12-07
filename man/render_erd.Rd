@@ -7,9 +7,9 @@
 render_erd(erd_object, label_distance = 2.5, label_angle = 45, n = 10)
 }
 \arguments{
-\item{erd_object}{An object of class "ERD", generated using the `create_erd`
-function. This object encapsulates the data frames representing the
-entities and the relationships between these entities.}
+\item{erd_object}{An object of class "ERD", generated using the
+\code{link{create_erd}} function. This object encapsulates the data frames
+representing the entities and the relationships between these entities.}
 
 \item{label_distance}{A numeric value that specifies the distance between the
 edge labels and the lines connecting the nodes. The default value is 2.5.}
@@ -22,16 +22,16 @@ columns to show all of the variables in the tables such that there are only
 `n` rows.}
 }
 \value{
-A `DiagrammeR` graph object representing the ERD.
+A \code{DiagrammeR} graph object representing the ERD.
 }
 \description{
 The \code{\link{render_erd}} function graphically renders ERD using
 \code{DiagrammeR}, incorporating pseudo-nodes to depict traditional ERD
 notations such as cardinality. This function uses edge attributes to append
-text labels near the end of the edge lines. Specifically, the `DiagrammeR`
-label attribute is leveraged to include text labels at the ends of the edges,
-which effectively convey the intended cardinality and relationship
-information. The `render_erd` function constructs edge labels from two
+text labels near the end of the edge lines. Specifically, the
+\code{DiagrammeR} label attribute is leveraged to include text labels at the
+ends of the edges, which effectively convey the intended cardinality and
+relationship information. This function constructs edge labels from two
 strings representing the left and right relationship attributes.
 }
 \examples{
