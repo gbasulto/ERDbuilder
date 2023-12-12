@@ -90,6 +90,18 @@ edr_plot
 
 ```
 
+```{r, eval = FALSE}
+
+library(dplyr)
+library(readr)
+
+occ_url <- "https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/OCC.csv"
+
+occ_tbl <- read_csv(occ_url, show_col_types = FALSE)
+
+TRUE
+```
+
 ## Example 2
 
 This is a basic example which shows you how to solve a common problem:
@@ -138,4 +150,3 @@ edr_plot2 %>%
   charToRaw %>% 
   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot2.tiff")
 ```
-

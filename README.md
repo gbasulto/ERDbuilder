@@ -76,6 +76,18 @@ edr_plot %>%
 edr_plot
 ```
 
+``` r
+
+library(dplyr)
+library(readr)
+
+occ_url <- "https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/OCC.csv"
+
+occ_tbl <- read_csv(occ_url, show_col_types = FALSE)
+
+TRUE
+```
+
 ## Example 2
 
 This is a basic example which shows you how to solve a common problem:
