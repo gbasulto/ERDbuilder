@@ -157,16 +157,21 @@ joined_data <-
 
 edr_plot <- render_erd(erd_object, label_distance = 3.0, label_angle = 15, n=20)
 
-# DPI = 600
-# WidthCM = 38
-# HeightCM = 38
-# 
+DPI <- 600
+WidthCM <- 38
+HeightCM <- 38
+ 
 # edr_plot %>% 
 #   export_svg %>% 
 #   charToRaw %>% 
 #   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot.tiff")
 
 edr_plot
+
+edr_plot %>%
+  export_svg() %>%
+  charToRaw() %>%
+  rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54))
 
 
 ```
