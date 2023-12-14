@@ -35,11 +35,6 @@ library(ERDbuilder)
 library(dplyr)
 library(readr)
 
-# Render the ERD graphically, save as a .tiff, then include in rendered files
-library(rsvg)
-library(DiagrammeRsvg)
-
-
 ## Set URLs ____________________________________________________________________
 data_url <- "https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/"
 occ_url <- paste0(data_url, "OCC.csv")
@@ -53,7 +48,7 @@ crash_tbl <- read_csv(crash_url, show_col_types = FALSE)      # Crash data
 distract_tbl <- read_csv(distract_url, show_col_types = FALSE)# Distraction data
 vehicle_tbl <- read_csv(vehicle_url, show_col_types = FALSE)  # Vehicle data
 
-# Define relationships _________________________________________________________
+## Define relationships ________________________________________________________
 
 relationships <- list(
   Crash = list(
@@ -74,7 +69,8 @@ relationships <- list(
   )
 )
 
-# Create the ERD object
+## Create the ERD object _______________________________________________________
+
 erd_object <- 
   create_erd(
     list(
@@ -84,9 +80,11 @@ erd_object <-
       Distract= distract_tbl), 
     relationships)
 
-# Perform joins. Note that there will be a many-to-many relationship when
-# joining the Distract table since the Crash, Vehicle, and Occupant tables will
-# have already been joined.
+# Perform joins ________________________________________________________________ 
+
+# Note that there will be a many-to-many relationship when joining the Distract
+# table since the Crash, Vehicle, and Occupant tables will have already been
+# joined.
 joined_data <- 
   perform_join(erd_object, c("Vehicle", "Crash",  "Occupant", "Distract"))
 #> Performing join: Using inner_join for table Crash 
@@ -94,23 +92,37 @@ joined_data <-
 #> Performing join: Using inner_join for table Distract
 
 
+## Render plot _________________________________________________________________
 
-
-edr_plot <- render_erd(erd_object, label_distance = 3.0, label_angle = 15, n=20)
-
-# DPI <- 600
-# WidthCM <- 38
-# HeightCM <- 38
- 
-# edr_plot %>% 
-#   export_svg %>% 
-#   charToRaw %>% 
-#   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot.tiff")
+edr_plot <- 
+  render_erd(erd_object, label_distance = 3.0, label_angle = 15, n = 20)
 
 edr_plot
 ```
 
 <img src="man/figures/README-example1-1.png" width="100%" />
+
+``` r
+
+## Uncomment to export to SVG __________________________________________________
+
+# # Render the ERD graphically, save as a .tiff, then include in rendered files
+# library(rsvg)
+# library(DiagrammeRsvg)
+# 
+# 
+# DPI <- 600
+# WidthCM <- 38
+# HeightCM <- 38
+# 
+# edr_plot |> 
+#   export_svg() |> 
+#   charToRaw() |> 
+#   rsvg(
+#     width = WidthCM * (DPI / 2.54), 
+#     height = HeightCM * (DPI / 2.54)) |> 
+#   tiff::writeTIFF("edr_plot.tiff")
+```
 
 ## Example 2
 
