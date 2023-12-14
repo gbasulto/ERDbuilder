@@ -78,14 +78,37 @@ edr_plot
 
 ``` r
 
+## Load packages _______________________________________________________________
 library(dplyr)
 library(readr)
 
-occ_url <- "https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/OCC.csv"
+## Set URLs ____________________________________________________________________
+data_url <- "https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/"
+occ_url <- paste0(data_url, "OCC.csv")
+crash_url <- paste0(data_url, "CRASH.csv")
+distract_url <- paste0(data_url, "DISTRACT.csv")
+vehicle_url <- paste0(data_url, "GV.csv")
+  
+## Load data ___________________________________________________________________
+occ_tbl <- read_csv(occ_url, show_col_types = FALSE)           # Occupant Data
+crash_tbl <- read_csv(crash_url, show_col_types = FALSE)       # Crash data
+distract_tbl <- read_csv(distract_url, show_col_types = FALSE) # Crash data
+vehicle_tbl <- read_csv(vehicle_url, show_col_types = FALSE)   # Vehicle data
 
-occ_tbl <- read_csv(occ_url, show_col_types = FALSE)
+# Define relationships _________________________________________________________
+relationships <- list(
+  "Crash" = list(
+    "Vehicle" = list("CASENUMBER" = "CASENUMBER", "relationship" = c("||", "|<")),
+    "Occupant" = list("CASENUMBER" = "CASENUMBER",  "relationship" = c("||", "|<")),
+    "Distract" = list("CASENUMBER" = "CASENUMBER",  "relationship" = c("||", "0<"))
 
-TRUE
+  ),
+  "Vehicle" = list(
+    "Crash" = list("CASENUMBER" = "CASENUMBER", "relationship" = c("|<", "||")),
+    "Occupant" = list("CASENUMBER" = "CASENUMBER", "VEHNO" = "VEHNO", "relationship" = c("|0", "0<")),
+    "Distract" = list("CASENUMBER" = "CASENUMBER", "VEHNO" = "VEHNO", "relationship" = c("||", "0<"))
+  )
+)
 ```
 
 ## Example 2
