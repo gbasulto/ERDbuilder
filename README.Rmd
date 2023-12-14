@@ -41,55 +41,6 @@ You can install the development version of ERDbuilder like so:
 
 ## Example 1
 
-```{r example0, eval = FALSE}
-
-url <- "https://static.nhtsa.gov/nhtsa/downloads/CISS/2020/CISS_2020_CSV_files.zip"
-download.file(url,"CISS.zip", mode = 'wb')
-unzip("CISS.zip")
-Occupant <- read.csv('OCC.csv') # Occupant Data
-Vehicle <- read.csv('GV.csv') # Vehicle data
-Crash <- read.csv('CRASH.csv') # Crash data
-Distract <- read.csv('DISTRACT.csv') # Crash data
-
-# Define relationships
-relationships <- list(
-  "Crash" = list(
-    "Vehicle" = list("CASENUMBER" = "CASENUMBER", "relationship" = c("||", "|<")),
-    "Occupant" = list("CASENUMBER" = "CASENUMBER",  "relationship" = c("||", "|<")),
-    "Distract" = list("CASENUMBER" = "CASENUMBER",  "relationship" = c("||", "0<"))
-
-  ),
-  "Vehicle" = list(
-    "Crash" = list("CASENUMBER" = "CASENUMBER", "relationship" = c("|<", "||")),
-    "Occupant" = list("CASENUMBER" = "CASENUMBER", "VEHNO" = "VEHNO", "relationship" = c("|0", "0<")),
-    "Distract" = list("CASENUMBER" = "CASENUMBER", "VEHNO" = "VEHNO", "relationship" = c("||", "0<"))
-  )
-)
-
-# Create the ERD object
-erd_object <- create_erd(list(Crash=Crash, Vehicle=Vehicle, Occupant=Occupant, Distract=Distract), relationships)
-
-# Perform joins. Note that there will be a many-to-many relationship when joining the Distract table since the Crash, Vehicle, and Occupant tables will have already been joined.
-joined_data <- perform_join(erd_object, c("Vehicle", "Crash",  "Occupant", "Distract"))
-
-# Render the ERD graphically, save as a .tiff, then include in rendered files
-library(rsvg)
-library(DiagrammeRsvg)
-edr_plot <- render_erd(erd_object, label_distance = 3.0, label_angle = 15, n=20)
-
-DPI = 600
-WidthCM = 38
-HeightCM = 38
-
-edr_plot %>% 
-  export_svg %>% 
-  charToRaw %>% 
-  rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot.tiff")
-
-edr_plot
-
-```
-
 ```{r example1, eval = TRUE, warning=FALSE, message=FALSE}
 
 ## Load packages _______________________________________________________________
@@ -157,9 +108,9 @@ joined_data <-
 
 edr_plot <- render_erd(erd_object, label_distance = 3.0, label_angle = 15, n=20)
 
-DPI <- 600
-WidthCM <- 38
-HeightCM <- 38
+# DPI <- 600
+# WidthCM <- 38
+# HeightCM <- 38
  
 # edr_plot %>% 
 #   export_svg %>% 
@@ -167,11 +118,6 @@ HeightCM <- 38
 #   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot.tiff")
 
 edr_plot
-
-edr_plot %>%
-  export_svg() %>%
-  charToRaw() %>%
-  rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54))
 
 
 ```
