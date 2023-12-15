@@ -10,7 +10,8 @@ URL: https://github.com/gbasulto/ERDbuilder
 BugReports: https://github.com/gbasulto/ERDbuilder/issues
 Authors@R: c(
     person("Jonathan", "Wood", role = "aut", email = "jwood2@iastate.edu"),
-    person("Guillermo", "Basulto-Elias", role = c("aut", "cre"), email = "basulto@iastate.edu")
+    person("Guillermo", "Basulto-Elias", role = c("aut", "cre"), 
+           email = "basulto@iastate.edu")
   )
 RoxygenNote: 7.2.3
 Imports: 
