@@ -14,7 +14,8 @@ names of the entities.}
 \item{relationships}{A nested named list describing the relationships between
 entities. The top-level names in this list should correspond to the names
 in \code{df_list}. Each element of this list is itself a list, describing
-relationships that the corresponding entity has with other entities. The list of acceptable values is specified in "Details."}
+relationships that the corresponding entity has with other entities. The
+list of acceptable values is specified in "Details."}
 }
 \value{
 An ERD object
@@ -29,7 +30,7 @@ list object of class "ERD".
 \details{
 Possible values in each relationship element of the list include:
 \itemize{
- \item{ "||" }{ which indicates one and only one}
+ \item{"||" }{ which indicates one and only one}
  \item{">|" }{ which indicates one or more (left table)}
  \item{"|<" }{ which indicates one or more (right table)}
  \item{">0" }{ which indicates zero or more (left table)}

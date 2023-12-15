@@ -39,7 +39,9 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
 
   for (table_name in tables_to_join[-1]) {
     if (is.null(relationships[[tables_to_join[1]]][[table_name]])) {
-      stop(paste0("No defined relationship between ", tables_to_join[1], " and ", table_name))
+      msg <- paste0("No defined relationship between ",
+                    tables_to_join[1], " and ", table_name)
+      stop(msg)
     }
 
     join_vars <- relationships[[tables_to_join[1]]][[table_name]]
@@ -51,7 +53,8 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
 
     join_vars <- join_vars[names(join_vars) != "relationship"]
 
-    # Determine join type based on relationship or use inner join if not specified
+    # Determine join type based on relationship or use inner join if not
+    # specified
     if (is.null(specified_joins)) {
       join_type <- "inner_join"
     } else {
@@ -61,7 +64,10 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
     cat("Performing join: Using", join_type, "for table", table_name, "\n")
 
     join_vars_char <- setNames(names(join_vars), join_vars)
-    main_table <- do.call(join_type, list(main_table, data_frames[[table_name]], by = join_vars_char))
+    main_table <- do.call(
+      join_type,
+      list(main_table, data_frames[[table_name]], by = join_vars_char)
+      )
   }
   return(main_table)
 }
