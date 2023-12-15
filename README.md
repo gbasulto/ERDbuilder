@@ -91,7 +91,6 @@ joined_data <-
 #> Performing join: Using inner_join for table Occupant 
 #> Performing join: Using inner_join for table Distract
 
-
 ## Render plot _________________________________________________________________
 
 edr_plot <- 
@@ -130,26 +129,31 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 
+## Load packages _______________________________________________________________
+library(ERDbuilder)
+
+## Create datasets _____________________________________________________________
+
+# Create dataframe "employees"
 employees <- data.frame(
   emp_id = c(1, 2, 3),
   name = c("Alice", "Bob", "Charlie")
 )
 
-# Create data frame "departments"
+# Create dataframe "departments"
 departments <- data.frame(
   dept_id = c(1, 2),
   dept_name = c("HR", "Engineering")
 )
 
-# Create data frame "assignments"
+# Create dataframe "assignments"
 assignments <- data.frame(
   emp_id = c(1, 3),
   dept_id = c(1, 2)
 )
 
-## Create ERD Object
+# Define relationships _________________________________________________________
 
-# Define relationships
 relationships <- list(
   employees = list(
     assignments = list(emp_id = "emp_id", relationship = c("||", "||")),
@@ -157,18 +161,32 @@ relationships <- list(
   )
 )
 
-# Create ERD object
-erd_object <- create_erd(list(employees = employees, departments = departments, assignments = assignments), relationships)
+# Create ERD object ____________________________________________________________
+erd_object <- create_erd(
+  list(
+    employees = employees, 
+    departments = departments, 
+    assignments = assignments), 
+  relationships)
 
-# Render the ERD graphically, save as a .tiff, then include in rendered files
+# Render the ERD graphically ___________________________________________________
 edr_plot2 <- render_erd(erd_object, label_distance = 2.0, label_angle = -25)
 
-DPI = 600
-WidthCM = 38
-HeightCM = 38
+# Plot ERD _____________________________________________________________________
+edr_plot2
+```
 
-edr_plot2 %>% 
-  export_svg %>% 
-  charToRaw %>% 
-  rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot2.tiff")
+<img src="man/figures/README-example2-1.png" width="100%" />
+
+``` r
+
+# ## Un-comment to export to TIFF ______________________________________________
+# DPI = 600
+# WidthCM = 38
+# HeightCM = 38
+# 
+# edr_plot2 %>% 
+#   export_svg %>% 
+#   charToRaw %>% 
+#   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot2.tiff")
 ```
