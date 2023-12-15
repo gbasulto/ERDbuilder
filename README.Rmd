@@ -186,9 +186,11 @@ edr_plot2
 # WidthCM = 38
 # HeightCM = 38
 # 
-# edr_plot2 %>% 
-#   export_svg %>% 
-#   charToRaw %>% 
-#   rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% tiff::writeTIFF("edr_plot2.tiff")
+# edr_plot2 |> 
+#   export_svg() |> 
+#   charToRaw |> 
+#   rsvg(width = WidthCM * (DPI / 2.54), 
+#        height = HeightCM *(DPI / 2.54)) |> 
+#   tiff::writeTIFF("edr_plot2.tiff")
 
 ```
