@@ -60,8 +60,8 @@ relationships <- list(
       CASENUMBER = "CASENUMBER", relationship = c("||", "0<"))
   ),
   Vehicle = list(
-    Crash = list(
-      CASENUMBER = "CASENUMBER", relationship = c("|<", "||")),
+   # Crash = list(
+   #   CASENUMBER = "CASENUMBER", relationship = c("|<", "||")),
     Occupant = list(
       CASENUMBER = "CASENUMBER", VEHNO = "VEHNO", relationship = c("|0", "0<")),
     Distract = list(
@@ -86,8 +86,8 @@ erd_object <-
 # table since the Crash, Vehicle, and Occupant tables will have already been
 # joined.
 joined_data <- 
-  perform_join(erd_object, c("Vehicle", "Crash",  "Occupant", "Distract"))
-#> Performing join: Using inner_join for table Crash 
+  perform_join(erd_object, c("Crash", "Vehicle", "Occupant", "Distract"))
+#> Performing join: Using inner_join for table Vehicle 
 #> Performing join: Using inner_join for table Occupant 
 #> Performing join: Using inner_join for table Distract
 
