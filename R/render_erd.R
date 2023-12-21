@@ -25,14 +25,18 @@
 #'
 #' @examples
 #' NULL
-render_erd <- function(erd_object, label_distance = 2.5, label_angle = 45, n = 10) {
+render_erd <- function(
+    erd_object,
+    label_distance = 2.5,
+    label_angle = 45,
+    n = 10) {
   relationships <- erd_object$relationships
   data_frames <- erd_object$data_frames
   erd_code <- ""
 
   # Create nodes with attributes in long-form tables
   for (frame in names(data_frames)) {
-    attributes <- sapply(names(data_frames[[frame]]), function(attr) {
+    attributes <- sapply(names(data_frames[[frame]]), \(attr) {
       nbsp_count <- max(0, nchar(frame) - nchar(attr))
       nbsp_str <- if (nbsp_count > 0) {
         paste(rep("&nbsp;", nbsp_count), collapse = "")
