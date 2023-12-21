@@ -155,8 +155,8 @@ assignments <- data.frame(
 # Define relationships _________________________________________________________
 
 relationships <- list(
-  employees = list(
-    assignments = list(emp_id = "emp_id", relationship = c("||", "||")),
+  assignments = list(
+    employees = list(emp_id = "emp_id", relationship = c("||", "||")),
     departments = list(dept_id = "dept_id", relationship = c(">0", "||"))
   )
 )
