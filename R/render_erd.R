@@ -30,6 +30,7 @@ render_erd <- function(
     label_distance = 2.5,
     label_angle = 45,
     n = 10) {
+
   relationships <- erd_object$relationships
   data_frames <- erd_object$data_frames
   erd_code <- ""
@@ -117,6 +118,23 @@ render_erd <- function(
     }
   }
 
+  # ## Original Legend table
+  # legend_code <- paste0(
+  #   "node [shape=none, margin=0];\n",
+  #   "legend [label=<",
+  #   "<table border='0' cellborder='1' cellspacing='0'>",
+  #   "<tr><td colspan='2'>Legend</td></tr>",
+  #   "<tr><td><b>TableName</b></td><td>Table Names (Bold)</td></tr>",
+  #   "<tr><td>&#124;&#124;</td><td>1 and only 1</td></tr>",
+  #   "<tr><td>&gt;&#124;</td><td>1 or more</td></tr>",
+  #   "<tr><td>&#124;&gt;</td><td>1 or more</td></tr>",
+  #   "<tr><td>0&#124;</td><td>0 or 1</td></tr>",
+  #   "<tr><td>&#124;0</td><td>0 or 1</td></tr>",
+  #   "<tr><td>0&lt;</td><td>0 or more</td></tr>",
+  #   "<tr><td>&lt;0</td><td>0 or more</td></tr>",
+  #   "</table>>];"
+  # )
+
   legend_code <- paste0(
     "node [shape=none, margin=0];\n",
     "legend [label=<",
@@ -124,12 +142,9 @@ render_erd <- function(
     "<tr><td colspan='2'>Legend</td></tr>",
     "<tr><td><b>TableName</b></td><td>Table Names (Bold)</td></tr>",
     "<tr><td>&#124;&#124;</td><td>1 and only 1</td></tr>",
-    "<tr><td>&gt;&#124;</td><td>1 or more</td></tr>",
-    "<tr><td>&#124;&gt;</td><td>1 or more</td></tr>",
-    "<tr><td>0&#124;</td><td>0 or 1</td></tr>",
-    "<tr><td>&#124;0</td><td>0 or 1</td></tr>",
-    "<tr><td>0&lt;</td><td>0 or more</td></tr>",
-    "<tr><td>&lt;0</td><td>0 or more</td></tr>",
+    "<tr><td>&gt;&#124;  or  &#124;&gt;</td><td>1 or more</td></tr>",
+    "<tr><td>0&#124;  or  &#124;0</td><td>0 or 1</td></tr>",
+    "<tr><td>0&lt;  or  &lt;0</td><td>0 or more</td></tr>",
     "</table>>];"
   )
 
