@@ -139,12 +139,12 @@ render_erd <- function(
     "node [shape=none, margin=0];\n",
     "legend [label=<",
     "<table border='0' cellborder='1' cellspacing='0'>",
-    "<tr><td colspan='3'>Symbol Nomenclature</td></tr>",
+    "<tr><td colspan='3'><b>Nomenclature</b></td></tr>",
     "<tr><td><b>To Left</b></td><td><b>To Right</b></td><td><b>Definition</b></td></tr>",
     "<tr><td>&#124;&#124;</td><td>&#124;&#124;</td><td>1 and only 1</td></tr>",
     "<tr><td>&gt;&#124;</td><td>&#124;&lt;</td><td>1 or more</td></tr>",
-    "<tr><td>0&#124;  or  &#124;0</td><td>0&#124;  or  &#124;0</td><td>0 or 1</td></tr>",
-    "<tr><td>0&lt;  or  &lt;0</td><td>0&lt;  or  &lt;0</td><td>0 or more</td></tr>",
+    "<tr><td>|0</td><td>0|</td><td>0 or 1</td></tr>",
+    "<tr><td>&gt;0</td><td>0&lt;</td><td>0 or more</td></tr>",
     "</table>>];"
   )
 
