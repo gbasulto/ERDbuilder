@@ -63,7 +63,7 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
 
     cat("Performing join: Using", join_type, "for table", table_name, "\n")
 
-    join_vars_char <- setNames(names(join_vars), join_vars)
+    join_vars_char <- stats::setNames(names(join_vars), join_vars)
     main_table <- do.call(
       join_type,
       list(main_table, data_frames[[table_name]], by = join_vars_char)
