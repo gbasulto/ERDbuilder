@@ -38,13 +38,17 @@ render_erd <- function(
   # Create nodes with attributes in long-form tables
   for (frame in names(data_frames)) {
     attributes <- sapply(names(data_frames[[frame]]), \(attr) {
+
       nbsp_count <- max(0, nchar(frame) - nchar(attr))
+
       nbsp_str <- if (nbsp_count > 0) {
         paste(rep("&nbsp;", nbsp_count), collapse = "")
       } else {
         ""
       }
-      if (attr %in% unlist(lapply(relationships[[frame]], \(x) x$join_column))) {
+
+      aux <- unlist(lapply(relationships[[frame]], \(x) x$join_column))
+      if (attr %in% aux) {
         return(paste0("<i>", attr, nbsp_str, "</i>"))
       } else {
         return(paste0(attr, nbsp_str))
@@ -118,33 +122,29 @@ render_erd <- function(
     }
   }
 
-  # ## Original Legend table
-  # legend_code <- paste0(
-  #   "node [shape=none, margin=0];\n",
-  #   "legend [label=<",
-  #   "<table border='0' cellborder='1' cellspacing='0'>",
-  #   "<tr><td colspan='2'>Legend</td></tr>",
-  #   "<tr><td><b>TableName</b></td><td>Table Names (Bold)</td></tr>",
-  #   "<tr><td>&#124;&#124;</td><td>1 and only 1</td></tr>",
-  #   "<tr><td>&gt;&#124;</td><td>1 or more</td></tr>",
-  #   "<tr><td>&#124;&gt;</td><td>1 or more</td></tr>",
-  #   "<tr><td>0&#124;</td><td>0 or 1</td></tr>",
-  #   "<tr><td>&#124;0</td><td>0 or 1</td></tr>",
-  #   "<tr><td>0&lt;</td><td>0 or more</td></tr>",
-  #   "<tr><td>&lt;0</td><td>0 or more</td></tr>",
-  #   "</table>>];"
-  # )
+  table_header <- "<tr><td colspan='3'><b>Nomenclature</b></td></tr>"
+  table_colnames <-
+    paste0(
+      "<tr><td><b>To Left</b></td>",
+      "<td><b>To Right</b></td>",
+      "<td><b>Definition</b></td></tr>"
+    )
+  table_rows <-
+    paste0(
+      "<tr><td>&#124;&#124;</td>",
+      "<td>&#124;&#124;</td><td>1 and only 1</td></tr>",
+      "<tr><td>&gt;&#124;</td><td>&#124;&lt;</td><td>1 or more</td></tr>",
+      "<tr><td>|0</td><td>0|</td><td>0 or 1</td></tr>",
+      "<tr><td>&gt;0</td><td>0&lt;</td><td>0 or more</td></tr>"
+    )
 
   legend_code <- paste0(
     "node [shape=none, margin=0];\n",
     "legend [label=<",
     "<table border='0' cellborder='1' cellspacing='0'>",
-    "<tr><td colspan='3'><b>Nomenclature</b></td></tr>",
-    "<tr><td><b>To Left</b></td><td><b>To Right</b></td><td><b>Definition</b></td></tr>",
-    "<tr><td>&#124;&#124;</td><td>&#124;&#124;</td><td>1 and only 1</td></tr>",
-    "<tr><td>&gt;&#124;</td><td>&#124;&lt;</td><td>1 or more</td></tr>",
-    "<tr><td>|0</td><td>0|</td><td>0 or 1</td></tr>",
-    "<tr><td>&gt;0</td><td>0&lt;</td><td>0 or more</td></tr>",
+    table_header,
+    table_colnames,
+    table_rows,
     "</table>>];"
   )
 
