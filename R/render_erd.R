@@ -37,23 +37,25 @@ render_erd <- function(
 
   # Create nodes with attributes in long-form tables
   for (frame in names(data_frames)) {
-    attributes <- sapply(names(data_frames[[frame]]), \(attr) {
+    attributes <- vapply(
+      X = names(data_frames[[frame]]),
+      FUN = \(attr) {
 
-      nbsp_count <- max(0, nchar(frame) - nchar(attr))
+        nbsp_count <- max(0, nchar(frame) - nchar(attr))
+        nbsp_str <- if (nbsp_count > 0) {
+          paste(rep("&nbsp;", nbsp_count), collapse = "")
+        } else {
+          ""
+        }
 
-      nbsp_str <- if (nbsp_count > 0) {
-        paste(rep("&nbsp;", nbsp_count), collapse = "")
-      } else {
-        ""
-      }
-
-      aux <- unlist(lapply(relationships[[frame]], \(x) x$join_column))
-      if (attr %in% aux) {
-        return(paste0("<i>", attr, nbsp_str, "</i>"))
-      } else {
-        return(paste0(attr, nbsp_str))
-      }
-    })
+        aux <- unlist(lapply(relationships[[frame]], \(x) x$join_column))
+        if (attr %in% aux) {
+          return(paste0("<i>", attr, nbsp_str, "</i>"))
+        } else {
+          return(paste0(attr, nbsp_str))
+        }
+      },
+      FUN.VALUE = character(1))
 
     # Calculate number of attributes for the current table
     num_attributes <- length(attributes)
@@ -69,13 +71,15 @@ render_erd <- function(
       )
 
     # Generate HTML for each column
-    attribute_columns <- sapply(
+    attribute_columns <- vapply(
       X = attributes_split,
       FUN = \(column) {
         column_attributes <- paste(column, collapse="</td></tr><tr><td>")
         paste0("<td><table border='0' cellborder='0' cellspacing='0'><tr><td>",
                column_attributes, "</td></tr></table></td>")
-      })
+      },
+      FUN.VALUE = character(1)
+    )
 
     # Combine the generated HTML for all columns
     attribute_columns <- paste(attribute_columns, collapse = "")
