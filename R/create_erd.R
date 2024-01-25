@@ -26,7 +26,12 @@
 #'   relationships that the corresponding entity has with other entities. The
 #'   list of acceptable values is specified in "Details."
 #'
-#' @return An ERD object
+#' @return An object of class "ERD", which is a named list containing two elements:
+#' \itemize{
+#'  \item{data_frames}{Named list of data frames identical to \code{df_list}.}
+#'  \item{relationship}{amed list of relationships identical to \code{relationships}.}
+#' }
+#' The class attribute of this list is set to "ERD".
 #' @export
 #'
 #' @examples
