@@ -13,6 +13,6 @@ Authors@R: c(
     person("Guillermo", "Basulto-Elias", role = c("aut", "cre"), 
            email = "basulto@iastate.edu")
   )
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports: 
     DiagrammeR
