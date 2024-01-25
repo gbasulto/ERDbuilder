@@ -6,7 +6,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ERDbuilder is to build Entity Relationship Diagrams.
+This R package creates Entity-Relationship Diagrams (ERDs). It generates
+traditional ERDs from data frames, enabling users to specify
+relationship cardinalities and variables involved in joins. The package
+also facilitates data joins based on the established ERD.
+
+## Package Dependencies
+
+- `DiagrammeR`
+
+- `dplyr`
 
 ## Installation
 
