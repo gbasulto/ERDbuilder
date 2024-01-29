@@ -101,7 +101,7 @@ render_erd <- function(
     )
 
     erd_code <- paste0(erd_code, frame_code)
-  }
+  } ## End node creation
 
   # Create edges with labels
   for (frame in names(relationships)) {
@@ -163,4 +163,22 @@ render_erd <- function(
     )
   )
   return(graph)
+}
+
+aux <- function(tbl_attrs, frame_name) {
+
+  ## nbps: non-breaking space
+  nbsp_count <- max(0, nchar(frame_name) - nchar(tbl_attrs))
+  nbsp_str <- if (nbsp_count > 0) {
+    paste(rep("&nbsp;", nbsp_count), collapse = "")
+  } else {
+    ""
+  }
+
+  aux <- unlist(lapply(relationships[[frame_name]], \(x) x$join_column))
+  if (tbl_attrs %in% aux) {
+    return(paste0("<i>", tbl_attrs, nbsp_str, "</i>"))
+  } else {
+    return(paste0(tbl_attrs, nbsp_str))
+  }
 }
