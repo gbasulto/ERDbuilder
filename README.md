@@ -22,7 +22,7 @@ also facilitates data joins based on the established ERD.
 You can install the development version of ERDbuilder like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+remotes::install_github("gbasulto/ERDbuilder")
 ```
 
 ## Function and Object List
