@@ -38,9 +38,19 @@ render_erd <- function(
   # Create nodes with attributes in long-form tables
   for (frame in names(data_frames)) {
 
+    raw_attributes <- names(data_frames[[frame]])
+
+    ## Bold keys
+    keys <- c("emp_id", "CASEID")
+    raw_attributes <-
+      ifelse(
+        test = raw_attributes %in% keys,
+        yes = paste0("<b>", raw_attributes, "</b>"),
+        no = raw_attributes)
+
     ## Add non-breaking space string when necessary
     attributes <- vapply(
-      X = names(data_frames[[frame]]),
+      X = raw_attributes,
       FUN = \(x) add_nonbreaking_space_char(x, frame, relationships),
       FUN.VALUE = character(1))
 
@@ -113,7 +123,7 @@ render_erd <- function(
     }
   }
 
-  table_header <- "<tr><td colspan='3'><b>Nomenclature</b></td></tr>"
+  table_header <- "<tr><td colspan='3' bgcolor='lightgrey'><b>Nomenclature</b></td></tr>"
   table_colnames <-
     paste0(
       "<tr><td><b>To Left</b></td>",
