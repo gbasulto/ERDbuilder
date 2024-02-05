@@ -41,7 +41,7 @@ render_erd <- function(
     raw_attributes <- names(data_frames[[frame]])
 
     ## Bold keys
-    keys <- c("emp_id", "CASEID")
+    keys <- unique(unlist(relationships))
     raw_attributes <-
       ifelse(
         test = raw_attributes %in% keys,
