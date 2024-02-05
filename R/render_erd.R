@@ -37,24 +37,11 @@ render_erd <- function(
 
   # Create nodes with attributes in long-form tables
   for (frame in names(data_frames)) {
+
+    ## Add non-breaking space string when necessary
     attributes <- vapply(
       X = names(data_frames[[frame]]),
-      FUN = \(attr) {
-
-        nbsp_count <- max(0, nchar(frame) - nchar(attr))
-        nbsp_str <- if (nbsp_count > 0) {
-          paste(rep("&nbsp;", nbsp_count), collapse = "")
-        } else {
-          ""
-        }
-
-        aux <- unlist(lapply(relationships[[frame]], \(x) x$join_column))
-        if (attr %in% aux) {
-          return(paste0("<i>", attr, nbsp_str, "</i>"))
-        } else {
-          return(paste0(attr, nbsp_str))
-        }
-      },
+      FUN = \(x) add_nonbreaking_space_char(x, frame, relationships),
       FUN.VALUE = character(1))
 
     # Calculate number of attributes for the current table
@@ -165,9 +152,8 @@ render_erd <- function(
   return(graph)
 }
 
-aux <- function(tbl_attrs, frame_name) {
+add_nonbreaking_space_char <- function(tbl_attrs, frame_name, frames_list)  {
 
-  ## nbps: non-breaking space
   nbsp_count <- max(0, nchar(frame_name) - nchar(tbl_attrs))
   nbsp_str <- if (nbsp_count > 0) {
     paste(rep("&nbsp;", nbsp_count), collapse = "")
@@ -175,7 +161,7 @@ aux <- function(tbl_attrs, frame_name) {
     ""
   }
 
-  aux <- unlist(lapply(relationships[[frame_name]], \(x) x$join_column))
+  aux <- unlist(lapply(frames_list[[frame_name]], \(x) x$join_column))
   if (tbl_attrs %in% aux) {
     return(paste0("<i>", tbl_attrs, nbsp_str, "</i>"))
   } else {
