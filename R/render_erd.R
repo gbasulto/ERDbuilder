@@ -40,13 +40,17 @@ render_erd <- function(
 
     raw_attributes <- names(data_frames[[frame]])
 
-    ## Bold keys
+    ## If an attribute is a key, put it in bold and at the beginning of the
+    ## dataset
     keys <- unique(unlist(relationships))
+    is_key <- raw_attributes %in% keys
     raw_attributes <-
       ifelse(
-        test = raw_attributes %in% keys,
+        test = is_key,
         yes = paste0("<b>", raw_attributes, "</b>"),
         no = raw_attributes)
+    raw_attributes <- c(raw_attributes[is_key], raw_attributes[!is_key])
+
 
     ## Add non-breaking space string when necessary
     attributes <- vapply(
@@ -123,31 +127,8 @@ render_erd <- function(
     }
   }
 
-  table_header <- "<tr><td colspan='3' bgcolor='lightgrey'><b>Nomenclature</b></td></tr>"
-  table_colnames <-
-    paste0(
-      "<tr><td><b>To Left</b></td>",
-      "<td><b>To Right</b></td>",
-      "<td><b>Definition</b></td></tr>"
-    )
-  table_rows <-
-    paste0(
-      "<tr><td>&#124;&#124;</td>",
-      "<td>&#124;&#124;</td><td>1 and only 1</td></tr>",
-      "<tr><td>&gt;&#124;</td><td>&#124;&lt;</td><td>1 or more</td></tr>",
-      "<tr><td>|0</td><td>0|</td><td>0 or 1</td></tr>",
-      "<tr><td>&gt;0</td><td>0&lt;</td><td>0 or more</td></tr>"
-    )
 
-  legend_code <- paste0(
-    "node [shape=none, margin=0];\n",
-    "legend [label=<",
-    "<table border='0' cellborder='1' cellspacing='0'>",
-    table_header,
-    table_colnames,
-    table_rows,
-    "</table>>];"
-  )
+  legend_code <- legend_code()
 
   graph <- DiagrammeR::grViz(
     paste0(
@@ -162,6 +143,7 @@ render_erd <- function(
   return(graph)
 }
 
+## Add non-breaking space to fields when necessary
 add_nonbreaking_space_char <- function(tbl_attrs, frame_name, frames_list)  {
 
   nbsp_count <- max(0, nchar(frame_name) - nchar(tbl_attrs))
@@ -177,4 +159,36 @@ add_nonbreaking_space_char <- function(tbl_attrs, frame_name, frames_list)  {
   } else {
     return(paste0(tbl_attrs, nbsp_str))
   }
+}
+
+
+## Produce HTML legend
+legend_code <- function() {
+
+  table_header <-
+    "<tr><td colspan='3' bgcolor='lightgrey'><b>Nomenclature</b></td></tr>"
+  table_colnames <-
+    paste0(
+      "<tr><td bgcolor='lightgrey'>To Left</td>",
+      "<td bgcolor='lightgrey'>To Right</td>",
+      "<td bgcolor='lightgrey'>Definition</td></tr>"
+    )
+  table_rows <-
+    paste0(
+      "<tr><td>&#124;&#124;</td>",
+      "<td>&#124;&#124;</td><td>1 and only 1</td></tr>",
+      "<tr><td>&gt;&#124;</td><td>&#124;&lt;</td><td>1 or more</td></tr>",
+      "<tr><td>|0</td><td>0|</td><td>0 or 1</td></tr>",
+      "<tr><td>&gt;0</td><td>0&lt;</td><td>0 or more</td></tr>"
+    )
+
+  paste0(
+    "node [shape=none, margin=0];\n",
+    "legend [label=<",
+    "<table border='0' cellborder='1' cellspacing='0'>",
+    table_header,
+    table_colnames,
+    table_rows,
+    "</table>>];"
+  )
 }
