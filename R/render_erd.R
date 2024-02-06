@@ -161,7 +161,6 @@ add_nonbreaking_space_char <- function(tbl_attrs, frame_name, frames_list)  {
   }
 }
 
-
 ## Produce HTML legend
 legend_code <- function() {
 
@@ -169,9 +168,9 @@ legend_code <- function() {
     "<tr><td colspan='3' bgcolor='lightgrey'><b>Nomenclature</b></td></tr>"
   table_colnames <-
     paste0(
-      "<tr><td bgcolor='lightgrey'>To Left</td>",
-      "<td bgcolor='lightgrey'>To Right</td>",
-      "<td bgcolor='lightgrey'>Definition</td></tr>"
+      "<tr><td bgcolor='grey95'>To Left</td>",
+      "<td bgcolor='grey95'>To Right</td>",
+      "<td bgcolor='grey95'>Definition</td></tr>"
     )
   table_rows <-
     paste0(
