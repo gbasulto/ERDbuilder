@@ -27,11 +27,11 @@ remotes::install_github("gbasulto/ERDbuilder")
 
 ## Function and Object List
 
-| Name             | Class    | Purpose           |
-|------------------|----------|-------------------|
-| `render_erd()`   | Function |                   |
-| `perform_join()` | Function |                   |
-| `create_erd()`   | Function | Create ERD object |
+| Name             | Class    | Purpose                     |
+|------------------|----------|-----------------------------|
+| `render_erd()`   | Function | Render ERD                  |
+| `perform_join()` | Function | Perform left join of tables |
+| `create_erd()`   | Function | Create ERD object           |
 
 Functions and Objects in “ERDbuilder” package
 
