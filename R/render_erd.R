@@ -9,6 +9,17 @@
 #' relationship information. This function constructs edge labels from two
 #' strings representing the left and right relationship attributes.
 #'
+#' This function is responsible for graphically rendering an
+#' Entity-Relationship Diagram (ERD) based on an object of class "ERD". This
+#' function leverages the \code{DiagrammeR} package to generate a graph that visually
+#' represents both the entities and the relationships contained within the ERD
+#' object. The entities are represented as nodes, and the relationships as
+#' edges. The \code{render_erd} function thus provides a robust mechanism for
+#' visually representing an ERD based on structured data within the R
+#' environment. By converting an ERD object into a graphical form, the function
+#' aids in a clearer understanding and communication of complex data
+#' relationships.
+#'
 #' @param erd_object An object of class "ERD", generated using the
 #'   \code{link{create_erd}} function. This object encapsulates the data frames
 #'   representing the entities and the relationships between these entities.
