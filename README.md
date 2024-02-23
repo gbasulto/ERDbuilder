@@ -17,6 +17,18 @@ also facilitates data joins based on the established ERD.
 
 - `dplyr`
 
+## Objective
+
+Create Entity Relationship Diagrams (ERD) by extracting the attribute
+names of tables to create complex graphs where:
+
+- Nodes: Each entity (i.e., data frame) is represented as a node. The
+  node label consists of the entity name and the attribute names within
+  the entity.
+- Edges: Relationships between entities are represented as edges between
+  the corresponding nodes. Labels at the ends of the edges indicate the
+  type and cardinality of the relationship.
+
 ## Installation
 
 You can install the development version of ERDbuilder like so:
