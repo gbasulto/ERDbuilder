@@ -43,6 +43,14 @@ Possible values in each relationship element of the list include:
  \item{"|0" }{ which indicates zero or one (left table)}
  \item{"0|" }{ which indicates zero or one (right table)}
 }
+
+It is imperative that the names used in \code{df_list} and relationships are
+consistent, as these are used for creating the ERD object and for subsequent
+operations like rendering and performing joins.
+
+Users can effortlessly encapsulate the data and relationships pertaining to
+an ERD into a single R object with this function, thereby facilitating
+downstream operations like rendering and joining.
 }
 \examples{
 NULL
