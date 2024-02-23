@@ -9,16 +9,32 @@
 #' relationship information. This function constructs edge labels from two
 #' strings representing the left and right relationship attributes.
 #'
-#' This function is responsible for graphically rendering an
-#' Entity-Relationship Diagram (ERD) based on an object of class "ERD". This
-#' function leverages the \code{DiagrammeR} package to generate a graph that visually
-#' represents both the entities and the relationships contained within the ERD
-#' object. The entities are represented as nodes, and the relationships as
-#' edges. The \code{render_erd} function thus provides a robust mechanism for
-#' visually representing an ERD based on structured data within the R
-#' environment. By converting an ERD object into a graphical form, the function
-#' aids in a clearer understanding and communication of complex data
-#' relationships.
+#' This function is responsible for graphically rendering an Entity-Relationship
+#' Diagram (ERD) based on an object of class "ERD". This function leverages the
+#' \code{DiagrammeR} package to generate a graph that visually represents both
+#' the entities and the relationships contained within the ERD object. The
+#' entities are represented as nodes, and the relationships as edges. The
+#' \code{render_erd} function thus provides a robust mechanism for visually
+#' representing an ERD based on structured data within the R environment. By
+#' converting an ERD object into a graphical form, the function aids in a
+#' clearer understanding and communication of complex data relationships.
+#'
+#' Nodes: Each entity (i.e., data frame) is represented as a node. The node
+#' label consists of the entity name and the attribute names within the entity.
+#'
+#' Edges: Relationships between entities are represented as edges between the
+#' corresponding nodes. Labels at the ends of the edges indicate the type and
+#' cardinality of the relationship.
+#'
+#' The \code{label_distance} and \code{label_angle} parameters control the
+#' presentation of edge labels in the ERD to minimize overlap and improve
+#' readability.
+#'
+#' The function uses a for loop to iterate through the entities and
+#' relationships, constructing the necessary \code{DiagrammeR} code to render
+#' each element. The \code{nodesep} and \code{ranksep} parameters in the
+#' \code{DiagrammeR} code control the node spacing in the rendered ERD, making
+#' it easier to visualize complex ERDs.
 #'
 #' @param erd_object An object of class "ERD", generated using the
 #'   \code{link{create_erd}} function. This object encapsulates the data frames
