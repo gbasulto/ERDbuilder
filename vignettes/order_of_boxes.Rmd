@@ -1,0 +1,124 @@
+---
+title: "Order of boxes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Order of boxes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ERDbuilder)
+
+
+
+library(incidentally)
+library(tidyverse)
+library(janitor)
+
+# https://cran.r-project.org/web/packages/incidentally/vignettes/congress.html
+
+I <- incidence.from.congress(
+  session = 115, 
+  types = c("sres"), 
+  areas = c("All"), 
+  format = "data", 
+  narrative = TRUE)
+
+## Matrix
+I$matrix |> row.names()
+I$matrix |> colnames()
+I$matrix[1:2, 1:10]
+I$matrix |> dim()
+
+
+legislators_tbl <- I$legislator |> as_tibble()
+bills_tbl <- I$bills |> as_tibble() |> clean_names()
+
+## 
+cosponsors_tbl <- 
+  I$matrix |> 
+  as.data.frame() |>
+  rownames_to_column(var = "name") |> 
+  pivot_longer(-name, names_to = "bill", values_to = "sponsored") |> 
+  filter(sponsored == 1) |> 
+  left_join(legislators_tbl, by = join_by(name)) |> 
+  select(id, bill)
+
+
+cosponsors_tbl
+legislators_tbl
+bills_tbl
+
+
+relationships <- list(
+  Cosponsors = list(
+    Legislators = list(id = "id", relationship = c(">0", "||")),
+    Bills = list(bill = "bill", relationship = c(">|", "||"))
+  )
+)
+
+erd <- create_erd(
+  list(
+    Cosponsors = cosponsors_tbl, 
+    Legislators = legislators_tbl, 
+    Bills = bills_tbl
+  ),
+  relationships
+)
+
+render_erd(erd)
+
+###   Legislators -> Cosponsors -> Bills
+
+relationships <- list(
+  Legislators = list(
+    Cosponsors = list(id = "id", relationship = c("||", "0<"))
+  ),
+  Cosponsors = list(
+    Bills = list(bill = "bill", relationship = c(">|", "||"))
+  )
+)
+
+erd <- create_erd(
+  list(
+    Cosponsors = cosponsors_tbl, 
+    Legislators = legislators_tbl, 
+    Bills = bills_tbl
+  ),
+  relationships
+)
+
+render_erd(erd)
+
+### Bills -> Cosponsors -> Legislators
+
+relationships <- list(
+  Legislators = list(
+    Cosponsors = list(id = "id", relationship = c("||", "0<"))
+  ),
+  Cosponsors = list(
+    Bills = list(bill = "bill", relationship = c(">|", "||"))
+  )
+)
+
+erd <- create_erd(
+  list(
+    Cosponsors = cosponsors_tbl, 
+    Legislators = legislators_tbl, 
+    Bills = bills_tbl
+  ),
+  relationships
+)
+
+render_erd(erd)
+
+
+```
