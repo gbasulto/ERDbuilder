@@ -32,12 +32,6 @@ I <- incidence.from.congress(
   format = "data", 
   narrative = TRUE)
 
-## Matrix
-I$matrix |> row.names()
-I$matrix |> colnames()
-I$matrix[1:2, 1:10]
-I$matrix |> dim()
-
 
 legislators_tbl <- I$legislator |> as_tibble()
 bills_tbl <- I$bills |> as_tibble() |> clean_names()
@@ -53,9 +47,9 @@ cosponsors_tbl <-
   select(id, bill)
 
 
-cosponsors_tbl
-legislators_tbl
-bills_tbl
+cosponsors_tbl |> head()
+legislators_tbl |> head()
+bills_tbl |> head()
 
 
 relationships <- list(
