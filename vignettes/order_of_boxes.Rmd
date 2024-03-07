@@ -101,11 +101,11 @@ render_erd(erd)
 ### Bills -> Cosponsors -> Legislators
 
 relationships <- list(
-  Legislators = list(
-    Cosponsors = list(id = "id", relationship = c("||", "0<"))
+    Bills = list(
+    Cosponsors = list(bill = "bill", relationship = c("||", "|<"))
   ),
   Cosponsors = list(
-    Bills = list(bill = "bill", relationship = c(">|", "||"))
+    Legislators = list(id = "id", relationship = c(">0", "||"))
   )
 )
 
