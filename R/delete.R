@@ -4,12 +4,24 @@
 #
 # ## Define entities
 #
-# students <-
-#   data.frame(
-#     id = c("hu1", "de2", "lo3"),
-#     student = c("Huey", "Dewey", "Louie"),
-#     email = c("hubert.duck", "dewfort.duck", "llewellyn.duck"),
-#     dob = c("04-15", "04-15", "04-15")
-#   )
+# students <- data.frame(
+#   student_id = c("hu1", "de2", "lo3"),
+#   student = c("Huey", "Dewey", "Louie"),
+#   email = c("hubert.duck", "dewfort.duck", "llewellyn.duck"),
+#   dob = c("04-15", "04-15", "04-15")
+# )
 #
-# courses <-
+# courses <- data.frame(
+#   course_id = c("water101", "evil205", "water202"),
+#   course = c("Swimming", "Human-chasing", "Dives")
+# )
+#
+# enrollment <- data.frame(
+#   course_id = c("water101", "evil205", "evil205", "water202"),
+#   student_id = c("hu1", "hu1", "de2", "de2"),
+#   final_grade = c("B", "A", "A", "F")
+# )
+#
+# department <- data.frame(
+#
+# )
