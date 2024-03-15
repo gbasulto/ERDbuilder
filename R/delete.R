@@ -23,5 +23,10 @@
 # )
 #
 # department <- data.frame(
+#   dept_id = c("water", "evil", "values"),
+#   department = c("Water activities", "Evil procurement", "Good values")
+# )
 #
+# faculty <- data.frame(
+#   faculty_name = c("Pluto", "Mickey", "Pete")
 # )
