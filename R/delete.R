@@ -42,14 +42,45 @@
 # department_tbl
 # faculty_tbl
 #
+# ## Define relationships
+# relationships <- list(
+#   students = list(
+#     enrollment = list(st_id = "st_id", relationship = c("||", "0<"))
+#   ),
+#   enrollment = list(),
+#   courses = list(),
+#   department = list(),
+#   faculty = list()
+# )
+#
+# relationships <- list(
+#   Crash = list(
+#     Vehicle = list(
+#       CASENUMBER = "CASENUMBER", relationship = c("||", "|<")),
+#     Occupant = list(
+#       CASENUMBER = "CASENUMBER", relationship = c("||", "|<")),
+#     Distract = list(
+#       CASENUMBER = "CASENUMBER", relationship = c("||", "0<"))
+#   ),
+#   Vehicle = list(
+#     # Crash = list(
+#     #   CASENUMBER = "CASENUMBER", relationship = c("|<", "||")),
+#     Occupant = list(
+#       CASENUMBER = "CASENUMBER", VEHNO = "VEHNO", relationship = c("|0", "0<")),
+#     Distract = list(
+#       CASENUMBER = "CASENUMBER", VEHNO = "VEHNO", relationship = c("||", "0<"))
+#   )
+# )
+#
 # erd_object <-
 #   create_erd(
-#
 #     list(
-#       Crash = crash_tbl,
-#       Vehicle = vehicle_tbl,
-#       Occupant = occupant_tbl,
-#       Distract= distract_tbl),
+#       students = students_tbl,
+#       courses = courses_tbl,
+#       enrollment = enrollment_tbl,
+#       department = department_tbl,
+#       facutlry = faculty_tbl
+#       ),
 #     relationships)
 #
 #
