@@ -14,6 +14,7 @@
 # courses_tbl <- data.frame(
 #   crs_id = c("water101", "evil205", "water202"),
 #   fac_id = c("01pl", "03pe", "02mi"),
+#   dep_id = c("water", "evil", "water"),
 #   course = c("Swimming", "Human-chasing", "Dives")
 # )
 #
