@@ -15,7 +15,8 @@ Authors@R: c(
   )
 RoxygenNote: 7.3.1
 Depends: 
-    DiagrammeR
+    DiagrammeR,
+    dplyr
 Suggests: 
     knitr,
     rmarkdown
