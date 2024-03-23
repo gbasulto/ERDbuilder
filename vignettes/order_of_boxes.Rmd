@@ -3,8 +3,10 @@ title: "Order of boxes"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Order of boxes}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -14,14 +16,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+
+```{r setup, message=FALSE}
+```
+
+
+
+```{r, eval = FALSE}
 library(ERDbuilder)
-
-
-
 library(incidentally)
-library(tidyverse)
-library(janitor)
 
 # https://cran.r-project.org/web/packages/incidentally/vignettes/congress.html
 
