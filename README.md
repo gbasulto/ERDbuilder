@@ -108,6 +108,7 @@ edr_plot2 <- render_erd(erd_object, label_distance = 2.0, label_angle = -25)
 
 # Plot ERD _____________________________________________________________________
 edr_plot2
+#> Google Chrome was not found. Try setting the `CHROMOTE_CHROME` environment variable to the executable of a Chromium-based browser, such as Google Chrome, Chromium or Brave.
 ```
 
 <img src="man/figures/README-example2-1.png" width="100%" />

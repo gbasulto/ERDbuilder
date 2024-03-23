@@ -52,7 +52,6 @@ remotes::install_github("gbasulto/ERDbuilder")
 
 : Functions and Objects in "ERDbuilder" package
 
-
 ## Example 1
 
 This is a basic example which shows you how to solve a common problem:
@@ -118,7 +117,6 @@ edr_plot2
 #   tiff::writeTIFF("edr_plot2.tiff")
 
 ```
-
 
 ## Example 2
 
