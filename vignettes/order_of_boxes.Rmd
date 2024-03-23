@@ -25,6 +25,11 @@ knitr::opts_chunk$set(
 ```{r, eval = FALSE}
 library(ERDbuilder)
 library(incidentally)
+library(janitor)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(gt)
 
 # https://cran.r-project.org/web/packages/incidentally/vignettes/congress.html
 
@@ -50,9 +55,21 @@ cosponsors_tbl <-
   select(id, bill)
 
 
-cosponsors_tbl |> head()
-legislators_tbl |> head()
-bills_tbl |> head()
+my_gt <- function(df) {
+  df |> 
+    gt() |>
+    tab_style(
+      style = cell_fill(color = "darkolivegreen1"),
+      locations = cells_column_labels()
+    )
+}
+
+
+gt_group(
+  cosponsors_tbl |> head(5) |> my_gt(),
+  legislators_tbl |> head(5) |> my_gt(),
+  bills_tbl |> head(5) |> my_gt()
+)
 
 
 relationships <- list(
@@ -71,7 +88,7 @@ erd <- create_erd(
   relationships
 )
 
-render_erd(erd)
+render_erd(erd, label_distance = 0)
 
 ###   Legislators -> Cosponsors -> Bills
 
@@ -93,7 +110,7 @@ erd <- create_erd(
   relationships
 )
 
-render_erd(erd)
+render_erd(erd, label_distance = 0)
 
 ### Bills -> Cosponsors -> Legislators
 
@@ -115,7 +132,7 @@ erd <- create_erd(
   relationships
 )
 
-render_erd(erd)
+render_erd(erd, label_distance = 0)
 
 
 ```
