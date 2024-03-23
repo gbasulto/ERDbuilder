@@ -14,7 +14,7 @@ Authors@R: c(
            email = "basulto@iastate.edu")
   )
 RoxygenNote: 7.3.1
-Depends: 
+Imports: 
     DiagrammeR,
     dplyr
 Suggests: 
