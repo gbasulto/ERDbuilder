@@ -122,7 +122,7 @@ edr_plot2
 
 ```{r example1, eval = TRUE, warning=FALSE, message=FALSE}
 
-## Load packages _______________________________________________________________
+## Load packages ______________________________________________________________
 library(ERDbuilder)
 library(dplyr)
 library(readr)

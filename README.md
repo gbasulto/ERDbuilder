@@ -55,16 +55,6 @@ This is a basic example which shows you how to solve a common problem:
 
 ## Load packages _______________________________________________________________
 library(ERDbuilder)
-#> Loading required package: DiagrammeR
-#> Loading required package: dplyr
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
 ## Create datasets _____________________________________________________________
 
@@ -132,7 +122,7 @@ edr_plot2
 
 ``` r
 
-## Load packages _______________________________________________________________
+## Load packages ______________________________________________________________
 library(ERDbuilder)
 library(dplyr)
 library(readr)
