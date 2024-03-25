@@ -16,7 +16,8 @@ Authors@R: c(
 RoxygenNote: 7.3.1
 Imports: 
     DiagrammeR,
-    dplyr
+    dplyr,
+    gt
 Suggests: 
     knitr,
     rmarkdown
