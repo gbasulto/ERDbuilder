@@ -14,17 +14,24 @@ knitr::opts_chunk$set(
 )
 ```
 
+Building an ERD is easy with `ERDbuilder` with the workflow presented in this vignette. In short, the steps are:
+
+1. Display all entities
+1. Define relationships
+1. Specify key attributes
+1. Define entity relationships
+1. Adjust parameters
+
 ```{r setup}
 library(ERDbuilder)
 ```
 
-```{r, eval = FALSE}
-
-
+```{r, eval = TRUE}
 # Load Packages -----------------------------------------------------------
 
 library(ERDbuilder)
 library(gt)
+library(dplyr)
 
 # Define entities ---------------------------------------------------------
 
@@ -79,8 +86,12 @@ gt_group(
   my_gt(faculty_tbl)
 )
 
-# Desired ERD    ----------------------------------------------------
+```
 
+# Desired ERD
+
+
+```{r, eval = TRUE}
 {
   ## Define relationships
   relationships <- list(
@@ -116,8 +127,11 @@ gt_group(
   ## Render ERD
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
+```
 
+## Display all entities
 
+```{r, eval = TRUE}
 # 1. Display table attributes --------------------------------------------------
 
 {
@@ -139,7 +153,12 @@ gt_group(
   ## Render ERD
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
+```
 
+
+## Define Relationships
+
+```{r, eval = TRUE}
 # 2. Define Relationships (Attempt 1)-------------------------------
 
 {
@@ -209,9 +228,11 @@ gt_group(
   
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
+```
 
-# 3. Highlight key attributes -------------------------------------------------
+## Highlight key attributes
 
+```{r, eval = TRUE}
 {
   ## Define relationships
   relationships <- list(
@@ -247,9 +268,11 @@ gt_group(
   ## Render ERD
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
+```
 
-# 4. Define entity relationships ---------------------------------------------
+## Define entity relationships 
 
+```{r, eval = TRUE}
 {
   ## Define relationships
   relationships <- list(
@@ -285,9 +308,11 @@ gt_group(
   ## Render ERD
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
+```
 
-# 5. Adjust parameters -------------------------------------------------
+## Adjust parameters
 
+```{r, eval = TRUE}
 {
   ## Define relationships
   relationships <- list(
