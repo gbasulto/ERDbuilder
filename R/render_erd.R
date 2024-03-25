@@ -160,7 +160,7 @@ render_erd <- function(
   graph <- DiagrammeR::grViz(
     paste0(
       "graph erd {\n",
-      "rankdir=LR; node [shape=record];\n",
+      "rankdir=LR; node [shape=record]; edge[color=grey70]\n",
       "nodesep=0.75; ranksep=1.25;\n",
       erd_code,
       legend_code,
