@@ -28,6 +28,14 @@ The order in which the attribute tables – or entities – appear in the ERD is
 
 ## ERDs
 
+![ERD 1](images/order_of_boxes_erd_01.png)
+
+![ERD 2](images/order_of_boxes_erd_02.png)
+
+![ERD 3](images/order_of_boxes_erd_03.png)
+
+## Code
+
 ```{r setup, message=FALSE}
 ```
 
