@@ -1,8 +1,8 @@
 ---
-title: "Order of entities"
+title: "Order of Entities"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Order of entities}
+  %\VignetteIndexEntry{Order of Entities}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -25,6 +25,16 @@ The order in which the attribute tables – or entities – appear in the ERD is
 | Cosponsors                                      |
 |-------------------------------------------------|
 | ![](images/order_of_boxes_cosponsors_table.png) |
+
+## ERDs
+
+![ERD 1](images/order_of_boxes_erd_01.png)
+
+![ERD 2](images/order_of_boxes_erd_02.png)
+
+![ERD 3](images/order_of_boxes_erd_03.png)
+
+## Code
 
 ```{r setup, message=FALSE}
 ```
@@ -70,12 +80,6 @@ my_gt <- function(df) {
       locations = cells_column_labels()
     )
 }
-
-
-cosponsors_tbl |> head(5) |> my_gt()
-legislators_tbl |> head(5) |> my_gt()
-bills_tbl |> head(5) |> my_gt()
-
 
 gt_group(
   cosponsors_tbl |> head(5) |> my_gt(),
