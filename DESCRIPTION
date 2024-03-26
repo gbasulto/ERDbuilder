@@ -6,7 +6,7 @@ Description: Build Entity Relationship Diagrams (ERD).
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/gbasulto/ERDbuilder
+URL: https://github.com/gbasulto/ERDbuilder, https://gbasulto.github.io/ERDbuilder/
 BugReports: https://github.com/gbasulto/ERDbuilder/issues
 Authors@R: c(
     person("Jonathan", "Wood", role = "aut", email = "jwood2@iastate.edu"),
