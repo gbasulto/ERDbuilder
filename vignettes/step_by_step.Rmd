@@ -3,8 +3,10 @@ title: "Step by Step"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Step by Step}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -16,11 +18,11 @@ knitr::opts_chunk$set(
 
 Building an ERD is easy with `ERDbuilder` with the workflow presented in this vignette. In short, the steps are:
 
-1. Display all entities
-1. Define relationships
-1. Specify key attributes
-1. Define entity relationships
-1. Adjust parameters
+1.  Display all entities
+2.  Define relationships
+3.  Specify key attributes
+4.  Define entity relationships
+5.  Adjust parameters
 
 ```{r setup}
 library(ERDbuilder)
@@ -90,7 +92,6 @@ gt_group(
 
 # Desired ERD
 
-
 ```{r, eval = TRUE}
 {
   ## Define relationships
@@ -154,7 +155,6 @@ gt_group(
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 }
 ```
-
 
 ## Define Relationships
 
@@ -270,7 +270,7 @@ gt_group(
 }
 ```
 
-## Define entity relationships 
+## Define entity relationships
 
 ```{r, eval = TRUE}
 {
@@ -355,4 +355,3 @@ perform_join(erd_object, c("courses", "enrollment", "department"))
 
 
 ```
-
