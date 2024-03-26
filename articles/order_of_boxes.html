@@ -78,6 +78,7 @@
 
     
     
+<p><img src="images/order_of_boxes_bills_table.png"></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.zacharyneal.com/backbone" class="external-link">incidentally</a></span><span class="op">)</span></span>
@@ -119,6 +120,11 @@
 <span>      locations <span class="op">=</span> <span class="fu"><a href="https://gt.rstudio.com/reference/cells_column_labels.html" class="external-link">cells_column_labels</a></span><span class="op">(</span><span class="op">)</span></span>
 <span>    <span class="op">)</span></span>
 <span><span class="op">}</span></span>
+<span></span>
+<span></span>
+<span><span class="va">cosponsors_tbl</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">my_gt</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">legislators_tbl</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">my_gt</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">bills_tbl</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">my_gt</span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span></span>
 <span><span class="fu"><a href="https://gt.rstudio.com/reference/gt_group.html" class="external-link">gt_group</a></span><span class="op">(</span></span>
