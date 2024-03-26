@@ -1,8 +1,8 @@
 ---
-title: "Order of boxes"
+title: "Order of entities"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Order of boxes}
+  %\VignetteIndexEntry{Order of entities}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 The order in which the attribute tables – or entities – appear in the ERD is determined by how the relationships are established.
 
 | Bills                                      | Senators                                      |
-|--------------------------------------------|-----------------------------------------------|
+|-----------------------------------|-------------------------------------|
 | ![](images/order_of_boxes_bills_table.png) | ![](images/order_of_boxes_senators_table.png) |
 
 | Cosponsors                                      |
