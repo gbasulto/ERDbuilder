@@ -78,7 +78,30 @@
 
     
     
-<p><img src="images/order_of_boxes_bills_table.png"></p>
+<p>The order in which the attribute tables – or entities – appear in the
+ERD is determined by how the relationships are established.</p>
+<table class="table">
+<colgroup>
+<col width="48%">
+<col width="51%">
+</colgroup>
+<thead><tr class="header">
+<th>Bills</th>
+<th>Senators</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><img src="images/order_of_boxes_bills_table.png"></td>
+<td><img src="images/order_of_boxes_senators_table.png"></td>
+</tr></tbody>
+</table>
+<table class="table">
+<thead><tr class="header">
+<th>Cosponsors</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><img src="images/order_of_boxes_cosponsors_table.png"></td>
+</tr></tbody>
+</table>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.zacharyneal.com/backbone" class="external-link">incidentally</a></span><span class="op">)</span></span>
