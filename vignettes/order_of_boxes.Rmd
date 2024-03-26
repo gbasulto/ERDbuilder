@@ -16,11 +16,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+![](images/order_of_boxes_bills_table.png)
 
 ```{r setup, message=FALSE}
 ```
-
-
 
 ```{r, eval = FALSE}
 library(ERDbuilder)
@@ -63,6 +62,11 @@ my_gt <- function(df) {
       locations = cells_column_labels()
     )
 }
+
+
+cosponsors_tbl |> head(5) |> my_gt()
+legislators_tbl |> head(5) |> my_gt()
+bills_tbl |> head(5) |> my_gt()
 
 
 gt_group(
