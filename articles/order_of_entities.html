@@ -138,9 +138,6 @@ complete example is in the code section.</p>
 This was achieved by linking legislators to cosponsors first, and then
 cosponsors to bills in the relationships list, shown in the code below.
 The complete example is in the code section.</p>
-<div class="float">
-<img src="images/order_of_boxes_erd_02.png" alt="Figure 2: ERD 2."><div class="figcaption">Figure 2: ERD 2.</div>
-</div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>  Legislators <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -150,6 +147,9 @@ The complete example is in the code section.</p>
 <span>    Bills <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>bill <span class="op">=</span> <span class="st">"bill"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"&gt;|"</span>, <span class="st">"||"</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
+<div class="float">
+<img src="images/order_of_boxes_erd_02.png" alt="Figure 2: ERD 2."><div class="figcaption">Figure 2: ERD 2.</div>
+</div>
 <p>Finally, Figure 3 was produced in a similar fashion, but in reverse
 order; the relationships list definition is shown in the code below. The
 complete example is in the code section.</p>
@@ -170,7 +170,9 @@ complete example is in the code section.</p>
 <h2 id="code">Code<a class="anchor" aria-label="anchor" href="#code"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span></span>
+<span><span class="co">## Load packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.zacharyneal.com/backbone" class="external-link">incidentally</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor" class="external-link">janitor</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
@@ -180,6 +182,7 @@ complete example is in the code section.</p>
 <span></span>
 <span><span class="co"># https://cran.r-project.org/web/packages/incidentally/vignettes/congress.html</span></span>
 <span></span>
+<span><span class="co">## Download data for example</span></span>
 <span><span class="va">I</span> <span class="op">&lt;-</span> <span class="fu">incidence.from.congress</span><span class="op">(</span></span>
 <span>  session <span class="op">=</span> <span class="fl">115</span>, </span>
 <span>  types <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"sres"</span><span class="op">)</span>, </span>
