@@ -94,7 +94,7 @@ erd_object <- create_erd(
   relationships)
 
 # Render the ERD graphically ___________________________________________________
-edr_plot2 <- render_erd(erd_object, label_distance = 2.0, label_angle = -25)
+edr_plot2 <- render_erd(erd_object, label_distance = 0, label_angle = -25)
 
 # Plot ERD _____________________________________________________________________
 edr_plot2
@@ -186,7 +186,7 @@ joined_data <-
 ## Render plot _________________________________________________________________
 
 edr_plot <- 
-  render_erd(erd_object, label_distance = 3.0, label_angle = 15, n = 20)
+  render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 
 edr_plot
 ```
