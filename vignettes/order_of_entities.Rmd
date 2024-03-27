@@ -32,18 +32,52 @@ For this example, US Senate bill data for Session 115 were utilized; they were d
 
 ## ERDs
 
-There are three entities: cosponsors, legislators, and bills. The first
+There are three entities: cosponsors, legislators, and bills. The cosponsor's data is linked to legislators and bills, but legislators and bills are not directly related.
 
-![ERD 1](images/order_of_boxes_erd_01.png)
+Figure 1 was produced by linking the cosponsors' table to legislators and bills in the relationships list, like in the code below. The complete example is in the code section.
 
-![ERD 2](images/order_of_boxes_erd_02.png)
+```{r, eval = FALSE}
+relationships <- list(
+  Cosponsors = list(
+    Legislators = list(id = "id", relationship = c(">0", "||")),
+    Bills = list(bill = "bill", relationship = c(">|", "||"))
+  )
+)
+```
 
-![ERD 3](images/order_of_boxes_erd_03.png)
+![Figure 1: ERD 1.](images/order_of_boxes_erd_01.png)
+
+Figure 2 links legislators to cosponsors, and cosponsors to bills. This was achieved by linking legislators to cosponsors first, and then cosponsors to bills in the relationships list, shown in the code below. The complete example is in the code section.
+
+![Figure 2: ERD 2.](images/order_of_boxes_erd_02.png)
+
+```{r, eval = FALSE}
+relationships <- list(
+  Legislators = list(
+    Cosponsors = list(id = "id", relationship = c("||", "0<"))
+  ),
+  Cosponsors = list(
+    Bills = list(bill = "bill", relationship = c(">|", "||"))
+  )
+)
+```
+
+Finally, Figure 3 was produced in a similar fashion, but in reverse order; the relationships list definition is shown in the code below. The complete example is in the code section.
+
+```{r, eval = FALSE}
+relationships <- list(
+    Bills = list(
+    Cosponsors = list(bill = "bill", relationship = c("||", "|<"))
+  ),
+  Cosponsors = list(
+    Legislators = list(id = "id", relationship = c(">0", "||"))
+  )
+)
+```
+
+![Figure 3: ERD 3](images/order_of_boxes_erd_03.png)
 
 ## Code
-
-```{r setup, message=FALSE}
-```
 
 ```{r, eval = FALSE}
 library(ERDbuilder)
