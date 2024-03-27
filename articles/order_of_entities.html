@@ -191,10 +191,9 @@ complete example is in the code section.</p>
 <span>  narrative <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span></span>
+<span><span class="co">## Define entities. Cosponsors table required some formatting.</span></span>
 <span><span class="va">legislators_tbl</span> <span class="op">&lt;-</span> <span class="va">I</span><span class="op">$</span><span class="va">legislator</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">bills_tbl</span> <span class="op">&lt;-</span> <span class="va">I</span><span class="op">$</span><span class="va">bills</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">clean_names</span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## </span></span>
 <span><span class="va">cosponsors_tbl</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="va">I</span><span class="op">$</span><span class="va">matrix</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -204,7 +203,7 @@ complete example is in the code section.</p>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">legislators_tbl</span>, by <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/join_by.html" class="external-link">join_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">id</span>, <span class="va">bill</span><span class="op">)</span></span>
 <span></span>
-<span></span>
+<span><span class="co">## Show the first five records of every entity</span></span>
 <span><span class="va">my_gt</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">df</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -221,6 +220,8 @@ complete example is in the code section.</p>
 <span><span class="op">)</span></span>
 <span></span>
 <span></span>
+<span><span class="co">## Figure 1</span></span>
+<span><span class="co">## Define first ERD: cosponsors linked to bills and legislators</span></span>
 <span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>  Cosponsors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>    Legislators <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"id"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"&gt;0"</span>, <span class="st">"||"</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -228,6 +229,7 @@ complete example is in the code section.</p>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
+<span><span class="co">## Create ERD</span></span>
 <span><span class="va">erd</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>    Cosponsors <span class="op">=</span> <span class="va">cosponsors_tbl</span>, </span>
@@ -237,8 +239,10 @@ complete example is in the code section.</p>
 <span>  <span class="va">relationships</span></span>
 <span><span class="op">)</span></span>
 <span></span>
+<span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd</span>, label_distance <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co">## Figure 2</span></span>
 <span><span class="co">###   Legislators -&gt; Cosponsors -&gt; Bills</span></span>
 <span></span>
 <span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -261,6 +265,7 @@ complete example is in the code section.</p>
 <span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd</span>, label_distance <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co">## Figure 3</span></span>
 <span><span class="co">### Bills -&gt; Cosponsors -&gt; Legislators</span></span>
 <span></span>
 <span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
