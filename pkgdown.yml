@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   order_of_entities: order_of_entities.html
   step_by_step: step_by_step.html
-last_built: 2024-03-27T14:53Z
+last_built: 2024-03-27T15:05Z
 urls:
   reference: https://gbasulto.github.io/ERDbuilder/reference
   article: https://gbasulto.github.io/ERDbuilder/articles

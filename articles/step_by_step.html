@@ -88,22 +88,15 @@ workflow presented in this vignette. In short, the steps are:</p>
 <li>Define entity relationships</li>
 <li>Adjust parameters</li>
 </ol>
+<div class="section level2">
+<h2 id="define-data-for-example">Define data for example<a class="anchor" aria-label="anchor" href="#define-data-for-example"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load Packages -----------------------------------------------------------</span></span>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com" class="external-link">gt</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
-<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     filter, lag</span></span>
-<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
 <span></span>
 <span><span class="co"># Define entities ---------------------------------------------------------</span></span>
 <span></span>
@@ -157,23 +150,23 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="fu">my_gt</span><span class="op">(</span><span class="va">department_tbl</span><span class="op">)</span>,</span>
 <span>  <span class="fu">my_gt</span><span class="op">(</span><span class="va">faculty_tbl</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<div id="skaolvkony" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#skaolvkony table {
+<div id="klwipcqvlg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#klwipcqvlg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#skaolvkony thead, #skaolvkony tbody, #skaolvkony tfoot, #skaolvkony tr, #skaolvkony td, #skaolvkony th {
+#klwipcqvlg thead, #klwipcqvlg tbody, #klwipcqvlg tfoot, #klwipcqvlg tr, #klwipcqvlg td, #klwipcqvlg th {
   border-style: none;
 }
 
-#skaolvkony p {
+#klwipcqvlg p {
   margin: 0;
   padding: 0;
 }
 
-#skaolvkony .gt_table {
+#klwipcqvlg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -199,12 +192,12 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-left-color: #D3D3D3;
 }
 
-#skaolvkony .gt_caption {
+#klwipcqvlg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#skaolvkony .gt_title {
+#klwipcqvlg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -216,7 +209,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-width: 0;
 }
 
-#skaolvkony .gt_subtitle {
+#klwipcqvlg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -228,7 +221,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-width: 0;
 }
 
-#skaolvkony .gt_heading {
+#klwipcqvlg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -240,13 +233,13 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#skaolvkony .gt_bottom_border {
+#klwipcqvlg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#skaolvkony .gt_col_headings {
+#klwipcqvlg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -261,7 +254,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#skaolvkony .gt_col_heading {
+#klwipcqvlg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -281,7 +274,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#skaolvkony .gt_column_spanner_outer {
+#klwipcqvlg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -293,15 +286,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 4px;
 }
 
-#skaolvkony .gt_column_spanner_outer:first-child {
+#klwipcqvlg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#skaolvkony .gt_column_spanner_outer:last-child {
+#klwipcqvlg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#skaolvkony .gt_column_spanner {
+#klwipcqvlg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -313,11 +306,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   width: 100%;
 }
 
-#skaolvkony .gt_spanner_row {
+#klwipcqvlg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#skaolvkony .gt_group_heading {
+#klwipcqvlg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -343,7 +336,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   text-align: left;
 }
 
-#skaolvkony .gt_empty_group_heading {
+#klwipcqvlg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -358,15 +351,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: middle;
 }
 
-#skaolvkony .gt_from_md > :first-child {
+#klwipcqvlg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#skaolvkony .gt_from_md > :last-child {
+#klwipcqvlg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#skaolvkony .gt_row {
+#klwipcqvlg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -385,7 +378,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#skaolvkony .gt_stub {
+#klwipcqvlg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -398,7 +391,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#skaolvkony .gt_stub_row_group {
+#klwipcqvlg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -412,15 +405,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: top;
 }
 
-#skaolvkony .gt_row_group_first td {
+#klwipcqvlg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#skaolvkony .gt_row_group_first th {
+#klwipcqvlg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#skaolvkony .gt_summary_row {
+#klwipcqvlg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -430,16 +423,16 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#skaolvkony .gt_first_summary_row {
+#klwipcqvlg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#skaolvkony .gt_first_summary_row.thick {
+#klwipcqvlg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#skaolvkony .gt_last_summary_row {
+#klwipcqvlg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -449,7 +442,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#skaolvkony .gt_grand_summary_row {
+#klwipcqvlg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -459,7 +452,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#skaolvkony .gt_first_grand_summary_row {
+#klwipcqvlg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -469,7 +462,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-color: #D3D3D3;
 }
 
-#skaolvkony .gt_last_grand_summary_row_top {
+#klwipcqvlg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -479,11 +472,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#skaolvkony .gt_striped {
+#klwipcqvlg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#skaolvkony .gt_table_body {
+#klwipcqvlg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -492,7 +485,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#skaolvkony .gt_footnotes {
+#klwipcqvlg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -506,7 +499,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#skaolvkony .gt_footnote {
+#klwipcqvlg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -515,7 +508,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#skaolvkony .gt_sourcenotes {
+#klwipcqvlg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -529,7 +522,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#skaolvkony .gt_sourcenote {
+#klwipcqvlg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -537,63 +530,63 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#skaolvkony .gt_left {
+#klwipcqvlg .gt_left {
   text-align: left;
 }
 
-#skaolvkony .gt_center {
+#klwipcqvlg .gt_center {
   text-align: center;
 }
 
-#skaolvkony .gt_right {
+#klwipcqvlg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#skaolvkony .gt_font_normal {
+#klwipcqvlg .gt_font_normal {
   font-weight: normal;
 }
 
-#skaolvkony .gt_font_bold {
+#klwipcqvlg .gt_font_bold {
   font-weight: bold;
 }
 
-#skaolvkony .gt_font_italic {
+#klwipcqvlg .gt_font_italic {
   font-style: italic;
 }
 
-#skaolvkony .gt_super {
+#klwipcqvlg .gt_super {
   font-size: 65%;
 }
 
-#skaolvkony .gt_footnote_marks {
+#klwipcqvlg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#skaolvkony .gt_asterisk {
+#klwipcqvlg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#skaolvkony .gt_indent_1 {
+#klwipcqvlg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#skaolvkony .gt_indent_2 {
+#klwipcqvlg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#skaolvkony .gt_indent_3 {
+#klwipcqvlg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#skaolvkony .gt_indent_4 {
+#klwipcqvlg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#skaolvkony .gt_indent_5 {
+#klwipcqvlg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -630,23 +623,23 @@ workflow presented in this vignette. In short, the steps are:</p>
 </tbody>
 </table>
 </div>
-<div id="trbwqbenov" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#trbwqbenov table {
+<div id="vsurbcdzjh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vsurbcdzjh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#trbwqbenov thead, #trbwqbenov tbody, #trbwqbenov tfoot, #trbwqbenov tr, #trbwqbenov td, #trbwqbenov th {
+#vsurbcdzjh thead, #vsurbcdzjh tbody, #vsurbcdzjh tfoot, #vsurbcdzjh tr, #vsurbcdzjh td, #vsurbcdzjh th {
   border-style: none;
 }
 
-#trbwqbenov p {
+#vsurbcdzjh p {
   margin: 0;
   padding: 0;
 }
 
-#trbwqbenov .gt_table {
+#vsurbcdzjh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -672,12 +665,12 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-left-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_caption {
+#vsurbcdzjh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#trbwqbenov .gt_title {
+#vsurbcdzjh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -689,7 +682,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-width: 0;
 }
 
-#trbwqbenov .gt_subtitle {
+#vsurbcdzjh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -701,7 +694,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-width: 0;
 }
 
-#trbwqbenov .gt_heading {
+#vsurbcdzjh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -713,13 +706,13 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_bottom_border {
+#vsurbcdzjh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_col_headings {
+#vsurbcdzjh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -734,7 +727,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_col_heading {
+#vsurbcdzjh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -754,7 +747,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#trbwqbenov .gt_column_spanner_outer {
+#vsurbcdzjh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -766,15 +759,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 4px;
 }
 
-#trbwqbenov .gt_column_spanner_outer:first-child {
+#vsurbcdzjh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#trbwqbenov .gt_column_spanner_outer:last-child {
+#vsurbcdzjh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#trbwqbenov .gt_column_spanner {
+#vsurbcdzjh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -786,11 +779,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   width: 100%;
 }
 
-#trbwqbenov .gt_spanner_row {
+#vsurbcdzjh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#trbwqbenov .gt_group_heading {
+#vsurbcdzjh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -816,7 +809,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   text-align: left;
 }
 
-#trbwqbenov .gt_empty_group_heading {
+#vsurbcdzjh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -831,15 +824,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: middle;
 }
 
-#trbwqbenov .gt_from_md > :first-child {
+#vsurbcdzjh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#trbwqbenov .gt_from_md > :last-child {
+#vsurbcdzjh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#trbwqbenov .gt_row {
+#vsurbcdzjh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -858,7 +851,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#trbwqbenov .gt_stub {
+#vsurbcdzjh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -871,7 +864,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#trbwqbenov .gt_stub_row_group {
+#vsurbcdzjh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -885,15 +878,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: top;
 }
 
-#trbwqbenov .gt_row_group_first td {
+#vsurbcdzjh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#trbwqbenov .gt_row_group_first th {
+#vsurbcdzjh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#trbwqbenov .gt_summary_row {
+#vsurbcdzjh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -903,16 +896,16 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#trbwqbenov .gt_first_summary_row {
+#vsurbcdzjh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_first_summary_row.thick {
+#vsurbcdzjh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#trbwqbenov .gt_last_summary_row {
+#vsurbcdzjh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -922,7 +915,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_grand_summary_row {
+#vsurbcdzjh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -932,7 +925,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#trbwqbenov .gt_first_grand_summary_row {
+#vsurbcdzjh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -942,7 +935,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_last_grand_summary_row_top {
+#vsurbcdzjh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -952,11 +945,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_striped {
+#vsurbcdzjh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#trbwqbenov .gt_table_body {
+#vsurbcdzjh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -965,7 +958,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_footnotes {
+#vsurbcdzjh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -979,7 +972,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_footnote {
+#vsurbcdzjh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -988,7 +981,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#trbwqbenov .gt_sourcenotes {
+#vsurbcdzjh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1002,7 +995,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#trbwqbenov .gt_sourcenote {
+#vsurbcdzjh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1010,63 +1003,63 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#trbwqbenov .gt_left {
+#vsurbcdzjh .gt_left {
   text-align: left;
 }
 
-#trbwqbenov .gt_center {
+#vsurbcdzjh .gt_center {
   text-align: center;
 }
 
-#trbwqbenov .gt_right {
+#vsurbcdzjh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#trbwqbenov .gt_font_normal {
+#vsurbcdzjh .gt_font_normal {
   font-weight: normal;
 }
 
-#trbwqbenov .gt_font_bold {
+#vsurbcdzjh .gt_font_bold {
   font-weight: bold;
 }
 
-#trbwqbenov .gt_font_italic {
+#vsurbcdzjh .gt_font_italic {
   font-style: italic;
 }
 
-#trbwqbenov .gt_super {
+#vsurbcdzjh .gt_super {
   font-size: 65%;
 }
 
-#trbwqbenov .gt_footnote_marks {
+#vsurbcdzjh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#trbwqbenov .gt_asterisk {
+#vsurbcdzjh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#trbwqbenov .gt_indent_1 {
+#vsurbcdzjh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#trbwqbenov .gt_indent_2 {
+#vsurbcdzjh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#trbwqbenov .gt_indent_3 {
+#vsurbcdzjh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#trbwqbenov .gt_indent_4 {
+#vsurbcdzjh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#trbwqbenov .gt_indent_5 {
+#vsurbcdzjh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1099,23 +1092,23 @@ workflow presented in this vignette. In short, the steps are:</p>
 </tbody>
 </table>
 </div>
-<div id="nofasmufco" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nofasmufco table {
+<div id="dijeorbzli" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dijeorbzli table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nofasmufco thead, #nofasmufco tbody, #nofasmufco tfoot, #nofasmufco tr, #nofasmufco td, #nofasmufco th {
+#dijeorbzli thead, #dijeorbzli tbody, #dijeorbzli tfoot, #dijeorbzli tr, #dijeorbzli td, #dijeorbzli th {
   border-style: none;
 }
 
-#nofasmufco p {
+#dijeorbzli p {
   margin: 0;
   padding: 0;
 }
 
-#nofasmufco .gt_table {
+#dijeorbzli .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1141,12 +1134,12 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-left-color: #D3D3D3;
 }
 
-#nofasmufco .gt_caption {
+#dijeorbzli .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nofasmufco .gt_title {
+#dijeorbzli .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1158,7 +1151,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-width: 0;
 }
 
-#nofasmufco .gt_subtitle {
+#dijeorbzli .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1170,7 +1163,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-width: 0;
 }
 
-#nofasmufco .gt_heading {
+#dijeorbzli .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1182,13 +1175,13 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#nofasmufco .gt_bottom_border {
+#dijeorbzli .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nofasmufco .gt_col_headings {
+#dijeorbzli .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1203,7 +1196,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#nofasmufco .gt_col_heading {
+#dijeorbzli .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1223,7 +1216,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#nofasmufco .gt_column_spanner_outer {
+#dijeorbzli .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1235,15 +1228,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 4px;
 }
 
-#nofasmufco .gt_column_spanner_outer:first-child {
+#dijeorbzli .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nofasmufco .gt_column_spanner_outer:last-child {
+#dijeorbzli .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nofasmufco .gt_column_spanner {
+#dijeorbzli .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1255,11 +1248,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   width: 100%;
 }
 
-#nofasmufco .gt_spanner_row {
+#dijeorbzli .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nofasmufco .gt_group_heading {
+#dijeorbzli .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1285,7 +1278,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   text-align: left;
 }
 
-#nofasmufco .gt_empty_group_heading {
+#dijeorbzli .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1300,15 +1293,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: middle;
 }
 
-#nofasmufco .gt_from_md > :first-child {
+#dijeorbzli .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nofasmufco .gt_from_md > :last-child {
+#dijeorbzli .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nofasmufco .gt_row {
+#dijeorbzli .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1327,7 +1320,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#nofasmufco .gt_stub {
+#dijeorbzli .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1340,7 +1333,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#nofasmufco .gt_stub_row_group {
+#dijeorbzli .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1354,15 +1347,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: top;
 }
 
-#nofasmufco .gt_row_group_first td {
+#dijeorbzli .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nofasmufco .gt_row_group_first th {
+#dijeorbzli .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nofasmufco .gt_summary_row {
+#dijeorbzli .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1372,16 +1365,16 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#nofasmufco .gt_first_summary_row {
+#dijeorbzli .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nofasmufco .gt_first_summary_row.thick {
+#dijeorbzli .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nofasmufco .gt_last_summary_row {
+#dijeorbzli .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1391,7 +1384,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nofasmufco .gt_grand_summary_row {
+#dijeorbzli .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1401,7 +1394,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#nofasmufco .gt_first_grand_summary_row {
+#dijeorbzli .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1411,7 +1404,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-color: #D3D3D3;
 }
 
-#nofasmufco .gt_last_grand_summary_row_top {
+#dijeorbzli .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1421,11 +1414,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nofasmufco .gt_striped {
+#dijeorbzli .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nofasmufco .gt_table_body {
+#dijeorbzli .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1434,7 +1427,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nofasmufco .gt_footnotes {
+#dijeorbzli .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1448,7 +1441,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#nofasmufco .gt_footnote {
+#dijeorbzli .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1457,7 +1450,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#nofasmufco .gt_sourcenotes {
+#dijeorbzli .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1471,7 +1464,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#nofasmufco .gt_sourcenote {
+#dijeorbzli .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1479,63 +1472,63 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#nofasmufco .gt_left {
+#dijeorbzli .gt_left {
   text-align: left;
 }
 
-#nofasmufco .gt_center {
+#dijeorbzli .gt_center {
   text-align: center;
 }
 
-#nofasmufco .gt_right {
+#dijeorbzli .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nofasmufco .gt_font_normal {
+#dijeorbzli .gt_font_normal {
   font-weight: normal;
 }
 
-#nofasmufco .gt_font_bold {
+#dijeorbzli .gt_font_bold {
   font-weight: bold;
 }
 
-#nofasmufco .gt_font_italic {
+#dijeorbzli .gt_font_italic {
   font-style: italic;
 }
 
-#nofasmufco .gt_super {
+#dijeorbzli .gt_super {
   font-size: 65%;
 }
 
-#nofasmufco .gt_footnote_marks {
+#dijeorbzli .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nofasmufco .gt_asterisk {
+#dijeorbzli .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nofasmufco .gt_indent_1 {
+#dijeorbzli .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nofasmufco .gt_indent_2 {
+#dijeorbzli .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nofasmufco .gt_indent_3 {
+#dijeorbzli .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nofasmufco .gt_indent_4 {
+#dijeorbzli .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nofasmufco .gt_indent_5 {
+#dijeorbzli .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1569,23 +1562,23 @@ workflow presented in this vignette. In short, the steps are:</p>
 </tbody>
 </table>
 </div>
-<div id="etsptjlypa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#etsptjlypa table {
+<div id="ciefuncbuu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ciefuncbuu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#etsptjlypa thead, #etsptjlypa tbody, #etsptjlypa tfoot, #etsptjlypa tr, #etsptjlypa td, #etsptjlypa th {
+#ciefuncbuu thead, #ciefuncbuu tbody, #ciefuncbuu tfoot, #ciefuncbuu tr, #ciefuncbuu td, #ciefuncbuu th {
   border-style: none;
 }
 
-#etsptjlypa p {
+#ciefuncbuu p {
   margin: 0;
   padding: 0;
 }
 
-#etsptjlypa .gt_table {
+#ciefuncbuu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1611,12 +1604,12 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-left-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_caption {
+#ciefuncbuu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#etsptjlypa .gt_title {
+#ciefuncbuu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1628,7 +1621,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-width: 0;
 }
 
-#etsptjlypa .gt_subtitle {
+#ciefuncbuu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1640,7 +1633,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-width: 0;
 }
 
-#etsptjlypa .gt_heading {
+#ciefuncbuu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1652,13 +1645,13 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_bottom_border {
+#ciefuncbuu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_col_headings {
+#ciefuncbuu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1673,7 +1666,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_col_heading {
+#ciefuncbuu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1693,7 +1686,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#etsptjlypa .gt_column_spanner_outer {
+#ciefuncbuu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1705,15 +1698,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 4px;
 }
 
-#etsptjlypa .gt_column_spanner_outer:first-child {
+#ciefuncbuu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#etsptjlypa .gt_column_spanner_outer:last-child {
+#ciefuncbuu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#etsptjlypa .gt_column_spanner {
+#ciefuncbuu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1725,11 +1718,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   width: 100%;
 }
 
-#etsptjlypa .gt_spanner_row {
+#ciefuncbuu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#etsptjlypa .gt_group_heading {
+#ciefuncbuu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1755,7 +1748,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   text-align: left;
 }
 
-#etsptjlypa .gt_empty_group_heading {
+#ciefuncbuu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1770,15 +1763,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: middle;
 }
 
-#etsptjlypa .gt_from_md > :first-child {
+#ciefuncbuu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#etsptjlypa .gt_from_md > :last-child {
+#ciefuncbuu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#etsptjlypa .gt_row {
+#ciefuncbuu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1797,7 +1790,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#etsptjlypa .gt_stub {
+#ciefuncbuu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1810,7 +1803,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#etsptjlypa .gt_stub_row_group {
+#ciefuncbuu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1824,15 +1817,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: top;
 }
 
-#etsptjlypa .gt_row_group_first td {
+#ciefuncbuu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#etsptjlypa .gt_row_group_first th {
+#ciefuncbuu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#etsptjlypa .gt_summary_row {
+#ciefuncbuu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1842,16 +1835,16 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#etsptjlypa .gt_first_summary_row {
+#ciefuncbuu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_first_summary_row.thick {
+#ciefuncbuu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#etsptjlypa .gt_last_summary_row {
+#ciefuncbuu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1861,7 +1854,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_grand_summary_row {
+#ciefuncbuu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1871,7 +1864,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#etsptjlypa .gt_first_grand_summary_row {
+#ciefuncbuu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1881,7 +1874,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_last_grand_summary_row_top {
+#ciefuncbuu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1891,11 +1884,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_striped {
+#ciefuncbuu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#etsptjlypa .gt_table_body {
+#ciefuncbuu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1904,7 +1897,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_footnotes {
+#ciefuncbuu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1918,7 +1911,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_footnote {
+#ciefuncbuu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1927,7 +1920,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#etsptjlypa .gt_sourcenotes {
+#ciefuncbuu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1941,7 +1934,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#etsptjlypa .gt_sourcenote {
+#ciefuncbuu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1949,63 +1942,63 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#etsptjlypa .gt_left {
+#ciefuncbuu .gt_left {
   text-align: left;
 }
 
-#etsptjlypa .gt_center {
+#ciefuncbuu .gt_center {
   text-align: center;
 }
 
-#etsptjlypa .gt_right {
+#ciefuncbuu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#etsptjlypa .gt_font_normal {
+#ciefuncbuu .gt_font_normal {
   font-weight: normal;
 }
 
-#etsptjlypa .gt_font_bold {
+#ciefuncbuu .gt_font_bold {
   font-weight: bold;
 }
 
-#etsptjlypa .gt_font_italic {
+#ciefuncbuu .gt_font_italic {
   font-style: italic;
 }
 
-#etsptjlypa .gt_super {
+#ciefuncbuu .gt_super {
   font-size: 65%;
 }
 
-#etsptjlypa .gt_footnote_marks {
+#ciefuncbuu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#etsptjlypa .gt_asterisk {
+#ciefuncbuu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#etsptjlypa .gt_indent_1 {
+#ciefuncbuu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#etsptjlypa .gt_indent_2 {
+#ciefuncbuu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#etsptjlypa .gt_indent_3 {
+#ciefuncbuu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#etsptjlypa .gt_indent_4 {
+#ciefuncbuu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#etsptjlypa .gt_indent_5 {
+#ciefuncbuu .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2030,23 +2023,23 @@ workflow presented in this vignette. In short, the steps are:</p>
 </tbody>
 </table>
 </div>
-<div id="mtzcaeomir" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mtzcaeomir table {
+<div id="vzygbotnri" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vzygbotnri table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mtzcaeomir thead, #mtzcaeomir tbody, #mtzcaeomir tfoot, #mtzcaeomir tr, #mtzcaeomir td, #mtzcaeomir th {
+#vzygbotnri thead, #vzygbotnri tbody, #vzygbotnri tfoot, #vzygbotnri tr, #vzygbotnri td, #vzygbotnri th {
   border-style: none;
 }
 
-#mtzcaeomir p {
+#vzygbotnri p {
   margin: 0;
   padding: 0;
 }
 
-#mtzcaeomir .gt_table {
+#vzygbotnri .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2072,12 +2065,12 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-left-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_caption {
+#vzygbotnri .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mtzcaeomir .gt_title {
+#vzygbotnri .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2089,7 +2082,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-width: 0;
 }
 
-#mtzcaeomir .gt_subtitle {
+#vzygbotnri .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2101,7 +2094,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-width: 0;
 }
 
-#mtzcaeomir .gt_heading {
+#vzygbotnri .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2113,13 +2106,13 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_bottom_border {
+#vzygbotnri .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_col_headings {
+#vzygbotnri .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2134,7 +2127,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_col_heading {
+#vzygbotnri .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2154,7 +2147,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#mtzcaeomir .gt_column_spanner_outer {
+#vzygbotnri .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2166,15 +2159,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 4px;
 }
 
-#mtzcaeomir .gt_column_spanner_outer:first-child {
+#vzygbotnri .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mtzcaeomir .gt_column_spanner_outer:last-child {
+#vzygbotnri .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mtzcaeomir .gt_column_spanner {
+#vzygbotnri .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2186,11 +2179,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   width: 100%;
 }
 
-#mtzcaeomir .gt_spanner_row {
+#vzygbotnri .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mtzcaeomir .gt_group_heading {
+#vzygbotnri .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2216,7 +2209,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   text-align: left;
 }
 
-#mtzcaeomir .gt_empty_group_heading {
+#vzygbotnri .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2231,15 +2224,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: middle;
 }
 
-#mtzcaeomir .gt_from_md > :first-child {
+#vzygbotnri .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mtzcaeomir .gt_from_md > :last-child {
+#vzygbotnri .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mtzcaeomir .gt_row {
+#vzygbotnri .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2258,7 +2251,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   overflow-x: hidden;
 }
 
-#mtzcaeomir .gt_stub {
+#vzygbotnri .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2271,7 +2264,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#mtzcaeomir .gt_stub_row_group {
+#vzygbotnri .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2285,15 +2278,15 @@ workflow presented in this vignette. In short, the steps are:</p>
   vertical-align: top;
 }
 
-#mtzcaeomir .gt_row_group_first td {
+#vzygbotnri .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mtzcaeomir .gt_row_group_first th {
+#vzygbotnri .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mtzcaeomir .gt_summary_row {
+#vzygbotnri .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2303,16 +2296,16 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#mtzcaeomir .gt_first_summary_row {
+#vzygbotnri .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_first_summary_row.thick {
+#vzygbotnri .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mtzcaeomir .gt_last_summary_row {
+#vzygbotnri .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2322,7 +2315,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_grand_summary_row {
+#vzygbotnri .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2332,7 +2325,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#mtzcaeomir .gt_first_grand_summary_row {
+#vzygbotnri .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2342,7 +2335,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-top-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_last_grand_summary_row_top {
+#vzygbotnri .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2352,11 +2345,11 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_striped {
+#vzygbotnri .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mtzcaeomir .gt_table_body {
+#vzygbotnri .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2365,7 +2358,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_footnotes {
+#vzygbotnri .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2379,7 +2372,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_footnote {
+#vzygbotnri .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2388,7 +2381,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#mtzcaeomir .gt_sourcenotes {
+#vzygbotnri .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2402,7 +2395,7 @@ workflow presented in this vignette. In short, the steps are:</p>
   border-right-color: #D3D3D3;
 }
 
-#mtzcaeomir .gt_sourcenote {
+#vzygbotnri .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2410,63 +2403,63 @@ workflow presented in this vignette. In short, the steps are:</p>
   padding-right: 5px;
 }
 
-#mtzcaeomir .gt_left {
+#vzygbotnri .gt_left {
   text-align: left;
 }
 
-#mtzcaeomir .gt_center {
+#vzygbotnri .gt_center {
   text-align: center;
 }
 
-#mtzcaeomir .gt_right {
+#vzygbotnri .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mtzcaeomir .gt_font_normal {
+#vzygbotnri .gt_font_normal {
   font-weight: normal;
 }
 
-#mtzcaeomir .gt_font_bold {
+#vzygbotnri .gt_font_bold {
   font-weight: bold;
 }
 
-#mtzcaeomir .gt_font_italic {
+#vzygbotnri .gt_font_italic {
   font-style: italic;
 }
 
-#mtzcaeomir .gt_super {
+#vzygbotnri .gt_super {
   font-size: 65%;
 }
 
-#mtzcaeomir .gt_footnote_marks {
+#vzygbotnri .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mtzcaeomir .gt_asterisk {
+#vzygbotnri .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mtzcaeomir .gt_indent_1 {
+#vzygbotnri .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mtzcaeomir .gt_indent_2 {
+#vzygbotnri .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mtzcaeomir .gt_indent_3 {
+#vzygbotnri .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mtzcaeomir .gt_indent_4 {
+#vzygbotnri .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mtzcaeomir .gt_indent_5 {
+#vzygbotnri .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2505,10 +2498,11 @@ workflow presented in this vignette. In short, the steps are:</p>
 </tbody>
 </table>
 </div>
+</div>
 <div class="section level2">
 <h2 id="desired-erd">Desired ERD<a class="anchor" aria-label="anchor" href="#desired-erd"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">{</span></span>
 <span>  <span class="co">## Define relationships</span></span>
 <span>  <span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -2544,11 +2538,13 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="co">## Render ERD</span></span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-2bcdb6a345711c77291e" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-2bcdb6a345711c77291e">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="section level3">
-<h3 id="display-all-entities">Display all entities<a class="anchor" aria-label="anchor" href="#display-all-entities"></a>
-</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-744ccc963b8da1f4b159" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-744ccc963b8da1f4b159">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="section level2">
+<h2 id="step-1-display-all-entities">Step 1: Display all entities<a class="anchor" aria-label="anchor" href="#step-1-display-all-entities"></a>
+</h2>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 1. Display table attributes --------------------------------------------------</span></span>
 <span></span>
 <span><span class="op">{</span></span>
@@ -2570,13 +2566,13 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="co">## Render ERD</span></span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-e5aab7fabda8ec2a629a" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-e5aab7fabda8ec2a629a">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-5188b1c8a9d395b6b23f" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-5188b1c8a9d395b6b23f">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div class="section level3">
-<h3 id="define-relationships">Define Relationships<a class="anchor" aria-label="anchor" href="#define-relationships"></a>
-</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="section level2">
+<h2 id="step-2-define-relationships">Step 2: Define relationships<a class="anchor" aria-label="anchor" href="#step-2-define-relationships"></a>
+</h2>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 2. Define Relationships (Attempt 1)-------------------------------</span></span>
 <span></span>
 <span><span class="op">{</span></span>
@@ -2611,8 +2607,8 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  </span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-94bcb8779e80f8a27c81" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-94bcb8779e80f8a27c81">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ndepartment -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-64852bd1fa5e3b1f0453" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-64852bd1fa5e3b1f0453">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ndepartment -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># 2. Define Relationships -------------------------------------------------------</span></span>
 <span></span>
@@ -2648,13 +2644,13 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  </span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-95d3477b3ce718c9dbec" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-95d3477b3ce718c9dbec">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-b2593e8afbf54dccac57" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-b2593e8afbf54dccac57">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div class="section level3">
-<h3 id="highlight-key-attributes">Highlight key attributes<a class="anchor" aria-label="anchor" href="#highlight-key-attributes"></a>
-</h3>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="section level2">
+<h2 id="step-3-highlight-key-attributes">Step 3: Highlight key attributes<a class="anchor" aria-label="anchor" href="#step-3-highlight-key-attributes"></a>
+</h2>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">{</span></span>
 <span>  <span class="co">## Define relationships</span></span>
 <span>  <span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -2690,13 +2686,13 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="co">## Render ERD</span></span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-67d6d058bd102b66c003" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-67d6d058bd102b66c003">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-a306e34f9cb78150d9ea" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-a306e34f9cb78150d9ea">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div class="section level3">
-<h3 id="define-entity-relationships">Define entity relationships<a class="anchor" aria-label="anchor" href="#define-entity-relationships"></a>
-</h3>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="section level2">
+<h2 id="step-4-define-entity-relationships">Step 4: Define entity relationships<a class="anchor" aria-label="anchor" href="#step-4-define-entity-relationships"></a>
+</h2>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">{</span></span>
 <span>  <span class="co">## Define relationships</span></span>
 <span>  <span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -2732,13 +2728,13 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="co">## Render ERD</span></span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-5542d8948e52ecdec477" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-5542d8948e52ecdec477">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-38b8540366ce7bd2a43c" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-38b8540366ce7bd2a43c">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div class="section level3">
-<h3 id="adjust-parameters">Adjust parameters<a class="anchor" aria-label="anchor" href="#adjust-parameters"></a>
-</h3>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="section level2">
+<h2 id="step-5-adjust-parameters">Step 5: Adjust parameters<a class="anchor" aria-label="anchor" href="#step-5-adjust-parameters"></a>
+</h2>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">{</span></span>
 <span>  <span class="co">## Define relationships</span></span>
 <span>  <span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -2774,8 +2770,8 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span>  <span class="co">## Render ERD</span></span>
 <span>  <span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">2</span>, label_angle <span class="op">=</span> <span class="fl">50</span>, n <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-1f1d01f67796fe503bfc" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-1f1d01f67796fe503bfc">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=2, labelangle=50];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-95ce714c04c033912750" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-95ce714c04c033912750">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=2, labelangle=50];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># Perform joins -----------------------------------------------------------</span></span>
 <span></span>
@@ -2787,7 +2783,6 @@ workflow presented in this vignette. In short, the steps are:</p>
 <span><span class="co">#&gt; 2  evil205   03pe   evil Human-chasing   hu1           A Evil procurement</span></span>
 <span><span class="co">#&gt; 3  evil205   03pe   evil Human-chasing   de2           A Evil procurement</span></span>
 <span><span class="co">#&gt; 4 water202   04mi  water         Dives   de2           F Water activities</span></span></code></pre></div>
-</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
