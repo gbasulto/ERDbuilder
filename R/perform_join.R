@@ -176,6 +176,15 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
     }
 
     cat("Performing join: Using", join_type, "for table", table_name, "\n")
+    join_type <- switch(join_type,
+                        inner_join = dplyr::inner_join,
+                        full_join = dplyr::full_join,
+                        left_join = dplyr::left_join,
+                        right_join = dplyr::right_join,
+                        semi_join = dplyr::semi_join,
+                        anti_join = dplyr::anti_join)
+
+    if (is.null(join_type)) stop("Invalid join.")
 
     join_vars_char <- stats::setNames(names(join_vars), join_vars)
     main_table <- do.call(
