@@ -101,10 +101,9 @@ I <- incidence.from.congress(
   narrative = TRUE)
 
 
+## Define entities. Cosponsors table required some formatting.
 legislators_tbl <- I$legislator |> as_tibble()
 bills_tbl <- I$bills |> as_tibble() |> clean_names()
-
-## 
 cosponsors_tbl <- 
   I$matrix |> 
   as.data.frame() |>
@@ -114,7 +113,7 @@ cosponsors_tbl <-
   left_join(legislators_tbl, by = join_by(name)) |> 
   select(id, bill)
 
-
+## Show the first five records of every entity
 my_gt <- function(df) {
   df |> 
     gt() |>
@@ -131,6 +130,8 @@ gt_group(
 )
 
 
+## Figure 1
+## Define first ERD: cosponsors linked to bills and legislators
 relationships <- list(
   Cosponsors = list(
     Legislators = list(id = "id", relationship = c(">0", "||")),
@@ -138,6 +139,7 @@ relationships <- list(
   )
 )
 
+## Create ERD
 erd <- create_erd(
   list(
     Cosponsors = cosponsors_tbl, 
@@ -147,8 +149,10 @@ erd <- create_erd(
   relationships
 )
 
+## Render ERD
 render_erd(erd, label_distance = 0)
 
+## Figure 2
 ###   Legislators -> Cosponsors -> Bills
 
 relationships <- list(
@@ -171,6 +175,7 @@ erd <- create_erd(
 
 render_erd(erd, label_distance = 0)
 
+## Figure 3
 ### Bills -> Cosponsors -> Legislators
 
 relationships <- list(
