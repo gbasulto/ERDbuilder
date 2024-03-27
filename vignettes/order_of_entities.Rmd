@@ -49,8 +49,6 @@ relationships <- list(
 
 Figure 2 links legislators to cosponsors, and cosponsors to bills. This was achieved by linking legislators to cosponsors first, and then cosponsors to bills in the relationships list, shown in the code below. The complete example is in the code section.
 
-![Figure 2: ERD 2.](images/order_of_boxes_erd_02.png)
-
 ```{r, eval = FALSE}
 relationships <- list(
   Legislators = list(
@@ -61,6 +59,8 @@ relationships <- list(
   )
 )
 ```
+
+![Figure 2: ERD 2.](images/order_of_boxes_erd_02.png)
 
 Finally, Figure 3 was produced in a similar fashion, but in reverse order; the relationships list definition is shown in the code below. The complete example is in the code section.
 
@@ -80,6 +80,8 @@ relationships <- list(
 ## Code
 
 ```{r, eval = FALSE}
+
+## Load packages
 library(ERDbuilder)
 library(incidentally)
 library(janitor)
@@ -90,6 +92,7 @@ library(gt)
 
 # https://cran.r-project.org/web/packages/incidentally/vignettes/congress.html
 
+## Download data for example
 I <- incidence.from.congress(
   session = 115, 
   types = c("sres"), 
