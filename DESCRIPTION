@@ -1,8 +1,8 @@
 Package: ERDbuilder
 Type: Package
-Title: Entity Relationship Diagrams Build
+Title: Entity Relationship Diagrams Builder
 Version: 0.1.0
-Description: Build Entity Relationship Diagrams (ERD).
+Description: Build entity relationship diagrams (ERD) to specify the nature of the relationship between tables in a database.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
@@ -19,5 +19,6 @@ Imports:
     dplyr
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    gt
 VignetteBuilder: knitr
