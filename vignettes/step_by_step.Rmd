@@ -24,11 +24,9 @@ Building an ERD is easy with `ERDbuilder` with the workflow presented in this vi
 4.  Define entity relationships
 5.  Adjust parameters
 
-```{r setup}
-library(ERDbuilder)
-```
+## Define data for example
 
-```{r, eval = TRUE}
+```{r setup, eval = TRUE, message=FALSE}
 # Load Packages -----------------------------------------------------------
 
 library(ERDbuilder)
@@ -90,7 +88,7 @@ gt_group(
 
 ```
 
-# Desired ERD
+## Desired ERD
 
 ```{r, eval = TRUE}
 {
@@ -130,7 +128,7 @@ gt_group(
 }
 ```
 
-## Display all entities
+## Step 1: Display all entities
 
 ```{r, eval = TRUE}
 # 1. Display table attributes --------------------------------------------------
@@ -156,7 +154,7 @@ gt_group(
 }
 ```
 
-## Define Relationships
+## Step 2: Define relationships
 
 ```{r, eval = TRUE}
 # 2. Define Relationships (Attempt 1)-------------------------------
@@ -230,7 +228,7 @@ gt_group(
 }
 ```
 
-## Highlight key attributes
+## Step 3: Highlight key attributes
 
 ```{r, eval = TRUE}
 {
@@ -270,7 +268,7 @@ gt_group(
 }
 ```
 
-## Define entity relationships
+## Step 4: Define entity relationships
 
 ```{r, eval = TRUE}
 {
@@ -310,7 +308,7 @@ gt_group(
 }
 ```
 
-## Adjust parameters
+## Step 5: Adjust parameters
 
 ```{r, eval = TRUE}
 {
