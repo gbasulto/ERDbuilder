@@ -9,10 +9,8 @@ LazyData: true
 URL: https://github.com/gbasulto/ERDbuilder, https://gbasulto.github.io/ERDbuilder/
 BugReports: https://github.com/gbasulto/ERDbuilder/issues
 Authors@R: c(
-    person("Jonathan", "Wood", role = "aut", email = "jwood2@iastate.edu"),
-    person("Guillermo", "Basulto-Elias", role = c("aut", "cre"), 
-           email = "basulto@iastate.edu")
-  )
+    person("Jonathan", "Wood", email = "jwood2@iastate.edu", role = "aut", comment = c(ORCID = "0000-0003-0131-6384")),
+    person("Guillermo", "Basulto-Elias", email = "basulto@iastate.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-5205-2190")))
 RoxygenNote: 7.3.1
 Imports: 
     DiagrammeR,
