@@ -94,21 +94,41 @@ list of acceptable values is specified in "Details."</p></dd>
     
 
 <p>An object of class "ERD", which is a named list containing two
-  elements:</p><ul><li><p>data_framesNamed list of data frames identical to <code>df_list</code>.</p></li>
-<li><p>relationshipNamed list of relationships identical to
- <code>relationships</code>.</p></li>
-</ul><p>The class attribute of this list is set to "ERD".</p>
+  elements:</p><dl><dt>data_frames</dt>
+<dd><p>Named list of data frames identical to <code>df_list</code>.</p></dd>
+
+ <dt>relationship</dt>
+<dd><p>Named list of relationships identical to
+ <code>relationships</code>.</p></dd>
+
+
+</dl><p>The class attribute of this list is set to "ERD".</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Possible values in each relationship element of the list include:</p><ul><li><p>"||"  which indicates one and only one</p></li>
-<li><p>"&gt;|"  which indicates one or more (left table)</p></li>
-<li><p>"|&lt;"  which indicates one or more (right table)</p></li>
-<li><p>"&gt;0"  which indicates zero or more (left table)</p></li>
-<li><p>"0&lt;"  which indicates zero or more (right table)</p></li>
-<li><p>"|0"  which indicates zero or one (left table)</p></li>
-<li><p>"0|"  which indicates zero or one (right table)</p></li>
-</ul><p>It is imperative that the names used in <code>df_list</code> and relationships are
+    <p>Possible values in each relationship element of the list include:</p><dl><dt>"||" </dt>
+<dd><p>which indicates one and only one</p></dd>
+
+ <dt>"&gt;|" </dt>
+<dd><p>which indicates one or more (left table)</p></dd>
+
+ <dt>"|&lt;" </dt>
+<dd><p>which indicates one or more (right table)</p></dd>
+
+ <dt>"&gt;0" </dt>
+<dd><p>which indicates zero or more (left table)</p></dd>
+
+ <dt>"0&lt;" </dt>
+<dd><p>which indicates zero or more (right table)</p></dd>
+
+ <dt>"|0" </dt>
+<dd><p>which indicates zero or one (left table)</p></dd>
+
+ <dt>"0|" </dt>
+<dd><p>which indicates zero or one (right table)</p></dd>
+
+
+</dl><p>It is imperative that the names used in <code>df_list</code> and relationships are
 consistent, as these are used for creating the ERD object and for subsequent
 operations like rendering and performing joins.</p>
 <p>Users can effortlessly encapsulate the data and relationships pertaining to
