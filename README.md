@@ -4,6 +4,9 @@
 # ERDbuilder
 
 <!-- badges: start -->
+
+[![codecov](https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/gbasulto/ERDbuilder)
+
 <!-- badges: end -->
 
 This R package creates Entity-Relationship Diagrams (ERDs). It generates
@@ -119,6 +122,9 @@ edr_plot2
 ```
 
 ## Example 2
+
+This is a second example with more entities and each entity having
+multiple attributes.
 
 ``` r
 

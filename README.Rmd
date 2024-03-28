@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
+[![codecov](https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/gbasulto/ERDbuilder)
+
 <!-- badges: end -->
 
 This R package creates Entity-Relationship Diagrams (ERDs). It generates traditional ERDs from data frames, enabling users to specify relationship cardinalities and variables involved in joins. The package also facilitates data joins based on the established ERD.
@@ -119,6 +121,8 @@ edr_plot2
 ```
 
 ## Example 2
+
+This is a second example with more entities and each entity having multiple attributes.
 
 ```{r example1, eval = TRUE, warning=FALSE, message=FALSE}
 
