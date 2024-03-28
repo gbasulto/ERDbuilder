@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![codecov](https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg)](https://codecov.io/gh/gbasulto/ERDbuilder)
+[![codecov](https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg)](https://app.codecov.io/gh/gbasulto/ERDbuilder)
 
 <!-- badges: end -->
 
@@ -48,7 +48,7 @@ remotes::install_github("gbasulto/ERDbuilder")
 | `perform_join()` | Function | Perform left join of tables |
 | `create_erd()`   | Function | Create ERD object           |
 
-Functions and Objects in “ERDbuilder” package
+Functions and Objects in the “ERDbuilder” package
 
 ## Example 1
 
