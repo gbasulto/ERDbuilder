@@ -1,7 +1,6 @@
 # # Load Packages -----------------------------------------------------------
 #
 # library(ERDbuilder)
-# library(dplyr)
 #
 # # Define entities ---------------------------------------------------------
 #
@@ -38,11 +37,11 @@
 #   dep_id = c("water", "water", "evil", "values")
 # )
 #
-# head(students_tbl)
-# head(courses_tbl)
-# head(enrollment_tbl)
-# head(department_tbl)
-# head(faculty_tbl)
+# # head(students_tbl)
+# # head(courses_tbl)
+# # head(enrollment_tbl)
+# # head(department_tbl)
+# # head(faculty_tbl)
 #
 # ## Define relationships----------------------------------------
 # relationships <- list(
