@@ -38,7 +38,7 @@
 #'   elements:
 #' \itemize{
 #'  \item{data_frames}{Named list of data frames identical to \code{df_list}.}
-#'  \item{relationship}{amed list of relationships identical to
+#'  \item{relationship}{Named list of relationships identical to
 #'  \code{relationships}.}
 #' }
 #' The class attribute of this list is set to "ERD".

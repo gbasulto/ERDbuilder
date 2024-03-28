@@ -316,7 +316,7 @@ render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 
 ## Step 5: Adjust parameters
 
-Specify the symbol distance to the edge with `label_distance`, the angle at which the edge labels are displayed with `label_angle`, and the maximum number of ros in each node table with `n`. The latter is particularly important when one of the tables has many attributes.
+Specify the symbol distance to the edge with `label_distance`, the angle at which the edge labels are displayed with `label_angle`, and the maximum number of rows in each node table with `n`. The latter is particularly important when one of the tables has many attributes.
 
 ```{r, eval = TRUE}
 ## Define relationships
