@@ -7,7 +7,7 @@
 #' list object of class "ERD".
 #'
 #' Possible values in each relationship element of the list include:
-#' \itemize{
+#' \describe{
 #'  \item{"||" }{ which indicates one and only one}
 #'  \item{">|" }{ which indicates one or more (left table)}
 #'  \item{"|<" }{ which indicates one or more (right table)}
@@ -36,7 +36,7 @@
 #'
 #' @return An object of class "ERD", which is a named list containing two
 #'   elements:
-#' \itemize{
+#' \describe{
 #'  \item{data_frames}{Named list of data frames identical to \code{df_list}.}
 #'  \item{relationship}{Named list of relationships identical to
 #'  \code{relationships}.}
