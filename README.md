@@ -26,8 +26,8 @@ names of tables to create complex graphs where:
   node label consists of the entity name and the attribute names within
   the entity.
 - Edges: Relationships between entities are represented as edges between
-  the corresponding nodes. Labels at the ends of the edges indicate the
-  type and cardinality of the relationship.
+  the corresponding nodes. Labels at the edges’ ends indicate the
+  relationship’s type and cardinality.
 
 ## Installation
 
