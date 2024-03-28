@@ -89,5 +89,6 @@
 #
 # nrow(joined_tbl) # 4
 # names(joined_tbl) ==
-#   c("crs_id", "fac_id", "dep_id", "course", "st_id", "final_grade", "department")
+#   c("crs_id", "fac_id", "dep_id", "course",
+#     "st_id", "final_grade", "department")
 # class(erd)[1] ## grViz
