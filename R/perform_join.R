@@ -175,7 +175,9 @@ perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
       join_type <- specified_joins[[table_name]]
     }
 
-    cat("Performing join: Using", join_type, "for table", table_name, "\n")
+    msg <-
+      paste("Performing join: Using", join_type, "for table", table_name, "\n")
+    message(msg)
     join_type <- switch(join_type,
                         inner_join = dplyr::inner_join,
                         full_join = dplyr::full_join,
