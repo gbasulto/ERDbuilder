@@ -5,65 +5,49 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="ERDbuilder">
 <title>Step by Step • ERDbuilder</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Step by Step">
-<meta property="og:description" content="ERDbuilder">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Step by Step">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">ERDbuilder</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/order_of_entities.html">Order of Entities</a>
-    <a class="dropdown-item" href="../articles/step_by_step.html">Step by Step</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/order_of_entities.html">Order of Entities</a></li>
+    <li><a class="dropdown-item" href="../articles/step_by_step.html">Step by Step</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../news/index.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/gbasulto/ERDbuilder/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/gbasulto/ERDbuilder/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -73,10 +57,11 @@
 <script src="step_by_step_files/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="step_by_step_files/viz-1.8.2/viz.js"></script><link href="step_by_step_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
 <script src="step_by_step_files/grViz-binding-1.0.11/grViz.js"></script><div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Step by Step</h1>
+
+      <h1>Step by Step</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/gbasulto/ERDbuilder/blob/HEAD/vignettes/step_by_step.Rmd" class="external-link"><code>vignettes/step_by_step.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/gbasulto/ERDbuilder/blob/master/vignettes/step_by_step.Rmd" class="external-link"><code>vignettes/step_by_step.Rmd</code></a></small>
       <div class="d-none name"><code>step_by_step.Rmd</code></div>
     </div>
 
@@ -156,23 +141,23 @@ step by step. The example includes five different entities.</p>
 <span>  <span class="fu">my_gt</span><span class="op">(</span><span class="va">department_tbl</span><span class="op">)</span>,</span>
 <span>  <span class="fu">my_gt</span><span class="op">(</span><span class="va">faculty_tbl</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<div id="abmfrwvkqc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#abmfrwvkqc table {
+<div id="mwlefoodfi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mwlefoodfi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#abmfrwvkqc thead, #abmfrwvkqc tbody, #abmfrwvkqc tfoot, #abmfrwvkqc tr, #abmfrwvkqc td, #abmfrwvkqc th {
+#mwlefoodfi thead, #mwlefoodfi tbody, #mwlefoodfi tfoot, #mwlefoodfi tr, #mwlefoodfi td, #mwlefoodfi th {
   border-style: none;
 }
 
-#abmfrwvkqc p {
+#mwlefoodfi p {
   margin: 0;
   padding: 0;
 }
 
-#abmfrwvkqc .gt_table {
+#mwlefoodfi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -198,12 +183,12 @@ step by step. The example includes five different entities.</p>
   border-left-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_caption {
+#mwlefoodfi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#abmfrwvkqc .gt_title {
+#mwlefoodfi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -215,7 +200,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-width: 0;
 }
 
-#abmfrwvkqc .gt_subtitle {
+#mwlefoodfi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -227,7 +212,7 @@ step by step. The example includes five different entities.</p>
   border-top-width: 0;
 }
 
-#abmfrwvkqc .gt_heading {
+#mwlefoodfi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -239,13 +224,13 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_bottom_border {
+#mwlefoodfi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_col_headings {
+#mwlefoodfi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -260,7 +245,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_col_heading {
+#mwlefoodfi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -280,7 +265,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#abmfrwvkqc .gt_column_spanner_outer {
+#mwlefoodfi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -292,15 +277,15 @@ step by step. The example includes five different entities.</p>
   padding-right: 4px;
 }
 
-#abmfrwvkqc .gt_column_spanner_outer:first-child {
+#mwlefoodfi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#abmfrwvkqc .gt_column_spanner_outer:last-child {
+#mwlefoodfi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#abmfrwvkqc .gt_column_spanner {
+#mwlefoodfi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -312,11 +297,11 @@ step by step. The example includes five different entities.</p>
   width: 100%;
 }
 
-#abmfrwvkqc .gt_spanner_row {
+#mwlefoodfi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#abmfrwvkqc .gt_group_heading {
+#mwlefoodfi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -342,7 +327,7 @@ step by step. The example includes five different entities.</p>
   text-align: left;
 }
 
-#abmfrwvkqc .gt_empty_group_heading {
+#mwlefoodfi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -357,15 +342,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: middle;
 }
 
-#abmfrwvkqc .gt_from_md > :first-child {
+#mwlefoodfi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#abmfrwvkqc .gt_from_md > :last-child {
+#mwlefoodfi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#abmfrwvkqc .gt_row {
+#mwlefoodfi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +369,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#abmfrwvkqc .gt_stub {
+#mwlefoodfi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -397,7 +382,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abmfrwvkqc .gt_stub_row_group {
+#mwlefoodfi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -411,15 +396,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: top;
 }
 
-#abmfrwvkqc .gt_row_group_first td {
+#mwlefoodfi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#abmfrwvkqc .gt_row_group_first th {
+#mwlefoodfi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#abmfrwvkqc .gt_summary_row {
+#mwlefoodfi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -429,16 +414,16 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abmfrwvkqc .gt_first_summary_row {
+#mwlefoodfi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_first_summary_row.thick {
+#mwlefoodfi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#abmfrwvkqc .gt_last_summary_row {
+#mwlefoodfi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -448,7 +433,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_grand_summary_row {
+#mwlefoodfi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -458,7 +443,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abmfrwvkqc .gt_first_grand_summary_row {
+#mwlefoodfi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -468,7 +453,7 @@ step by step. The example includes five different entities.</p>
   border-top-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_last_grand_summary_row_top {
+#mwlefoodfi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -478,11 +463,11 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_striped {
+#mwlefoodfi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#abmfrwvkqc .gt_table_body {
+#mwlefoodfi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -491,7 +476,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_footnotes {
+#mwlefoodfi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -505,7 +490,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_footnote {
+#mwlefoodfi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -514,7 +499,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abmfrwvkqc .gt_sourcenotes {
+#mwlefoodfi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -528,7 +513,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abmfrwvkqc .gt_sourcenote {
+#mwlefoodfi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -536,64 +521,73 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abmfrwvkqc .gt_left {
+#mwlefoodfi .gt_left {
   text-align: left;
 }
 
-#abmfrwvkqc .gt_center {
+#mwlefoodfi .gt_center {
   text-align: center;
 }
 
-#abmfrwvkqc .gt_right {
+#mwlefoodfi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#abmfrwvkqc .gt_font_normal {
+#mwlefoodfi .gt_font_normal {
   font-weight: normal;
 }
 
-#abmfrwvkqc .gt_font_bold {
+#mwlefoodfi .gt_font_bold {
   font-weight: bold;
 }
 
-#abmfrwvkqc .gt_font_italic {
+#mwlefoodfi .gt_font_italic {
   font-style: italic;
 }
 
-#abmfrwvkqc .gt_super {
+#mwlefoodfi .gt_super {
   font-size: 65%;
 }
 
-#abmfrwvkqc .gt_footnote_marks {
+#mwlefoodfi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#abmfrwvkqc .gt_asterisk {
+#mwlefoodfi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#abmfrwvkqc .gt_indent_1 {
+#mwlefoodfi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#abmfrwvkqc .gt_indent_2 {
+#mwlefoodfi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#abmfrwvkqc .gt_indent_3 {
+#mwlefoodfi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#abmfrwvkqc .gt_indent_4 {
+#mwlefoodfi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#abmfrwvkqc .gt_indent_5 {
+#mwlefoodfi .gt_indent_5 {
   text-indent: 25px;
+}
+
+#mwlefoodfi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mwlefoodfi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -629,23 +623,23 @@ step by step. The example includes five different entities.</p>
 </tbody>
 </table>
 </div>
-<div id="odiyvdkfaw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#odiyvdkfaw table {
+<div id="eexombwkke" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eexombwkke table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#odiyvdkfaw thead, #odiyvdkfaw tbody, #odiyvdkfaw tfoot, #odiyvdkfaw tr, #odiyvdkfaw td, #odiyvdkfaw th {
+#eexombwkke thead, #eexombwkke tbody, #eexombwkke tfoot, #eexombwkke tr, #eexombwkke td, #eexombwkke th {
   border-style: none;
 }
 
-#odiyvdkfaw p {
+#eexombwkke p {
   margin: 0;
   padding: 0;
 }
 
-#odiyvdkfaw .gt_table {
+#eexombwkke .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -671,12 +665,12 @@ step by step. The example includes five different entities.</p>
   border-left-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_caption {
+#eexombwkke .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#odiyvdkfaw .gt_title {
+#eexombwkke .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -688,7 +682,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-width: 0;
 }
 
-#odiyvdkfaw .gt_subtitle {
+#eexombwkke .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -700,7 +694,7 @@ step by step. The example includes five different entities.</p>
   border-top-width: 0;
 }
 
-#odiyvdkfaw .gt_heading {
+#eexombwkke .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -712,13 +706,13 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_bottom_border {
+#eexombwkke .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_col_headings {
+#eexombwkke .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -733,7 +727,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_col_heading {
+#eexombwkke .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -753,7 +747,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#odiyvdkfaw .gt_column_spanner_outer {
+#eexombwkke .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -765,15 +759,15 @@ step by step. The example includes five different entities.</p>
   padding-right: 4px;
 }
 
-#odiyvdkfaw .gt_column_spanner_outer:first-child {
+#eexombwkke .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#odiyvdkfaw .gt_column_spanner_outer:last-child {
+#eexombwkke .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#odiyvdkfaw .gt_column_spanner {
+#eexombwkke .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -785,11 +779,11 @@ step by step. The example includes five different entities.</p>
   width: 100%;
 }
 
-#odiyvdkfaw .gt_spanner_row {
+#eexombwkke .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#odiyvdkfaw .gt_group_heading {
+#eexombwkke .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -815,7 +809,7 @@ step by step. The example includes five different entities.</p>
   text-align: left;
 }
 
-#odiyvdkfaw .gt_empty_group_heading {
+#eexombwkke .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -830,15 +824,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: middle;
 }
 
-#odiyvdkfaw .gt_from_md > :first-child {
+#eexombwkke .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#odiyvdkfaw .gt_from_md > :last-child {
+#eexombwkke .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#odiyvdkfaw .gt_row {
+#eexombwkke .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -857,7 +851,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#odiyvdkfaw .gt_stub {
+#eexombwkke .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -870,7 +864,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#odiyvdkfaw .gt_stub_row_group {
+#eexombwkke .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -884,15 +878,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: top;
 }
 
-#odiyvdkfaw .gt_row_group_first td {
+#eexombwkke .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#odiyvdkfaw .gt_row_group_first th {
+#eexombwkke .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#odiyvdkfaw .gt_summary_row {
+#eexombwkke .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -902,16 +896,16 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#odiyvdkfaw .gt_first_summary_row {
+#eexombwkke .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_first_summary_row.thick {
+#eexombwkke .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#odiyvdkfaw .gt_last_summary_row {
+#eexombwkke .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -921,7 +915,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_grand_summary_row {
+#eexombwkke .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -931,7 +925,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#odiyvdkfaw .gt_first_grand_summary_row {
+#eexombwkke .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -941,7 +935,7 @@ step by step. The example includes five different entities.</p>
   border-top-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_last_grand_summary_row_top {
+#eexombwkke .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -951,11 +945,11 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_striped {
+#eexombwkke .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#odiyvdkfaw .gt_table_body {
+#eexombwkke .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -964,7 +958,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_footnotes {
+#eexombwkke .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -978,7 +972,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_footnote {
+#eexombwkke .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -987,7 +981,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#odiyvdkfaw .gt_sourcenotes {
+#eexombwkke .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1001,7 +995,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#odiyvdkfaw .gt_sourcenote {
+#eexombwkke .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1009,64 +1003,73 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#odiyvdkfaw .gt_left {
+#eexombwkke .gt_left {
   text-align: left;
 }
 
-#odiyvdkfaw .gt_center {
+#eexombwkke .gt_center {
   text-align: center;
 }
 
-#odiyvdkfaw .gt_right {
+#eexombwkke .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#odiyvdkfaw .gt_font_normal {
+#eexombwkke .gt_font_normal {
   font-weight: normal;
 }
 
-#odiyvdkfaw .gt_font_bold {
+#eexombwkke .gt_font_bold {
   font-weight: bold;
 }
 
-#odiyvdkfaw .gt_font_italic {
+#eexombwkke .gt_font_italic {
   font-style: italic;
 }
 
-#odiyvdkfaw .gt_super {
+#eexombwkke .gt_super {
   font-size: 65%;
 }
 
-#odiyvdkfaw .gt_footnote_marks {
+#eexombwkke .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#odiyvdkfaw .gt_asterisk {
+#eexombwkke .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#odiyvdkfaw .gt_indent_1 {
+#eexombwkke .gt_indent_1 {
   text-indent: 5px;
 }
 
-#odiyvdkfaw .gt_indent_2 {
+#eexombwkke .gt_indent_2 {
   text-indent: 10px;
 }
 
-#odiyvdkfaw .gt_indent_3 {
+#eexombwkke .gt_indent_3 {
   text-indent: 15px;
 }
 
-#odiyvdkfaw .gt_indent_4 {
+#eexombwkke .gt_indent_4 {
   text-indent: 20px;
 }
 
-#odiyvdkfaw .gt_indent_5 {
+#eexombwkke .gt_indent_5 {
   text-indent: 25px;
+}
+
+#eexombwkke .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#eexombwkke div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -1098,23 +1101,23 @@ step by step. The example includes five different entities.</p>
 </tbody>
 </table>
 </div>
-<div id="gaajttbkye" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gaajttbkye table {
+<div id="ulbfdpbcyv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ulbfdpbcyv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gaajttbkye thead, #gaajttbkye tbody, #gaajttbkye tfoot, #gaajttbkye tr, #gaajttbkye td, #gaajttbkye th {
+#ulbfdpbcyv thead, #ulbfdpbcyv tbody, #ulbfdpbcyv tfoot, #ulbfdpbcyv tr, #ulbfdpbcyv td, #ulbfdpbcyv th {
   border-style: none;
 }
 
-#gaajttbkye p {
+#ulbfdpbcyv p {
   margin: 0;
   padding: 0;
 }
 
-#gaajttbkye .gt_table {
+#ulbfdpbcyv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1140,12 +1143,12 @@ step by step. The example includes five different entities.</p>
   border-left-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_caption {
+#ulbfdpbcyv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gaajttbkye .gt_title {
+#ulbfdpbcyv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1157,7 +1160,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-width: 0;
 }
 
-#gaajttbkye .gt_subtitle {
+#ulbfdpbcyv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1169,7 +1172,7 @@ step by step. The example includes five different entities.</p>
   border-top-width: 0;
 }
 
-#gaajttbkye .gt_heading {
+#ulbfdpbcyv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1181,13 +1184,13 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_bottom_border {
+#ulbfdpbcyv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_col_headings {
+#ulbfdpbcyv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1202,7 +1205,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_col_heading {
+#ulbfdpbcyv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1222,7 +1225,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#gaajttbkye .gt_column_spanner_outer {
+#ulbfdpbcyv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1234,15 +1237,15 @@ step by step. The example includes five different entities.</p>
   padding-right: 4px;
 }
 
-#gaajttbkye .gt_column_spanner_outer:first-child {
+#ulbfdpbcyv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gaajttbkye .gt_column_spanner_outer:last-child {
+#ulbfdpbcyv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gaajttbkye .gt_column_spanner {
+#ulbfdpbcyv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1254,11 +1257,11 @@ step by step. The example includes five different entities.</p>
   width: 100%;
 }
 
-#gaajttbkye .gt_spanner_row {
+#ulbfdpbcyv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gaajttbkye .gt_group_heading {
+#ulbfdpbcyv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1284,7 +1287,7 @@ step by step. The example includes five different entities.</p>
   text-align: left;
 }
 
-#gaajttbkye .gt_empty_group_heading {
+#ulbfdpbcyv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1299,15 +1302,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: middle;
 }
 
-#gaajttbkye .gt_from_md > :first-child {
+#ulbfdpbcyv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gaajttbkye .gt_from_md > :last-child {
+#ulbfdpbcyv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gaajttbkye .gt_row {
+#ulbfdpbcyv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1326,7 +1329,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#gaajttbkye .gt_stub {
+#ulbfdpbcyv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1339,7 +1342,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#gaajttbkye .gt_stub_row_group {
+#ulbfdpbcyv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1353,15 +1356,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: top;
 }
 
-#gaajttbkye .gt_row_group_first td {
+#ulbfdpbcyv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gaajttbkye .gt_row_group_first th {
+#ulbfdpbcyv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gaajttbkye .gt_summary_row {
+#ulbfdpbcyv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1371,16 +1374,16 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#gaajttbkye .gt_first_summary_row {
+#ulbfdpbcyv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_first_summary_row.thick {
+#ulbfdpbcyv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gaajttbkye .gt_last_summary_row {
+#ulbfdpbcyv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1390,7 +1393,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_grand_summary_row {
+#ulbfdpbcyv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1400,7 +1403,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#gaajttbkye .gt_first_grand_summary_row {
+#ulbfdpbcyv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1410,7 +1413,7 @@ step by step. The example includes five different entities.</p>
   border-top-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_last_grand_summary_row_top {
+#ulbfdpbcyv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1420,11 +1423,11 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_striped {
+#ulbfdpbcyv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gaajttbkye .gt_table_body {
+#ulbfdpbcyv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1433,7 +1436,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_footnotes {
+#ulbfdpbcyv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1447,7 +1450,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_footnote {
+#ulbfdpbcyv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1456,7 +1459,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#gaajttbkye .gt_sourcenotes {
+#ulbfdpbcyv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1470,7 +1473,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#gaajttbkye .gt_sourcenote {
+#ulbfdpbcyv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1478,64 +1481,73 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#gaajttbkye .gt_left {
+#ulbfdpbcyv .gt_left {
   text-align: left;
 }
 
-#gaajttbkye .gt_center {
+#ulbfdpbcyv .gt_center {
   text-align: center;
 }
 
-#gaajttbkye .gt_right {
+#ulbfdpbcyv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gaajttbkye .gt_font_normal {
+#ulbfdpbcyv .gt_font_normal {
   font-weight: normal;
 }
 
-#gaajttbkye .gt_font_bold {
+#ulbfdpbcyv .gt_font_bold {
   font-weight: bold;
 }
 
-#gaajttbkye .gt_font_italic {
+#ulbfdpbcyv .gt_font_italic {
   font-style: italic;
 }
 
-#gaajttbkye .gt_super {
+#ulbfdpbcyv .gt_super {
   font-size: 65%;
 }
 
-#gaajttbkye .gt_footnote_marks {
+#ulbfdpbcyv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gaajttbkye .gt_asterisk {
+#ulbfdpbcyv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gaajttbkye .gt_indent_1 {
+#ulbfdpbcyv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gaajttbkye .gt_indent_2 {
+#ulbfdpbcyv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gaajttbkye .gt_indent_3 {
+#ulbfdpbcyv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gaajttbkye .gt_indent_4 {
+#ulbfdpbcyv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gaajttbkye .gt_indent_5 {
+#ulbfdpbcyv .gt_indent_5 {
   text-indent: 25px;
+}
+
+#ulbfdpbcyv .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ulbfdpbcyv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -1568,23 +1580,23 @@ step by step. The example includes five different entities.</p>
 </tbody>
 </table>
 </div>
-<div id="fwrixgpalt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fwrixgpalt table {
+<div id="kgufivjubq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kgufivjubq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fwrixgpalt thead, #fwrixgpalt tbody, #fwrixgpalt tfoot, #fwrixgpalt tr, #fwrixgpalt td, #fwrixgpalt th {
+#kgufivjubq thead, #kgufivjubq tbody, #kgufivjubq tfoot, #kgufivjubq tr, #kgufivjubq td, #kgufivjubq th {
   border-style: none;
 }
 
-#fwrixgpalt p {
+#kgufivjubq p {
   margin: 0;
   padding: 0;
 }
 
-#fwrixgpalt .gt_table {
+#kgufivjubq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1610,12 +1622,12 @@ step by step. The example includes five different entities.</p>
   border-left-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_caption {
+#kgufivjubq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fwrixgpalt .gt_title {
+#kgufivjubq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1627,7 +1639,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-width: 0;
 }
 
-#fwrixgpalt .gt_subtitle {
+#kgufivjubq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1639,7 +1651,7 @@ step by step. The example includes five different entities.</p>
   border-top-width: 0;
 }
 
-#fwrixgpalt .gt_heading {
+#kgufivjubq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1651,13 +1663,13 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_bottom_border {
+#kgufivjubq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_col_headings {
+#kgufivjubq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1672,7 +1684,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_col_heading {
+#kgufivjubq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1692,7 +1704,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#fwrixgpalt .gt_column_spanner_outer {
+#kgufivjubq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1704,15 +1716,15 @@ step by step. The example includes five different entities.</p>
   padding-right: 4px;
 }
 
-#fwrixgpalt .gt_column_spanner_outer:first-child {
+#kgufivjubq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fwrixgpalt .gt_column_spanner_outer:last-child {
+#kgufivjubq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fwrixgpalt .gt_column_spanner {
+#kgufivjubq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1724,11 +1736,11 @@ step by step. The example includes five different entities.</p>
   width: 100%;
 }
 
-#fwrixgpalt .gt_spanner_row {
+#kgufivjubq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fwrixgpalt .gt_group_heading {
+#kgufivjubq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1754,7 +1766,7 @@ step by step. The example includes five different entities.</p>
   text-align: left;
 }
 
-#fwrixgpalt .gt_empty_group_heading {
+#kgufivjubq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1769,15 +1781,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: middle;
 }
 
-#fwrixgpalt .gt_from_md > :first-child {
+#kgufivjubq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fwrixgpalt .gt_from_md > :last-child {
+#kgufivjubq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fwrixgpalt .gt_row {
+#kgufivjubq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1796,7 +1808,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#fwrixgpalt .gt_stub {
+#kgufivjubq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1809,7 +1821,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#fwrixgpalt .gt_stub_row_group {
+#kgufivjubq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1823,15 +1835,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: top;
 }
 
-#fwrixgpalt .gt_row_group_first td {
+#kgufivjubq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fwrixgpalt .gt_row_group_first th {
+#kgufivjubq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fwrixgpalt .gt_summary_row {
+#kgufivjubq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1841,16 +1853,16 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#fwrixgpalt .gt_first_summary_row {
+#kgufivjubq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_first_summary_row.thick {
+#kgufivjubq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fwrixgpalt .gt_last_summary_row {
+#kgufivjubq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1860,7 +1872,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_grand_summary_row {
+#kgufivjubq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1870,7 +1882,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#fwrixgpalt .gt_first_grand_summary_row {
+#kgufivjubq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1880,7 +1892,7 @@ step by step. The example includes five different entities.</p>
   border-top-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_last_grand_summary_row_top {
+#kgufivjubq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1890,11 +1902,11 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_striped {
+#kgufivjubq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fwrixgpalt .gt_table_body {
+#kgufivjubq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1903,7 +1915,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_footnotes {
+#kgufivjubq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1917,7 +1929,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_footnote {
+#kgufivjubq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1926,7 +1938,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#fwrixgpalt .gt_sourcenotes {
+#kgufivjubq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1940,7 +1952,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#fwrixgpalt .gt_sourcenote {
+#kgufivjubq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1948,64 +1960,73 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#fwrixgpalt .gt_left {
+#kgufivjubq .gt_left {
   text-align: left;
 }
 
-#fwrixgpalt .gt_center {
+#kgufivjubq .gt_center {
   text-align: center;
 }
 
-#fwrixgpalt .gt_right {
+#kgufivjubq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fwrixgpalt .gt_font_normal {
+#kgufivjubq .gt_font_normal {
   font-weight: normal;
 }
 
-#fwrixgpalt .gt_font_bold {
+#kgufivjubq .gt_font_bold {
   font-weight: bold;
 }
 
-#fwrixgpalt .gt_font_italic {
+#kgufivjubq .gt_font_italic {
   font-style: italic;
 }
 
-#fwrixgpalt .gt_super {
+#kgufivjubq .gt_super {
   font-size: 65%;
 }
 
-#fwrixgpalt .gt_footnote_marks {
+#kgufivjubq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fwrixgpalt .gt_asterisk {
+#kgufivjubq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fwrixgpalt .gt_indent_1 {
+#kgufivjubq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fwrixgpalt .gt_indent_2 {
+#kgufivjubq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fwrixgpalt .gt_indent_3 {
+#kgufivjubq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fwrixgpalt .gt_indent_4 {
+#kgufivjubq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fwrixgpalt .gt_indent_5 {
+#kgufivjubq .gt_indent_5 {
   text-indent: 25px;
+}
+
+#kgufivjubq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kgufivjubq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -2029,23 +2050,23 @@ step by step. The example includes five different entities.</p>
 </tbody>
 </table>
 </div>
-<div id="abkzbwxcmp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#abkzbwxcmp table {
+<div id="txvafbsnay" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#txvafbsnay table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#abkzbwxcmp thead, #abkzbwxcmp tbody, #abkzbwxcmp tfoot, #abkzbwxcmp tr, #abkzbwxcmp td, #abkzbwxcmp th {
+#txvafbsnay thead, #txvafbsnay tbody, #txvafbsnay tfoot, #txvafbsnay tr, #txvafbsnay td, #txvafbsnay th {
   border-style: none;
 }
 
-#abkzbwxcmp p {
+#txvafbsnay p {
   margin: 0;
   padding: 0;
 }
 
-#abkzbwxcmp .gt_table {
+#txvafbsnay .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2071,12 +2092,12 @@ step by step. The example includes five different entities.</p>
   border-left-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_caption {
+#txvafbsnay .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#abkzbwxcmp .gt_title {
+#txvafbsnay .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2088,7 +2109,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-width: 0;
 }
 
-#abkzbwxcmp .gt_subtitle {
+#txvafbsnay .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2100,7 +2121,7 @@ step by step. The example includes five different entities.</p>
   border-top-width: 0;
 }
 
-#abkzbwxcmp .gt_heading {
+#txvafbsnay .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2112,13 +2133,13 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_bottom_border {
+#txvafbsnay .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_col_headings {
+#txvafbsnay .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2133,7 +2154,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_col_heading {
+#txvafbsnay .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2153,7 +2174,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#abkzbwxcmp .gt_column_spanner_outer {
+#txvafbsnay .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2165,15 +2186,15 @@ step by step. The example includes five different entities.</p>
   padding-right: 4px;
 }
 
-#abkzbwxcmp .gt_column_spanner_outer:first-child {
+#txvafbsnay .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#abkzbwxcmp .gt_column_spanner_outer:last-child {
+#txvafbsnay .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#abkzbwxcmp .gt_column_spanner {
+#txvafbsnay .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2185,11 +2206,11 @@ step by step. The example includes five different entities.</p>
   width: 100%;
 }
 
-#abkzbwxcmp .gt_spanner_row {
+#txvafbsnay .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#abkzbwxcmp .gt_group_heading {
+#txvafbsnay .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2215,7 +2236,7 @@ step by step. The example includes five different entities.</p>
   text-align: left;
 }
 
-#abkzbwxcmp .gt_empty_group_heading {
+#txvafbsnay .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2230,15 +2251,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: middle;
 }
 
-#abkzbwxcmp .gt_from_md > :first-child {
+#txvafbsnay .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#abkzbwxcmp .gt_from_md > :last-child {
+#txvafbsnay .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#abkzbwxcmp .gt_row {
+#txvafbsnay .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2257,7 +2278,7 @@ step by step. The example includes five different entities.</p>
   overflow-x: hidden;
 }
 
-#abkzbwxcmp .gt_stub {
+#txvafbsnay .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2270,7 +2291,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abkzbwxcmp .gt_stub_row_group {
+#txvafbsnay .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2284,15 +2305,15 @@ step by step. The example includes five different entities.</p>
   vertical-align: top;
 }
 
-#abkzbwxcmp .gt_row_group_first td {
+#txvafbsnay .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#abkzbwxcmp .gt_row_group_first th {
+#txvafbsnay .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#abkzbwxcmp .gt_summary_row {
+#txvafbsnay .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2302,16 +2323,16 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abkzbwxcmp .gt_first_summary_row {
+#txvafbsnay .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_first_summary_row.thick {
+#txvafbsnay .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#abkzbwxcmp .gt_last_summary_row {
+#txvafbsnay .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2321,7 +2342,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_grand_summary_row {
+#txvafbsnay .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2331,7 +2352,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abkzbwxcmp .gt_first_grand_summary_row {
+#txvafbsnay .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2341,7 +2362,7 @@ step by step. The example includes five different entities.</p>
   border-top-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_last_grand_summary_row_top {
+#txvafbsnay .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2351,11 +2372,11 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_striped {
+#txvafbsnay .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#abkzbwxcmp .gt_table_body {
+#txvafbsnay .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2364,7 +2385,7 @@ step by step. The example includes five different entities.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_footnotes {
+#txvafbsnay .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2378,7 +2399,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_footnote {
+#txvafbsnay .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2387,7 +2408,7 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abkzbwxcmp .gt_sourcenotes {
+#txvafbsnay .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2401,7 +2422,7 @@ step by step. The example includes five different entities.</p>
   border-right-color: #D3D3D3;
 }
 
-#abkzbwxcmp .gt_sourcenote {
+#txvafbsnay .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2409,64 +2430,73 @@ step by step. The example includes five different entities.</p>
   padding-right: 5px;
 }
 
-#abkzbwxcmp .gt_left {
+#txvafbsnay .gt_left {
   text-align: left;
 }
 
-#abkzbwxcmp .gt_center {
+#txvafbsnay .gt_center {
   text-align: center;
 }
 
-#abkzbwxcmp .gt_right {
+#txvafbsnay .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#abkzbwxcmp .gt_font_normal {
+#txvafbsnay .gt_font_normal {
   font-weight: normal;
 }
 
-#abkzbwxcmp .gt_font_bold {
+#txvafbsnay .gt_font_bold {
   font-weight: bold;
 }
 
-#abkzbwxcmp .gt_font_italic {
+#txvafbsnay .gt_font_italic {
   font-style: italic;
 }
 
-#abkzbwxcmp .gt_super {
+#txvafbsnay .gt_super {
   font-size: 65%;
 }
 
-#abkzbwxcmp .gt_footnote_marks {
+#txvafbsnay .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#abkzbwxcmp .gt_asterisk {
+#txvafbsnay .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#abkzbwxcmp .gt_indent_1 {
+#txvafbsnay .gt_indent_1 {
   text-indent: 5px;
 }
 
-#abkzbwxcmp .gt_indent_2 {
+#txvafbsnay .gt_indent_2 {
   text-indent: 10px;
 }
 
-#abkzbwxcmp .gt_indent_3 {
+#txvafbsnay .gt_indent_3 {
   text-indent: 15px;
 }
 
-#abkzbwxcmp .gt_indent_4 {
+#txvafbsnay .gt_indent_4 {
   text-indent: 20px;
 }
 
-#abkzbwxcmp .gt_indent_5 {
+#txvafbsnay .gt_indent_5 {
   text-indent: 25px;
+}
+
+#txvafbsnay .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#txvafbsnay div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
@@ -2543,8 +2573,8 @@ step by step. The example includes five different entities.</p>
 <span></span>
 <span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-01b2f7f628ec61fb1026" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-01b2f7f628ec61fb1026">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2 id="step-1-display-all-entities">Step 1: Display all entities<a class="anchor" aria-label="anchor" href="#step-1-display-all-entities"></a>
@@ -2570,8 +2600,8 @@ is empty.</p>
 <span></span>
 <span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-b7834eeaac575abc9920" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-b7834eeaac575abc9920">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-e5c8c404fe174e4c81bd" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2 id="step-2-define-relationships">Step 2: Define relationships<a class="anchor" aria-label="anchor" href="#step-2-define-relationships"></a>
@@ -2614,8 +2644,8 @@ relationships.</p>
 <span>    <span class="va">relationships</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-9f4e37cd220249a89362" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-9f4e37cd220249a89362">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ndepartment -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-36aa3d2a04d42bbc2145" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-36aa3d2a04d42bbc2145">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ndepartment -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span></span>
 <span><span class="co"># 2. Define Relationships: improved example</span></span>
@@ -2650,8 +2680,8 @@ relationships.</p>
 <span>    <span class="va">relationships</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-9c119f3c07ccc4df2604" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-9c119f3c07ccc4df2604">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-febe03efa1a2d8d52a86" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-febe03efa1a2d8d52a86">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>st_id&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;&nbsp;<\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>crs_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>st_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>dep_id&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><tr><td>fac_id&nbsp;<\/td><\/tr><tr><td>dep_id&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2 id="step-3-highlight-key-attributes">Step 3: Highlight key attributes<a class="anchor" aria-label="anchor" href="#step-3-highlight-key-attributes"></a>
@@ -2693,8 +2723,8 @@ of those attributes to bold and put them on top pf the node table.</p>
 <span></span>
 <span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-5dee3b6778ae4111df4b" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-5dee3b6778ae4111df4b">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-1fb4450895fe099f74a1" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-1fb4450895fe099f74a1">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\"\", headlabel=\"\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2 id="step-4-define-entity-relationships">Step 4: Define entity relationships<a class="anchor" aria-label="anchor" href="#step-4-define-entity-relationships"></a>
@@ -2735,8 +2765,8 @@ table.</p>
 <span></span>
 <span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-0ba8be5c6550b68fd6f3" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-0ba8be5c6550b68fd6f3">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-10b3b7155e8045a1b2ad" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-10b3b7155e8045a1b2ad">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=0, labelangle=15];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=0, labelangle=15];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=0, labelangle=15];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2 id="step-5-adjust-parameters">Step 5: Adjust parameters<a class="anchor" aria-label="anchor" href="#step-5-adjust-parameters"></a>
@@ -2780,31 +2810,29 @@ important when one of the tables has many attributes.</p>
 <span></span>
 <span><span class="co">## Render ERD</span></span>
 <span><span class="fu"><a href="../reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">2</span>, label_angle <span class="op">=</span> <span class="fl">50</span>, n <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-18fd9623a90565ae99bb" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-18fd9623a90565ae99bb">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=2, labelangle=50];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-4018eef1a407a0df6b52" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-4018eef1a407a0df6b52">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nstudents [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>students<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>student&nbsp;<\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>email&nbsp;&nbsp;&nbsp;<\/td><\/tr><tr><td>dob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>courses<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><tr><td><b>fac_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>course&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nenrollment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>enrollment<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>crs_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>st_id<\/b><\/td><\/tr><tr><td>final_grade<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartment [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>department<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dep_id<\/b><\/td><\/tr><tr><td>department<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nfaculty [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"2\" bgcolor=\"lightgrey\"><b>faculty<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>fac_id<\/b><\/td><\/tr><tr><td><b>dep_id<\/b><\/td><\/tr><\/table><\/td><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td>faculty_name<\/td><\/tr><tr><td>title&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ncourses -- enrollment[taillabel=\"||\", headlabel=\"|<\", labeldistance=2, labelangle=50];\ncourses -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\ncourses -- faculty[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nenrollment -- students[taillabel=\">0\", headlabel=\"||\", labeldistance=2, labelangle=50];\nstudents -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nfaculty -- department[taillabel=\">|\", headlabel=\"||\", labeldistance=2, labelangle=50];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Developed by Jonathan Wood, Guillermo Basulto-Elias.</p>
+  <p>Developed by Jonathan Wood, Guillermo Basulto-Elias.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>

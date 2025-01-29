@@ -1,39 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/404.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/articles/order_of_entities.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/articles/step_by_step.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/reference/create_erd.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/reference/perform_join.html</loc>
-  </url>
-  <url>
-    <loc>https://gbasulto.github.io/ERDbuilder/reference/render_erd.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://gbasulto.github.io/ERDbuilder/404.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/LICENSE.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/articles/index.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/articles/order_of_entities.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/articles/step_by_step.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/authors.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/index.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/news/index.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/reference/create_erd.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/reference/index.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/reference/perform_join.html</loc></url>
+<url><loc>https://gbasulto.github.io/ERDbuilder/reference/render_erd.html</loc></url>
 </urlset>
+
