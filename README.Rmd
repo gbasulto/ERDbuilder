@@ -104,10 +104,10 @@ erd_object <- create_erd(
   relationships)
 
 # Render the ERD graphically ___________________________________________________
-edr_plot2 <- render_erd(erd_object, label_distance = 0, label_angle = -25)
+erd_plot2 <- render_erd(erd_object, label_distance = 0, label_angle = -25)
 
 # Plot ERD _____________________________________________________________________
-#edr_plot2
+#erd_plot2
 
 # ## Un-comment to export to TIFF ______________________________________________
 # DPI = 600
