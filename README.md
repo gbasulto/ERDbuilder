@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ERDbuilder
+# ERDbuilder <a href="https://gbasulto.github.io/ERDbuilder/"><img src="man/figures/logo.png" align="right" height="139" alt="ERDbuilder website" /></a>
 
 <!-- badges: start -->
 
@@ -100,13 +100,7 @@ erd_object <- create_erd(
 edr_plot2 <- render_erd(erd_object, label_distance = 0, label_angle = -25)
 
 # Plot ERD _____________________________________________________________________
-edr_plot2
-#> Google Chrome was not found. Try setting the `CHROMOTE_CHROME` environment variable to the executable of a Chromium-based browser, such as Google Chrome, Chromium or Brave.
-```
-
-<img src="man/figures/README-example2-1.png" width="100%" />
-
-``` r
+#edr_plot2
 
 # ## Un-comment to export to TIFF ______________________________________________
 # DPI = 600
@@ -185,21 +179,13 @@ erd_object <-
 # joined.
 joined_data <- 
   perform_join(erd_object, c("Crash", "Vehicle", "Occupant", "Distract"))
-#> Performing join: Using inner_join for table Vehicle 
-#> Performing join: Using inner_join for table Occupant 
-#> Performing join: Using inner_join for table Distract
 
 ## Render plot _________________________________________________________________
 
 edr_plot <- 
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 
-edr_plot
-```
-
-<img src="man/figures/README-example1-1.png" width="100%" />
-
-``` r
+#edr_plot
 
 ## Uncomment to export to SVG __________________________________________________
 

@@ -13,13 +13,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ERDbuilder
+# ERDbuilder <a href="https://gbasulto.github.io/ERDbuilder/"><img src="man/figures/logo.png" align="right" height="139" alt="ERDbuilder website" /></a>
+
 
 <!-- badges: start -->
 
 [![codecov](https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg)](https://app.codecov.io/gh/gbasulto/ERDbuilder)
 
 <!-- badges: end -->
+
+
 
 This R package creates Entity-Relationship Diagrams (ERDs). It generates traditional ERDs from data frames, enabling users to specify relationship cardinalities and variables involved in joins. The package also facilitates data joins based on the established ERD.
 
@@ -104,7 +107,7 @@ erd_object <- create_erd(
 edr_plot2 <- render_erd(erd_object, label_distance = 0, label_angle = -25)
 
 # Plot ERD _____________________________________________________________________
-edr_plot2
+#edr_plot2
 
 # ## Un-comment to export to TIFF ______________________________________________
 # DPI = 600
@@ -189,7 +192,7 @@ joined_data <-
 edr_plot <- 
   render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
 
-edr_plot
+#edr_plot
 
 ## Uncomment to export to SVG __________________________________________________
 
