@@ -13,6 +13,7 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Entity Relationship Diagrams Builder">
 <meta name="description" content="Build entity relationship diagrams (ERD) to specify the nature of the relationship between tables in a database.">
 <meta property="og:description" content="Build entity relationship diagrams (ERD) to specify the nature of the relationship between tables in a database.">
+<meta property="og:image" content="https://gbasulto.github.io/ERDbuilder/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -54,8 +55,11 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="erdbuilder">ERDbuilder<a class="anchor" aria-label="anchor" href="#erdbuilder"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="erdbuilder-">ERDbuilder 
+<a class="anchor" aria-label="anchor" href="#erdbuilder-"></a>
+</h1>
+</div>
 <!-- badges: start -->
 
 <!-- badges: end -->
@@ -163,11 +167,8 @@
 <span><span class="va">edr_plot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="op">-</span><span class="fl">25</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Plot ERD _____________________________________________________________________</span></span>
-<span><span class="va">edr_plot2</span></span>
-<span><span class="co">#&gt; Google Chrome was not found. Try setting the `CHROMOTE_CHROME` environment variable to the executable of a Chromium-based browser, such as Google Chrome, Chromium or Brave.</span></span></code></pre></div>
-<p><img src="reference/figures/README-example2-1.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
+<span><span class="co">#edr_plot2</span></span>
+<span></span>
 <span><span class="co"># ## Un-comment to export to TIFF ______________________________________________</span></span>
 <span><span class="co"># DPI = 600</span></span>
 <span><span class="co"># WidthCM = 38</span></span>
@@ -184,7 +185,7 @@
 <h2 id="example-2">Example 2<a class="anchor" aria-label="anchor" href="#example-2"></a>
 </h2>
 <p>This is a second example with more entities and each entity having multiple attributes.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co">## Load packages ______________________________________________________________</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
@@ -243,19 +244,14 @@
 <span><span class="co"># joined.</span></span>
 <span><span class="va">joined_data</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="fu"><a href="reference/perform_join.html">perform_join</a></span><span class="op">(</span><span class="va">erd_object</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Crash"</span>, <span class="st">"Vehicle"</span>, <span class="st">"Occupant"</span>, <span class="st">"Distract"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Performing join: Using inner_join for table Vehicle </span></span>
-<span><span class="co">#&gt; Performing join: Using inner_join for table Occupant </span></span>
-<span><span class="co">#&gt; Performing join: Using inner_join for table Distract</span></span>
 <span></span>
 <span><span class="co">## Render plot _________________________________________________________________</span></span>
 <span></span>
 <span><span class="va">edr_plot</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">edr_plot</span></span></code></pre></div>
-<p><img src="reference/figures/README-example1-1.png" width="100%"></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
+<span><span class="co">#edr_plot</span></span>
+<span></span>
 <span><span class="co">## Uncomment to export to SVG __________________________________________________</span></span>
 <span></span>
 <span><span class="co"># # Render the ERD graphically, save as a .tiff, then include in rendered files</span></span>
