@@ -19,6 +19,7 @@ Suggests:
     knitr,
     rmarkdown,
     gt,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    clipr
 VignetteBuilder: knitr
 Config/testthat/edition: 3
