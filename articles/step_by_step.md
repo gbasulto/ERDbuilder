@@ -1,0 +1,391 @@
+# Step by Step
+
+Building an ERD is easy with `ERDbuilder` with the workflow presented in
+this vignette. In short, the steps are:
+
+1.  Display all entities
+2.  Define relationships
+3.  Specify key attributes
+4.  Define entity relationships
+5.  Adjust parameters
+
+This vignette shows how to build an entity relationship diagram (ERD)
+step by step. The example includes five different entities.
+
+## Define data
+
+Hypothetical course data in a college.
+
+``` r
+
+# Load Packages -----------------------------------------------------------
+
+library(ERDbuilder)
+library(gt)
+library(dplyr)
+
+# Define entities ---------------------------------------------------------
+
+students_tbl <- data.frame(
+  st_id = c("hu1", "de2", "lo3"),
+  dep_id = c("water", "evil", "values"),
+  student = c("Huey", "Dewey", "Louie"),
+  email = c("hubert.duck", "dewfort.duck", "llewellyn.duck"),
+  dob = c("04-15", "04-15", "04-15")
+)
+
+courses_tbl <- data.frame(
+  crs_id = c("water101", "evil205", "water202"),
+  fac_id = c("02do", "03pe", "04mi"),
+  dep_id = c("water", "evil", "water"),
+  course = c("Swimming", "Human-chasing", "Dives")
+)
+
+enrollment_tbl <- data.frame(
+  crs_id = c("water101", "evil205", "evil205", "water202"),
+  st_id = c("hu1", "hu1", "de2", "de2"),
+  final_grade = c("B", "A", "A", "F")
+)
+
+department_tbl <- data.frame(
+  dep_id = c("water", "evil", "values"),
+  department = c("Water activities", "Evil procurement", "Good values")
+)
+
+faculty_tbl <- data.frame(
+  faculty_name = c("Scrooge McDuck", "Donald", "Pete", "Mickey"),
+  title = c("Emeritus", "Full", "Assistant", "Full"),
+  fac_id = c("01sc", "02do", "03pe", "04mi"),
+  dep_id = c("water", "water", "evil", "values")
+)
+
+
+my_gt <- function(df) {
+  df |> 
+    gt() |>
+    tab_style(
+      style = cell_fill(color = "darkolivegreen1"),
+      locations = cells_column_labels()
+    )
+}
+
+gt_group(
+  my_gt(students_tbl),
+  my_gt(courses_tbl),
+  my_gt(enrollment_tbl),
+  my_gt(department_tbl),
+  my_gt(faculty_tbl)
+)
+```
+
+| st_id | dep_id | student | email          | dob   |
+|-------|--------|---------|----------------|-------|
+| hu1   | water  | Huey    | hubert.duck    | 04-15 |
+| de2   | evil   | Dewey   | dewfort.duck   | 04-15 |
+| lo3   | values | Louie   | llewellyn.duck | 04-15 |
+
+| crs_id   | fac_id | dep_id | course        |
+|----------|--------|--------|---------------|
+| water101 | 02do   | water  | Swimming      |
+| evil205  | 03pe   | evil   | Human-chasing |
+| water202 | 04mi   | water  | Dives         |
+
+| crs_id   | st_id | final_grade |
+|----------|-------|-------------|
+| water101 | hu1   | B           |
+| evil205  | hu1   | A           |
+| evil205  | de2   | A           |
+| water202 | de2   | F           |
+
+| dep_id | department       |
+|--------|------------------|
+| water  | Water activities |
+| evil   | Evil procurement |
+| values | Good values      |
+
+| faculty_name   | title     | fac_id | dep_id |
+|----------------|-----------|--------|--------|
+| Scrooge McDuck | Emeritus  | 01sc   | water  |
+| Donald         | Full      | 02do   | water  |
+| Pete           | Assistant | 03pe   | evil   |
+| Mickey         | Full      | 04mi   | values |
+
+## Desired ERD
+
+The following code is what we would like to end up with.
+
+``` r
+
+## Define relationships
+relationships <- list(
+  courses = list(
+    enrollment = list(crs_id = "crs_id", relationship = c("||", "|<")),
+    department = list(dep_id = "dep_id", relationship = c(">|", "||")),
+    faculty = list(fac_id = "fac_id", relationship = c(">0", "||"))
+  ),
+  enrollment = list(
+    students = list(st_id = "st_id", relationship = c(">0", "||")
+    )
+  ),
+  students = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  ),
+  faculty = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  )
+)
+
+## Create ERD object
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+## Render ERD
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+## Step 1: Display all entities
+
+The first step is to print the nodes with the entities’ attributes, even
+if they are not yet connected. Observe that the relationship list is
+empty.
+
+``` r
+
+## Define relationships
+relationships <- list()
+
+## Create ERD object
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+## Render ERD
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+## Step 2: Define relationships
+
+In this step, the relationship between entities is established, although
+the nature of the relationships is not yet specified.
+
+There are two attempts to establish the relationships; the first is
+discarded since the graph is too wide. The second attempt solves this by
+changing the order in which the relationships were specified. The
+vignette “Order of Entities” provides more details on how to tune the
+relationships.
+
+``` r
+
+## Define relationships: ugly attempt
+relationships <- list(
+  courses = list(
+    enrollment = list(),
+    department = list(),
+    faculty = list()
+  ),
+  enrollment = list(
+    students = list()
+  ),
+  students = list(
+    department = list()
+  ),
+  department = list(
+    faculty = list()
+  )
+)
+
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+``` r
+
+
+
+# 2. Define Relationships: improved example
+
+## Define relationships
+relationships <- list(
+  courses = list(
+    enrollment = list(),
+    department = list(),
+    faculty = list()
+  ),
+  enrollment = list(
+    students = list()
+  ),
+  students = list(
+    department = list()
+  ),
+  faculty = list(
+    department = list()
+  )
+)
+
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+## Step 3: Highlight key attributes
+
+Specify the keys that allow joining tables. This will change the font of
+those attributes to bold and put them on top pf the node table.
+
+``` r
+
+
+## Define relationships
+relationships <- list(
+  courses = list(
+    enrollment = list(crs_id = "crs_id", relationship = c("", "")),
+    department = list(dep_id = "dep_id", relationship = c("", "")),
+    faculty = list(fac_id = "fac_id", relationship = c("", ""))
+  ),
+  enrollment = list(
+    students = list(st_id = "st_id", relationship = c("", "")
+    )
+  ),
+  students = list(
+    department = list(dep_id = "dep_id", relationship = c("", ""))
+  ),
+  faculty = list(
+    department = list(dep_id = "dep_id", relationship = c("", ""))
+  )
+)
+
+## Create ERD object
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+## Render ERD
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+## Step 4: Define entity relationships
+
+Then, add the nature of the relationships following the nomenclature
+table.
+
+``` r
+
+## Define relationships
+relationships <- list(
+  courses = list(
+    enrollment = list(crs_id = "crs_id", relationship = c("||", "|<")),
+    department = list(dep_id = "dep_id", relationship = c(">|", "||")),
+    faculty = list(fac_id = "fac_id", relationship = c(">0", "||"))
+  ),
+  enrollment = list(
+    students = list(st_id = "st_id", relationship = c(">0", "||")
+    )
+  ),
+  students = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  ),
+  faculty = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  )
+)
+
+## Create ERD object
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+## Render ERD
+render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
+```
+
+## Step 5: Adjust parameters
+
+Specify the symbol distance to the edge with `label_distance`, the angle
+at which the edge labels are displayed with `label_angle`, and the
+maximum number of rows in each node table with `n`. The latter is
+particularly important when one of the tables has many attributes.
+
+``` r
+
+## Define relationships
+relationships <- list(
+  courses = list(
+    enrollment = list(crs_id = "crs_id", relationship = c("||", "|<")),
+    department = list(dep_id = "dep_id", relationship = c(">|", "||")),
+    faculty = list(fac_id = "fac_id", relationship = c(">0", "||"))
+  ),
+  enrollment = list(
+    students = list(st_id = "st_id", relationship = c(">0", "||")
+    )
+  ),
+  students = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  ),
+  faculty = list(
+    department = list(dep_id = "dep_id", relationship = c(">|", "||"))
+  )
+)
+
+## Create ERD object
+erd_object <-
+  create_erd(
+    list(
+      students = students_tbl,
+      courses = courses_tbl,
+      enrollment = enrollment_tbl,
+      department = department_tbl,
+      faculty = faculty_tbl
+    ),
+    relationships)
+
+## Render ERD
+render_erd(erd_object, label_distance = 2, label_angle = 50, n = 2)
+```

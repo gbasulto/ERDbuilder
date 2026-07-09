@@ -1,10 +1,10 @@
-pandoc: 3.1.11
-pkgdown: 2.1.1
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   order_of_entities: order_of_entities.html
   step_by_step: step_by_step.html
-last_built: 2025-01-30T17:56Z
+last_built: 2026-07-09T22:06Z
 urls:
   reference: https://gbasulto.github.io/ERDbuilder/reference
   article: https://gbasulto.github.io/ERDbuilder/articles
