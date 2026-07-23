@@ -63,71 +63,58 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>This R package creates Entity-Relationship Diagrams (ERDs). It generates traditional ERDs from data frames, enabling users to specify relationship cardinalities and variables involved in joins. The package also facilitates data joins based on the established ERD.</p>
-<div class="section level2">
-<h2 id="package-dependencies">Package Dependencies<a class="anchor" aria-label="anchor" href="#package-dependencies"></a>
-</h2>
+<p><code>ERDbuilder</code> creates Entity-Relationship Diagrams (ERDs) directly from R data frames.</p>
+<p>The package provides tools to:</p>
 <ul>
-<li><p><code>DiagrammeR</code></p></li>
-<li><p><code>dplyr</code></p></li>
+<li>inspect a named list of data frames and suggest possible relationships;</li>
+<li>create an ERD specification using table names, join columns, and cardinalities;</li>
+<li>validate the ERD structure and compare declared relationships with the observed data;</li>
+<li>render the ERD as an interactive diagram; and</li>
+<li>join tables using the relationships stored in the ERD.</li>
 </ul>
-</div>
-<div class="section level2">
-<h2 id="objective">Objective<a class="anchor" aria-label="anchor" href="#objective"></a>
-</h2>
-<p>Create Entity Relationship Diagrams (ERD) by extracting the attribute names of tables to create complex graphs where:</p>
-<ul>
-<li>Nodes: Each entity (i.e., data frame) is represented as a node. The node label consists of the entity name and the attribute names within the entity.</li>
-<li>Edges: Relationships between entities are represented as edges between the corresponding nodes. Labels at the edges’ ends indicate the relationship’s type and cardinality.</li>
-</ul>
-</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of ERDbuilder like so:</p>
+<p>You can install the development version of <code>ERDbuilder</code> from GitHub:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gbasulto/ERDbuilder"</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="function-and-object-list">Function and Object List<a class="anchor" aria-label="anchor" href="#function-and-object-list"></a>
-</h2>
-<table class="table">
-<thead><tr>
-<th>Name</th>
-<th>Class</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code><a href="reference/render_erd.html">render_erd()</a></code></td>
-<td>Function</td>
-<td>Render ERD</td>
-</tr>
-<tr>
-<td><code><a href="reference/perform_join.html">perform_join()</a></code></td>
-<td>Function</td>
-<td>Perform left join of tables</td>
-</tr>
-<tr>
-<td><code><a href="reference/create_erd.html">create_erd()</a></code></td>
-<td>Function</td>
-<td>Create ERD object</td>
-</tr>
-</tbody>
-</table>
-<p>Functions and Objects in the “ERDbuilder” package</p>
-</div>
-<div class="section level2">
-<h2 id="example-1">Example 1<a class="anchor" aria-label="anchor" href="#example-1"></a>
-</h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gbasulto/ERDbuilder"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Using GitHub PAT from the git credential store.</span></span>
+<span><span class="co">#&gt; Downloading GitHub repo gbasulto/ERDbuilder@HEAD</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── R CMD build ─────────────────────────────────────────────────────────────────</span></span>
+<span><span class="co">#&gt;          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION'</span></span>
+<span><span class="co">#&gt;       ─  preparing 'ERDbuilder':</span></span>
+<span><span class="co">#&gt;   ✔  checking DESCRIPTION meta-information</span></span>
+<span><span class="co">#&gt;       ─  checking for LF line-endings in source and make files and shell scripts</span></span>
+<span><span class="co">#&gt;   ─  checking for empty or unneeded directories</span></span>
+<span><span class="co">#&gt;      Omitted 'LazyData' from DESCRIPTION</span></span>
+<span><span class="co">#&gt;      NB: this package now depends on R (&gt;=        NB: this package now depends on R (&gt;= 4.1.0)</span></span>
+<span><span class="co">#&gt;      WARNING: Added dependency on R &gt;= 4.1.0 because package code uses the</span></span>
+<span><span class="co">#&gt;      pipe |&gt; or function shorthand \(...) syntax added in R 4.1.0.</span></span>
+<span><span class="co">#&gt;      File(s) using such syntax:</span></span>
+<span><span class="co">#&gt;        'render_erd.R'</span></span>
+<span><span class="co">#&gt;   ─  building 'ERDbuilder_1.0.0.tar.gz'</span></span>
+<span><span class="co">#&gt;      </span></span>
+<span><span class="co">#&gt; </span></span></code></pre></div>
+<p>Then load the package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="recommended-workflow">Recommended workflow<a class="anchor" aria-label="anchor" href="#recommended-workflow"></a>
+</h2>
+<p>A typical <code>ERDbuilder</code> workflow consists of six steps:</p>
+<ol style="list-style-type: decimal">
+<li>Place the data frames in a named list.</li>
+<li>Use <code><a href="reference/suggest_relationships.html">suggest_relationships()</a></code> to identify likely relationships.</li>
+<li>Review and, when necessary, edit the suggested relationships.</li>
+<li>Create an ERD object with <code><a href="reference/create_erd.html">create_erd()</a></code>.</li>
+<li>Check the ERD with <code><a href="reference/validate_erd.html">validate_erd()</a></code>.</li>
+<li>Render the ERD or use it to join tables.</li>
+</ol>
+<p>Define dataframes for example:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
-<span><span class="co">## Load packages _______________________________________________________________</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Create datasets _____________________________________________________________</span></span>
-<span></span>
 <span><span class="co"># Create dataframe "employees"</span></span>
 <span><span class="va">employees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span>
@@ -144,132 +131,449 @@
 <span><span class="va">assignments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  dept_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>  employees <span class="op">=</span> <span class="va">employees</span>,</span>
+<span>  departments <span class="op">=</span> <span class="va">departments</span>,</span>
+<span>  assignments <span class="op">=</span> <span class="va">assignments</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Define relationships _________________________________________________________</span></span>
+<span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/suggest_relationships.html">suggest_relationships</a></span><span class="op">(</span><span class="va">df_list</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Suggested 2 relationship(s).</span></span>
+<span></span>
+<span><span class="va">erd_object</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
+<span>  df_list <span class="op">=</span> <span class="va">df_list</span>,</span>
+<span>  relationships <span class="op">=</span> <span class="va">relationships</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span><span class="va">erd_object</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ERD validation: valid </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span><span class="op">)</span></span></code></pre></div>
+<div id="htmlwidget-452db7a0e01903c8cbf1" class="grViz html-widget html-fill-item" style="width:100%;height:480px;">
+
+</div>
+<script type="application/json" data-for="htmlwidget-452db7a0e01903c8cbf1">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nemployees [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>employees<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>departments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dept_id<\/b><\/td><\/tr><tr><td>dept_name&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nassignments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>assignments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td><b>dept_id<\/b><\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nemployees -- assignments[taillabel=\"||\", headlabel=\"0|\", labeldistance=2.5, labelangle=45];\ndepartments -- assignments[taillabel=\"||\", headlabel=\"||\", labeldistance=2.5, labelangle=45];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p>Relationship suggestions are based on the available data and should always be reviewed before they are treated as database constraints.</p>
+</div>
+<div class="section level2">
+<h2 id="main-functions">Main functions<a class="anchor" aria-label="anchor" href="#main-functions"></a>
+</h2>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th align="left">Function</th>
+<th align="left">Purpose</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left"><code><a href="reference/suggest_relationships.html">suggest_relationships()</a></code></td>
+<td align="left">Suggest relationships between data frames</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/format_relationships.html">format_relationships()</a></code></td>
+<td align="left">Convert a relationship specification into paste-ready R code</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/create_erd.html">create_erd()</a></code></td>
+<td align="left">Create an ERD object</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/validate_erd.html">validate_erd()</a></code></td>
+<td align="left">Validate the ERD structure and optionally inspect observed cardinalities</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/is_valid_erd.html">is_valid_erd()</a></code></td>
+<td align="left">Return whether an ERD passes validation</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/render_erd.html">render_erd()</a></code></td>
+<td align="left">Render an ERD</td>
+</tr>
+<tr>
+<td align="left"><code><a href="reference/perform_join.html">perform_join()</a></code></td>
+<td align="left">Join tables using relationships stored in an ERD</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level2">
+<h2 id="suggesting-relationships">Suggesting relationships<a class="anchor" aria-label="anchor" href="#suggesting-relationships"></a>
+</h2>
+<p><code><a href="reference/suggest_relationships.html">suggest_relationships()</a></code> examines pairs of data frames and evaluates possible join columns using information such as:</p>
+<ul>
+<li>matching or similar column names;</li>
+<li>columns with names that resemble identifiers;</li>
+<li>uniqueness of potential keys; and</li>
+<li>coverage of values between tables.</li>
+</ul>
+<p>Start by creating a named list of data frames:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">employees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">departments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  dept_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  dept_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Human Resources"</span>, <span class="st">"Engineering"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">assignments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  assignment_id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,</span>
+<span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  dept_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>  employees <span class="op">=</span> <span class="va">employees</span>,</span>
+<span>  departments <span class="op">=</span> <span class="va">departments</span>,</span>
+<span>  assignments <span class="op">=</span> <span class="va">assignments</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Generate the suggested relationships:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/suggest_relationships.html">suggest_relationships</a></span><span class="op">(</span></span>
+<span>  <span class="va">df_list</span>,</span>
+<span>  quiet <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">relationships</span></span>
+<span><span class="co">#&gt; $employees</span></span>
+<span><span class="co">#&gt; $employees$assignments</span></span>
+<span><span class="co">#&gt; $employees$assignments$emp_id</span></span>
+<span><span class="co">#&gt; [1] "emp_id"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $employees$assignments$relationship</span></span>
+<span><span class="co">#&gt; [1] "||" "0&lt;"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $departments</span></span>
+<span><span class="co">#&gt; $departments$assignments</span></span>
+<span><span class="co">#&gt; $departments$assignments$dept_id</span></span>
+<span><span class="co">#&gt; [1] "dept_id"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $departments$assignments$relationship</span></span>
+<span><span class="co">#&gt; [1] "||" "|&lt;"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; attr(,"suggestions")</span></span>
+<span><span class="co">#&gt;    from_table    to_table from_columns to_columns relationship_left</span></span>
+<span><span class="co">#&gt; 1   employees assignments       emp_id     emp_id                ||</span></span>
+<span><span class="co">#&gt; 2 departments assignments      dept_id    dept_id                ||</span></span>
+<span><span class="co">#&gt;   relationship_right score coverage_from_to coverage_to_from coverage_mean</span></span>
+<span><span class="co">#&gt; 1                 0&lt; 0.925        0.6666667                1     0.8333333</span></span>
+<span><span class="co">#&gt; 2                 |&lt; 1.000        1.0000000                1     1.0000000</span></span>
+<span><span class="co">#&gt;   from_unique to_unique n_columns</span></span>
+<span><span class="co">#&gt; 1        TRUE     FALSE         1</span></span>
+<span><span class="co">#&gt; 2        TRUE     FALSE         1</span></span></code></pre></div>
+<p>The returned object uses the same relationship structure expected by <code><a href="reference/create_erd.html">create_erd()</a></code>.</p>
+<p>Diagnostic information about the suggestions is stored in the <code>"suggestions"</code> attribute:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">relationships</span>, <span class="st">"suggestions"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    from_table    to_table from_columns to_columns relationship_left</span></span>
+<span><span class="co">#&gt; 1   employees assignments       emp_id     emp_id                ||</span></span>
+<span><span class="co">#&gt; 2 departments assignments      dept_id    dept_id                ||</span></span>
+<span><span class="co">#&gt;   relationship_right score coverage_from_to coverage_to_from coverage_mean</span></span>
+<span><span class="co">#&gt; 1                 0&lt; 0.925        0.6666667                1     0.8333333</span></span>
+<span><span class="co">#&gt; 2                 |&lt; 1.000        1.0000000                1     1.0000000</span></span>
+<span><span class="co">#&gt;   from_unique to_unique n_columns</span></span>
+<span><span class="co">#&gt; 1        TRUE     FALSE         1</span></span>
+<span><span class="co">#&gt; 2        TRUE     FALSE         1</span></span></code></pre></div>
+<p>These diagnostics can be used to review the proposed join columns, relationship direction, key uniqueness, value coverage, and confidence score.</p>
+<div class="section level3">
+<h3 id="creating-paste-ready-relationship-code">Creating paste-ready relationship code<a class="anchor" aria-label="anchor" href="#creating-paste-ready-relationship-code"></a>
+</h3>
+<p>Use <code><a href="reference/format_relationships.html">format_relationships()</a></code> to convert the suggested object into R code:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="fu"><a href="reference/format_relationships.html">format_relationships</a></span><span class="op">(</span><span class="va">relationships</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; relationships &lt;- list(employees = list(assignments = list(emp_id = "emp_id", relationship = c("||", </span></span>
+<span><span class="co">#&gt; "0&lt;"))), departments = list(assignments = list(dept_id = "dept_id", </span></span>
+<span><span class="co">#&gt;     relationship = c("||", "|&lt;"))))</span></span></code></pre></div>
+<p>To copy that code directly to the system clipboard during an interactive R session, use:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/suggest_relationships.html">suggest_relationships</a></span><span class="op">(</span></span>
+<span>  <span class="va">df_list</span>,</span>
+<span>  copy <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Clipboard support requires the optional <code>clipr</code> package:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"clipr"</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="creating-and-validating-an-erd">Creating and validating an ERD<a class="anchor" aria-label="anchor" href="#creating-and-validating-an-erd"></a>
+</h2>
+<p>After reviewing the suggested relationships, create the ERD object:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">erd_object</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
+<span>  df_list <span class="op">=</span> <span class="va">df_list</span>,</span>
+<span>  relationships <span class="op">=</span> <span class="va">relationships</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">validation</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span><span class="va">erd_object</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">validation</span></span>
+<span><span class="co">#&gt; ERD validation: valid </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span></code></pre></div>
+<p>The validation result contains an issue table:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">validation</span><span class="op">$</span><span class="va">issues</span></span>
+<span><span class="co">#&gt; [1] severity   code       from_table to_table   n_affected message   </span></span>
+<span><span class="co">#&gt; &lt;0 rows&gt; (or 0-length row.names)</span></span></code></pre></div>
+<p>It also contains a logical indicator of whether the ERD is valid:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">validation</span><span class="op">$</span><span class="va">valid</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<p>For a direct logical result, use:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/is_valid_erd.html">is_valid_erd</a></span><span class="op">(</span><span class="va">erd_object</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="structural-and-data-validation">Structural and data validation<a class="anchor" aria-label="anchor" href="#structural-and-data-validation"></a>
+</h3>
+<p>By default, <code><a href="reference/validate_erd.html">validate_erd()</a></code> distinguishes between structural errors and warnings based on the observed data.</p>
+<p>Structural errors include problems such as:</p>
+<ul>
+<li>references to tables that do not exist;</li>
+<li>references to columns that do not exist;</li>
+<li>malformed relationship specifications;</li>
+<li>invalid cardinality symbols;</li>
+<li>incompatible join-column types; and</li>
+<li>duplicate definitions of the same relationship.</li>
+</ul>
+<p>When <code>check_data = TRUE</code>, the function also compares the declared cardinalities with the values observed in the data:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  check_data <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; ERD validation: valid </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span></code></pre></div>
+<p>Observed cardinality violations are warnings by default because a data sample may not fully represent the intended database constraints.</p>
+<p>Use <code>strict = TRUE</code> to treat warnings as validation failures:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  check_data <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  strict <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; ERD validation: valid </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span></code></pre></div>
+<p>During progressive ERD construction, incomplete relationships can be permitted explicitly:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  check_data <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  allow_incomplete <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; ERD validation: valid </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="example-1-basic-erd">Example 1: Basic ERD<a class="anchor" aria-label="anchor" href="#example-1-basic-erd"></a>
+</h2>
+<p>The following example manually defines the relationships among employees, departments, and assignments.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">employees</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">departments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  dept_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  dept_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Human Resources"</span>, <span class="st">"Engineering"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">assignments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  assignment_id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,</span>
+<span>  emp_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  dept_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>  assignments <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>    employees <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>emp_id <span class="op">=</span> <span class="st">"emp_id"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"||"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    departments <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>dept_id <span class="op">=</span> <span class="st">"dept_id"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"&gt;0"</span>, <span class="st">"||"</span><span class="op">)</span><span class="op">)</span></span>
+<span>    employees <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      emp_id <span class="op">=</span> <span class="st">"emp_id"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"&gt;|"</span>, <span class="st">"||"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    departments <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      dept_id <span class="op">=</span> <span class="st">"dept_id"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"&gt;0"</span>, <span class="st">"||"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Create ERD object ____________________________________________________________</span></span>
 <span><span class="va">erd_object</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>    employees <span class="op">=</span> <span class="va">employees</span>, </span>
-<span>    departments <span class="op">=</span> <span class="va">departments</span>, </span>
-<span>    assignments <span class="op">=</span> <span class="va">assignments</span><span class="op">)</span>, </span>
-<span>  <span class="va">relationships</span><span class="op">)</span></span>
+<span>  df_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>    employees <span class="op">=</span> <span class="va">employees</span>,</span>
+<span>    departments <span class="op">=</span> <span class="va">departments</span>,</span>
+<span>    assignments <span class="op">=</span> <span class="va">assignments</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  relationships <span class="op">=</span> <span class="va">relationships</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Render the ERD graphically ___________________________________________________</span></span>
-<span><span class="va">erd_plot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="op">-</span><span class="fl">25</span><span class="op">)</span></span>
+<span><span class="va">validation</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  check_data <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Plot ERD _____________________________________________________________________</span></span>
-<span><span class="co">#erd_plot2</span></span>
+<span><span class="va">validation</span></span>
+<span><span class="co">#&gt; ERD validation: valid with warnings </span></span>
+<span><span class="co">#&gt; Errors: 0 | Warnings: 1 </span></span>
+<span><span class="co">#&gt;  severity code                 from_table  to_table  n_affected</span></span>
+<span><span class="co">#&gt;  warning  observed_cardinality assignments employees 1         </span></span>
+<span><span class="co">#&gt;  message                                                                                                    </span></span>
+<span><span class="co">#&gt;  The `assignments` side is declared `&gt;|` (one or more), but 1 row(s) in `employees` violate that constraint.</span></span></code></pre></div>
+<p>Render the ERD:</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">erd_plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  label_distance <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  label_angle <span class="op">=</span> <span class="op">-</span><span class="fl">25</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># ## Un-comment to export to TIFF ______________________________________________</span></span>
-<span><span class="co"># DPI = 600</span></span>
-<span><span class="co"># WidthCM = 38</span></span>
-<span><span class="co"># HeightCM = 38</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># edr_plot2 |&gt; </span></span>
-<span><span class="co">#   export_svg() |&gt; </span></span>
-<span><span class="co">#   charToRaw |&gt; </span></span>
-<span><span class="co">#   rsvg(width = WidthCM * (DPI / 2.54), </span></span>
-<span><span class="co">#        height = HeightCM *(DPI / 2.54)) |&gt; </span></span>
-<span><span class="co">#   tiff::writeTIFF("edr_plot2.tiff")</span></span></code></pre></div>
+<span><span class="co"># erd_plot</span></span></code></pre></div>
+<p>To export the diagram, packages such as <code>DiagrammeRsvg</code>, <code>rsvg</code>, and <code>tiff</code> can be used:</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rich-iannone/DiagrammeRsvg" class="external-link">DiagrammeRsvg</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/rsvg/" class="external-link">rsvg</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.rforge.net/tiff/" class="external-link">tiff</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">dpi</span> <span class="op">&lt;-</span> <span class="fl">600</span></span>
+<span><span class="va">width_cm</span> <span class="op">&lt;-</span> <span class="fl">38</span></span>
+<span><span class="va">height_cm</span> <span class="op">&lt;-</span> <span class="fl">38</span></span>
+<span></span>
+<span><span class="va">erd_plot</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">DiagrammeRsvg</span><span class="fu">::</span><span class="fu">export_svg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/rawConversion.html" class="external-link">charToRaw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">rsvg</span><span class="fu">::</span><span class="fu">rsvg</span><span class="op">(</span></span>
+<span>    width <span class="op">=</span> <span class="va">width_cm</span> <span class="op">*</span> <span class="op">(</span><span class="va">dpi</span> <span class="op">/</span> <span class="fl">2.54</span><span class="op">)</span>,</span>
+<span>    height <span class="op">=</span> <span class="va">height_cm</span> <span class="op">*</span> <span class="op">(</span><span class="va">dpi</span> <span class="op">/</span> <span class="fl">2.54</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tiff</span><span class="fu">::</span><span class="fu">writeTIFF</span><span class="op">(</span><span class="st">"erd_plot.tiff"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example-2">Example 2<a class="anchor" aria-label="anchor" href="#example-2"></a>
+<h2 id="example-2-crash-vehicle-occupant-and-distraction-data">Example 2: Crash, vehicle, occupant, and distraction data<a class="anchor" aria-label="anchor" href="#example-2-crash-vehicle-occupant-and-distraction-data"></a>
 </h2>
-<p>This is a second example with more entities and each entity having multiple attributes.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
-<span><span class="co">## Load packages ______________________________________________________________</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<p>This example creates a larger ERD and uses it to join four related tables.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gbasulto/ERDbuilder" class="external-link">ERDbuilder</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org" class="external-link">readr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Set URLs ____________________________________________________________________</span></span>
-<span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/jwood-iastate/DataFiles/main/"</span></span>
-<span><span class="va">occ_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"OCC.csv"</span><span class="op">)</span></span>
-<span><span class="va">crash_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"CRASH.csv"</span><span class="op">)</span></span>
-<span><span class="va">distract_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"DISTRACT.csv"</span><span class="op">)</span></span>
-<span><span class="va">vehicle_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"GV.csv"</span><span class="op">)</span></span>
-<span>  </span>
-<span><span class="co">## Load data ___________________________________________________________________</span></span>
-<span><span class="va">occupant_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">occ_url</span>, show_col_types <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>     <span class="co"># Occupant Data</span></span>
-<span><span class="va">crash_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">crash_url</span>, show_col_types <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>      <span class="co"># Crash data</span></span>
-<span><span class="va">distract_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">distract_url</span>, show_col_types <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="co"># Distraction data</span></span>
-<span><span class="va">vehicle_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="va">vehicle_url</span>, show_col_types <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>  <span class="co"># Vehicle data</span></span>
-<span></span>
-<span><span class="co">## Define relationships ________________________________________________________</span></span>
-<span></span>
-<span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>  Crash <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>    Vehicle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"|&lt;"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    Occupant <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"|&lt;"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    Distract <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"0&lt;"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">)</span>,</span>
-<span>  Vehicle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>   <span class="co"># Crash = list(</span></span>
-<span>   <span class="co">#   CASENUMBER = "CASENUMBER", relationship = c("|&lt;", "||")),</span></span>
-<span>    Occupant <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>, VEHNO <span class="op">=</span> <span class="st">"VEHNO"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"|0"</span>, <span class="st">"0&lt;"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    Distract <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>, VEHNO <span class="op">=</span> <span class="st">"VEHNO"</span>, relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"0&lt;"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span>
+<span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span></span>
+<span>  <span class="st">"https://raw.githubusercontent.com/"</span>,</span>
+<span>  <span class="st">"jwood-iastate/DataFiles/main/"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Create the ERD object _______________________________________________________</span></span>
+<span><span class="va">occupant_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"OCC.csv"</span><span class="op">)</span>,</span>
+<span>  show_col_types <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">erd_object</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="fu"><a href="reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>      Crash <span class="op">=</span> <span class="va">crash_tbl</span>, </span>
-<span>      Vehicle <span class="op">=</span> <span class="va">vehicle_tbl</span>, </span>
-<span>      Occupant <span class="op">=</span> <span class="va">occupant_tbl</span>, </span>
-<span>      Distract<span class="op">=</span> <span class="va">distract_tbl</span><span class="op">)</span>, </span>
-<span>    <span class="va">relationships</span><span class="op">)</span></span>
+<span><span class="va">crash_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"CRASH.csv"</span><span class="op">)</span>,</span>
+<span>  show_col_types <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Perform joins ________________________________________________________________ </span></span>
+<span><span class="va">distract_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"DISTRACT.csv"</span><span class="op">)</span>,</span>
+<span>  show_col_types <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Note that there will be a many-to-many relationship when joining the Distract</span></span>
-<span><span class="co"># table since the Crash, Vehicle, and Occupant tables will have already been</span></span>
-<span><span class="co"># joined.</span></span>
-<span><span class="va">joined_data</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="fu"><a href="reference/perform_join.html">perform_join</a></span><span class="op">(</span><span class="va">erd_object</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Crash"</span>, <span class="st">"Vehicle"</span>, <span class="st">"Occupant"</span>, <span class="st">"Distract"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">vehicle_tbl</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data_url</span>, <span class="st">"GV.csv"</span><span class="op">)</span>,</span>
+<span>  show_col_types <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Render plot _________________________________________________________________</span></span>
+<span><span class="va">df_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>  Crash <span class="op">=</span> <span class="va">crash_tbl</span>,</span>
+<span>  Vehicle <span class="op">=</span> <span class="va">vehicle_tbl</span>,</span>
+<span>  Occupant <span class="op">=</span> <span class="va">occupant_tbl</span>,</span>
+<span>  Distract <span class="op">=</span> <span class="va">distract_tbl</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>The relationships can be suggested initially:</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">suggested_relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/suggest_relationships.html">suggest_relationships</a></span><span class="op">(</span><span class="va">df_list</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">edr_plot</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span>, label_distance <span class="op">=</span> <span class="fl">0</span>, label_angle <span class="op">=</span> <span class="fl">15</span>, n <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">suggested_relationships</span>, <span class="st">"suggestions"</span><span class="op">)</span></span></code></pre></div>
+<p>For this example, the reviewed relationship specification is:</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">relationships</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>  Crash <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>    Vehicle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"|&lt;"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    Occupant <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"|&lt;"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    Distract <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"0&lt;"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  Vehicle <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>    Occupant <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>,</span>
+<span>      VEHNO <span class="op">=</span> <span class="st">"VEHNO"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"|0"</span>, <span class="st">"0&lt;"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    Distract <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      CASENUMBER <span class="op">=</span> <span class="st">"CASENUMBER"</span>,</span>
+<span>      VEHNO <span class="op">=</span> <span class="st">"VEHNO"</span>,</span>
+<span>      relationship <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"||"</span>, <span class="st">"0&lt;"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Create and validate the ERD:</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">erd_object</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/create_erd.html">create_erd</a></span><span class="op">(</span></span>
+<span>  df_list <span class="op">=</span> <span class="va">df_list</span>,</span>
+<span>  relationships <span class="op">=</span> <span class="va">relationships</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">#edr_plot</span></span>
+<span><span class="fu"><a href="reference/validate_erd.html">validate_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  check_data <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Join the tables:</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># A many-to-many relationship may arise when Distract is joined after Crash,</span></span>
+<span><span class="co"># Vehicle, and Occupant have already been combined.</span></span>
 <span></span>
-<span><span class="co">## Uncomment to export to SVG __________________________________________________</span></span>
+<span><span class="va">joined_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/perform_join.html">perform_join</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Crash"</span>, <span class="st">"Vehicle"</span>, <span class="st">"Occupant"</span>, <span class="st">"Distract"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Render the ERD:</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">erd_plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span></span>
+<span>  <span class="va">erd_object</span>,</span>
+<span>  label_distance <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  label_angle <span class="op">=</span> <span class="fl">15</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">20</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># # Render the ERD graphically, save as a .tiff, then include in rendered files</span></span>
-<span><span class="co"># library(rsvg)</span></span>
-<span><span class="co"># library(DiagrammeRsvg)</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># DPI &lt;- 600</span></span>
-<span><span class="co"># WidthCM &lt;- 38</span></span>
-<span><span class="co"># HeightCM &lt;- 38</span></span>
-<span><span class="co"># </span></span>
-<span><span class="co"># edr_plot |&gt; </span></span>
-<span><span class="co">#   export_svg() |&gt; </span></span>
-<span><span class="co">#   charToRaw() |&gt; </span></span>
-<span><span class="co">#   rsvg(</span></span>
-<span><span class="co">#     width = WidthCM * (DPI / 2.54), </span></span>
-<span><span class="co">#     height = HeightCM * (DPI / 2.54)) |&gt; </span></span>
-<span><span class="co">#   tiff::writeTIFF("edr_plot.tiff")</span></span></code></pre></div>
+<span><span class="va">erd_plot</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="additional-documentation">Additional documentation<a class="anchor" aria-label="anchor" href="#additional-documentation"></a>
+</h2>
+<p>More detailed examples are available in the package vignettes:</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/browseVignettes.html" class="external-link">browseVignettes</a></span><span class="op">(</span><span class="st">"ERDbuilder"</span><span class="op">)</span></span></code></pre></div>
+<p>The package website is available at:</p>
+<p><a href="https://gbasulto.github.io/ERDbuilder/" class="uri">https://gbasulto.github.io/ERDbuilder/</a></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
