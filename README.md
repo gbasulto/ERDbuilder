@@ -31,24 +31,6 @@ You can install the development version of `ERDbuilder` from GitHub:
 
 ``` r
 remotes::install_github("gbasulto/ERDbuilder")
-#> Using GitHub PAT from the git credential store.
-#> Downloading GitHub repo gbasulto/ERDbuilder@HEAD
-#> 
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION'
-#>       ─  preparing 'ERDbuilder':
-#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-#>       ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>    Omitted 'LazyData' from DESCRIPTION
-#>      NB: this package now depends on R (>=        NB: this package now depends on R (>= 4.1.0)
-#>        WARNING: Added dependency on R >= 4.1.0 because package code uses the
-#>      pipe |> or function shorthand \(...) syntax added in R 4.1.0.
-#>      File(s) using such syntax:
-#>        'render_erd.R'
-#> ─  building 'ERDbuilder_1.0.0.tar.gz'
-#>      
-#> 
 ```
 
 Then load the package:
@@ -109,12 +91,11 @@ erd_object <- create_erd(
 validate_erd(erd_object)
 #> ERD validation: valid 
 #> Errors: 0 | Warnings: 0
-
-render_erd(erd_object)
 ```
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-28c7c69433d9b7b410ce" style="width:100%;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-28c7c69433d9b7b410ce">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nemployees [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>employees<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>departments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dept_id<\/b><\/td><\/tr><tr><td>dept_name&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nassignments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>assignments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td><b>dept_id<\/b><\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nemployees -- assignments[taillabel=\"||\", headlabel=\"0|\", labeldistance=2.5, labelangle=45];\ndepartments -- assignments[taillabel=\"||\", headlabel=\"||\", labeldistance=2.5, labelangle=45];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+``` r
+render_erd(erd_object)
+```
 
 Relationship suggestions are based on the available data and should
 always be reviewed before they are treated as database constraints.

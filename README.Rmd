@@ -37,7 +37,7 @@ The package provides tools to:
 
 You can install the development version of `ERDbuilder` from GitHub:
 
-```{r}
+```{r, eval = FALSE}
 remotes::install_github("gbasulto/ERDbuilder")
 ```
 
@@ -97,7 +97,9 @@ erd_object <- create_erd(
 )
 
 validate_erd(erd_object)
+```
 
+```{r, eval = FALSE}
 render_erd(erd_object)
 ```
 
