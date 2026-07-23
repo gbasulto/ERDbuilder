@@ -33,6 +33,8 @@
 #'   in \code{df_list}. Each element of this list is itself a list, describing
 #'   relationships that the corresponding entity has with other entities. The
 #'   list of acceptable values is specified in "Details."
+#' @param validate Logical. If `TRUE`, validate the ERD structure before
+#'   returning the object. Observed data cardinalities are not checked here.
 #'
 #' @return An object of class "ERD", which is a named list containing two
 #'   elements:
@@ -126,11 +128,23 @@
 #'
 #' ## Render ERD -----------------------------------------------------------
 #' render_erd(erd_object, label_distance = 0, label_angle = 15, n = 20)
-create_erd <- function(df_list, relationships) {
-  erd_object <- list(
-    "data_frames" = df_list,
-    "relationships" = relationships
+create_erd <- function(df_list, relationships, validate = TRUE) {
+  check_flag(validate, "validate")
+
+  erd_object <- structure(
+    list(
+      data_frames = df_list,
+      relationships = relationships
+    ),
+    class = "ERD"
   )
-  class(erd_object) <- "ERD"
-  return(erd_object)
+
+  if (validate) {
+    assert_erd(
+      erd_object,
+      check_data = FALSE
+    )
+  }
+
+  erd_object
 }
