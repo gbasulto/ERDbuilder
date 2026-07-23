@@ -149,3 +149,101 @@ test_that("assert_erd stops for structural errors", {
     "Invalid ERD object"
   )
 })
+
+
+test_that("empty relationship specifications can be allowed during construction", {
+  erd <- make_valid_erd()
+  erd$relationships$departments$employees <- list()
+
+  default_result <- validate_erd(erd, check_data = FALSE)
+  incomplete_result <- validate_erd(
+    erd,
+    check_data = FALSE,
+    allow_incomplete = TRUE
+  )
+
+  expect_false(default_result$valid)
+  expect_true(
+    "incomplete_relationship_specification" %in% default_result$issues$code
+  )
+
+  expect_true(incomplete_result$valid)
+  expect_equal(incomplete_result$n_errors, 0L)
+  expect_equal(incomplete_result$n_warnings, 1L)
+  expect_true(
+    "incomplete_relationship_specification" %in%
+      incomplete_result$issues$code
+  )
+})
+
+test_that("blank cardinality symbols can be allowed during construction", {
+  erd <- make_valid_erd()
+  erd$relationships$departments$employees$relationship <- c("", "")
+
+  default_result <- validate_erd(erd, check_data = FALSE)
+  incomplete_result <- validate_erd(
+    erd,
+    check_data = FALSE,
+    allow_incomplete = TRUE
+  )
+
+  expect_false(default_result$valid)
+  expect_true("missing_cardinality" %in% default_result$issues$code)
+
+  expect_true(incomplete_result$valid)
+  expect_equal(incomplete_result$n_errors, 0L)
+  expect_equal(incomplete_result$n_warnings, 1L)
+  expect_true("missing_cardinality" %in% incomplete_result$issues$code)
+})
+
+test_that("allow_incomplete does not accept malformed specifications", {
+  erd <- make_valid_erd()
+  erd$relationships$departments$employees <- c(dept_id = "dept_id")
+
+  result <- validate_erd(
+    erd,
+    check_data = FALSE,
+    allow_incomplete = TRUE
+  )
+
+  expect_false(result$valid)
+  expect_true(
+    "invalid_relationship_specification" %in% result$issues$code
+  )
+})
+
+test_that("create_erd supports the package's progressive vignette workflow", {
+  departments <- data.frame(dept_id = 1:2)
+  employees <- data.frame(employee_id = 1:3, dept_id = c(1L, 1L, 2L))
+
+  expect_no_error(
+    create_erd(
+      list(
+        departments = departments,
+        employees = employees
+      ),
+      list(
+        departments = list(
+          employees = list()
+        )
+      )
+    )
+  )
+
+  expect_no_error(
+    create_erd(
+      list(
+        departments = departments,
+        employees = employees
+      ),
+      list(
+        departments = list(
+          employees = list(
+            dept_id = "dept_id",
+            relationship = c("", "")
+          )
+        )
+      )
+    )
+  )
+})

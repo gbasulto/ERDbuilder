@@ -4,7 +4,12 @@
 \alias{validate_erd}
 \title{Validate an ERD Object}
 \usage{
-validate_erd(erd_object, check_data = TRUE, strict = FALSE)
+validate_erd(
+  erd_object,
+  check_data = TRUE,
+  strict = FALSE,
+  allow_incomplete = FALSE
+)
 }
 \arguments{
 \item{erd_object}{An object created by [create_erd()].}
@@ -12,6 +17,10 @@ validate_erd(erd_object, check_data = TRUE, strict = FALSE)
 \item{check_data}{Logical. Check observed cardinalities if `TRUE`.}
 
 \item{strict}{Logical. Treat warnings as invalid if `TRUE`.}
+
+\item{allow_incomplete}{Logical. If `TRUE`, unfinished relationship
+specifications are reported as warnings rather than errors. This is useful
+while progressively constructing and rendering an ERD.}
 }
 \value{
 An object of class `erd_validation` containing `valid`, `issues`,

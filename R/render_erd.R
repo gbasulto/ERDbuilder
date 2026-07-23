@@ -138,9 +138,11 @@ render_erd <- function(
     label_angle = 45,
     n = 10) {
 
+
   assert_erd(
     erd_object,
-    check_data = FALSE
+    check_data = FALSE,
+    allow_incomplete = TRUE
   )
 
   relationships <- erd_object$relationships

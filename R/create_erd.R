@@ -142,7 +142,8 @@ create_erd <- function(df_list, relationships, validate = TRUE) {
   if (validate) {
     assert_erd(
       erd_object,
-      check_data = FALSE
+      check_data = FALSE,
+      allow_incomplete = TRUE
     )
   }
 

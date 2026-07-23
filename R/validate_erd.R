@@ -9,6 +9,9 @@
 #' @param erd_object An object created by [create_erd()].
 #' @param check_data Logical. Check observed cardinalities if `TRUE`.
 #' @param strict Logical. Treat warnings as invalid if `TRUE`.
+#' @param allow_incomplete Logical. If `TRUE`, unfinished relationship
+#'   specifications are reported as warnings rather than errors. This is useful
+#'   while progressively constructing and rendering an ERD.
 #'
 #' @return An object of class `erd_validation` containing `valid`, `issues`,
 #'   `n_errors`, `n_warnings`, and `strict`.
@@ -41,9 +44,13 @@
 #' )
 #'
 #' validate_erd(erd)
-validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
+validate_erd <- function(erd_object,
+                         check_data = TRUE,
+                         strict = FALSE,
+                         allow_incomplete = FALSE) {
   check_flag(check_data, "check_data")
   check_flag(strict, "strict")
+  check_flag(allow_incomplete, "allow_incomplete")
 
   issues <- new_issue_table()
 
@@ -223,11 +230,31 @@ validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
 
       specification <- target_list[[to_table]]
 
-      if (!is_named_list(specification)) {
+      if (!is.list(specification) ||
+          (length(specification) > 0L && !is_named_list(specification))) {
         add_issue(
           "error",
           "invalid_relationship_specification",
-          "Each relationship specification must be a named list.",
+          paste0(
+            "The relationship specification for `", from_table, "` -> `",
+            to_table, "` must be a list with uniquely named elements."
+          ),
+          from_table,
+          to_table
+        )
+
+        next
+      }
+
+      # An empty list is useful while the user is arranging entities and edges.
+      if (length(specification) == 0L) {
+        add_issue(
+          if (allow_incomplete) "warning" else "error",
+          "incomplete_relationship_specification",
+          paste0(
+            "The relationship `", from_table, "` -> `", to_table,
+            "` does not yet define join columns or cardinality."
+          ),
           from_table,
           to_table
         )
@@ -236,8 +263,23 @@ validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
       }
 
       relationship <- specification$relationship
+      relationship_is_incomplete <- is_incomplete_relationship_vector(
+        relationship
+      )
+      relationship_is_valid <- is_valid_relationship_vector(relationship)
 
-      if (!is_valid_relationship_vector(relationship)) {
+      if (relationship_is_incomplete) {
+        add_issue(
+          if (allow_incomplete) "warning" else "error",
+          "missing_cardinality",
+          paste0(
+            "`relationship` for `", from_table, "` -> `", to_table,
+            "` has not yet been specified."
+          ),
+          from_table,
+          to_table
+        )
+      } else if (!relationship_is_valid) {
         add_issue(
           "error",
           "invalid_cardinality",
@@ -254,9 +296,12 @@ validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
 
       if (length(from_columns) == 0L) {
         add_issue(
-          "error",
+          if (allow_incomplete) "warning" else "error",
           "missing_join_columns",
-          "At least one join-column mapping is required.",
+          paste0(
+            "The relationship `", from_table, "` -> `", to_table,
+            "` does not yet define a join-column mapping."
+          ),
           from_table,
           to_table
         )
@@ -351,7 +396,7 @@ validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
 
       edge_is_valid <- sum(issues$severity == "error") == edge_error_count
 
-      if (check_data && edge_is_valid) {
+      if (check_data && edge_is_valid && relationship_is_valid) {
         issues <- rbind(
           issues,
           check_relationship_data(
@@ -376,8 +421,16 @@ validate_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
 #' @inheritParams validate_erd
 #' @return A single logical value.
 #' @export
-is_valid_erd <- function(erd_object, check_data = TRUE, strict = FALSE) {
-  validate_erd(erd_object, check_data = check_data, strict = strict)$valid
+is_valid_erd <- function(erd_object,
+                         check_data = TRUE,
+                         strict = FALSE,
+                         allow_incomplete = FALSE) {
+  validate_erd(
+    erd_object,
+    check_data = check_data,
+    strict = strict,
+    allow_incomplete = allow_incomplete
+  )$valid
 }
 
 #' @export
@@ -402,11 +455,15 @@ print.erd_validation <- function(x, ...) {
   invisible(x)
 }
 
-assert_erd <- function(erd_object, check_data = FALSE, strict = FALSE) {
+assert_erd <- function(erd_object,
+                       check_data = FALSE,
+                       strict = FALSE,
+                       allow_incomplete = FALSE) {
   result <- validate_erd(
     erd_object,
     check_data = check_data,
-    strict = strict
+    strict = strict,
+    allow_incomplete = allow_incomplete
   )
 
   if (!result$valid) {
@@ -453,6 +510,16 @@ is_single_string <- function(x) {
 
 left_relationship_symbols <- function() c("||", ">|", ">0", "|0")
 right_relationship_symbols <- function() c("||", "|<", "0<", "0|")
+
+is_incomplete_relationship_vector <- function(x) {
+  is.null(x) ||
+    (
+      is.character(x) &&
+        length(x) == 2L &&
+        !anyNA(x) &&
+        all(x == "")
+    )
+}
 
 is_valid_relationship_vector <- function(x) {
   is.character(x) &&

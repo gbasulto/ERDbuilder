@@ -82,3 +82,31 @@ test_that("render erd works", {
 
   expect_equal(class(erd)[1], expected = "grViz")
 })
+
+test_that("render_erd accepts incomplete relationships", {
+  parent <- data.frame(
+    id = 1:3
+  )
+
+  child <- data.frame(
+    parent_id = c(1L, 1L, 2L)
+  )
+
+  relationships <- list(
+    parent = list(
+      child = list()
+    )
+  )
+
+  erd <- create_erd(
+    df_list = list(
+      parent = parent,
+      child = child
+    ),
+    relationships = relationships
+  )
+
+  expect_no_error(
+    render_erd(erd)
+  )
+})
