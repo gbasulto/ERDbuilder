@@ -158,7 +158,8 @@ erd <- create_erd(
     Legislators = legislators_tbl, 
     Bills = bills_tbl
   ),
-  relationships
+  relationships,
+  validate = FALSE
 )
 
 ## Render ERD
@@ -182,7 +183,8 @@ erd <- create_erd(
     Legislators = legislators_tbl, 
     Bills = bills_tbl
   ),
-  relationships
+  relationships,
+  validate = FALSE
 )
 
 render_erd(erd, label_distance = 0)

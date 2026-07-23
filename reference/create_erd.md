@@ -9,7 +9,7 @@ and returns a list object of class "ERD".
 ## Usage
 
 ``` r
-create_erd(df_list, relationships)
+create_erd(df_list, relationships, validate = TRUE)
 ```
 
 ## Arguments
@@ -27,6 +27,11 @@ create_erd(df_list, relationships)
   `df_list`. Each element of this list is itself a list, describing
   relationships that the corresponding entity has with other entities.
   The list of acceptable values is specified in "Details."
+
+- validate:
+
+  Logical. If \`TRUE\`, validate the ERD structure before returning the
+  object. Observed data cardinalities are not checked here.
 
 ## Value
 
