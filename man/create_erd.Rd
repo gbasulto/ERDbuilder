@@ -4,7 +4,7 @@
 \alias{create_erd}
 \title{Create ERD Object}
 \usage{
-create_erd(df_list, relationships)
+create_erd(df_list, relationships, validate = TRUE)
 }
 \arguments{
 \item{df_list}{A named list of data frames, where each data frame represents
@@ -16,6 +16,9 @@ entities. The top-level names in this list should correspond to the names
 in \code{df_list}. Each element of this list is itself a list, describing
 relationships that the corresponding entity has with other entities. The
 list of acceptable values is specified in "Details."}
+
+\item{validate}{Logical. If `TRUE`, validate the ERD structure before
+returning the object. Observed data cardinalities are not checked here.}
 }
 \value{
 An object of class "ERD", which is a named list containing two

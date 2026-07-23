@@ -147,6 +147,12 @@
 #'
 #' perform_join(erd_object, c("courses", "enrollment", "department"))
 perform_join <- function(erd_object, tables_to_join, specified_joins = NULL) {
+
+  assert_erd(
+    erd_object,
+    check_data = FALSE
+  )
+
   relationships <- erd_object$relationships
   data_frames <- erd_object$data_frames
   main_table <- data_frames[[tables_to_join[1]]]

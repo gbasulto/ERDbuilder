@@ -138,6 +138,11 @@ render_erd <- function(
     label_angle = 45,
     n = 10) {
 
+  assert_erd(
+    erd_object,
+    check_data = FALSE
+  )
+
   relationships <- erd_object$relationships
   data_frames <- erd_object$data_frames
   erd_code <- ""
