@@ -62,7 +62,6 @@
 </div>
 <!-- badges: start -->
 
-<!-- badges: end -->
 <p><code>ERDbuilder</code> creates Entity-Relationship Diagrams (ERDs) directly from R data frames.</p>
 <p>The package provides tools to:</p>
 <ul>
@@ -82,18 +81,18 @@
 <span><span class="co">#&gt; Downloading GitHub repo gbasulto/ERDbuilder@HEAD</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; ── R CMD build ─────────────────────────────────────────────────────────────────</span></span>
-<span><span class="co">#&gt;          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION'</span></span>
+<span><span class="co">#&gt;          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION'</span></span>
 <span><span class="co">#&gt;       ─  preparing 'ERDbuilder':</span></span>
-<span><span class="co">#&gt;   ✔  checking DESCRIPTION meta-information</span></span>
+<span><span class="co">#&gt;    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information</span></span>
 <span><span class="co">#&gt;       ─  checking for LF line-endings in source and make files and shell scripts</span></span>
 <span><span class="co">#&gt;   ─  checking for empty or unneeded directories</span></span>
-<span><span class="co">#&gt;      Omitted 'LazyData' from DESCRIPTION</span></span>
+<span><span class="co">#&gt;    Omitted 'LazyData' from DESCRIPTION</span></span>
 <span><span class="co">#&gt;      NB: this package now depends on R (&gt;=        NB: this package now depends on R (&gt;= 4.1.0)</span></span>
-<span><span class="co">#&gt;      WARNING: Added dependency on R &gt;= 4.1.0 because package code uses the</span></span>
+<span><span class="co">#&gt;        WARNING: Added dependency on R &gt;= 4.1.0 because package code uses the</span></span>
 <span><span class="co">#&gt;      pipe |&gt; or function shorthand \(...) syntax added in R 4.1.0.</span></span>
 <span><span class="co">#&gt;      File(s) using such syntax:</span></span>
 <span><span class="co">#&gt;        'render_erd.R'</span></span>
-<span><span class="co">#&gt;   ─  building 'ERDbuilder_1.0.0.tar.gz'</span></span>
+<span><span class="co">#&gt; ─  building 'ERDbuilder_1.0.0.tar.gz'</span></span>
 <span><span class="co">#&gt;      </span></span>
 <span><span class="co">#&gt; </span></span></code></pre></div>
 <p>Then load the package:</p>
@@ -152,10 +151,10 @@
 <span><span class="co">#&gt; Errors: 0 | Warnings: 0</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/render_erd.html">render_erd</a></span><span class="op">(</span><span class="va">erd_object</span><span class="op">)</span></span></code></pre></div>
-<div id="htmlwidget-452db7a0e01903c8cbf1" class="grViz html-widget html-fill-item" style="width:100%;height:480px;">
+<div id="htmlwidget-28c7c69433d9b7b410ce" class="grViz html-widget html-fill-item" style="width:100%;height:480px;">
 
 </div>
-<script type="application/json" data-for="htmlwidget-452db7a0e01903c8cbf1">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nemployees [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>employees<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>departments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dept_id<\/b><\/td><\/tr><tr><td>dept_name&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nassignments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>assignments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td><b>dept_id<\/b><\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nemployees -- assignments[taillabel=\"||\", headlabel=\"0|\", labeldistance=2.5, labelangle=45];\ndepartments -- assignments[taillabel=\"||\", headlabel=\"||\", labeldistance=2.5, labelangle=45];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p>Relationship suggestions are based on the available data and should always be reviewed before they are treated as database constraints.</p>
+<script type="application/json" data-for="htmlwidget-28c7c69433d9b7b410ce">{"x":{"diagram":"graph erd {\nrankdir=LR; node [shape=record]; edge[color=grey80]\nnodesep=0.75; ranksep=1.25;\nemployees [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>employees<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\ndepartments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>departments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>dept_id<\/b><\/td><\/tr><tr><td>dept_name&nbsp;&nbsp;<\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nassignments [shape=none, fontsize=10, label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"1\" bgcolor=\"lightgrey\"><b>assignments<\/b><\/td><\/tr><tr><td><table border=\"0\" cellborder=\"0\" cellspacing=\"0\"><tr><td><b>emp_id<\/b><\/td><\/tr><tr><td><b>dept_id<\/b><\/td><\/tr><\/table><\/td><\/tr><\/table>>];\nemployees -- assignments[taillabel=\"||\", headlabel=\"0|\", labeldistance=2.5, labelangle=45];\ndepartments -- assignments[taillabel=\"||\", headlabel=\"||\", labeldistance=2.5, labelangle=45];\nnode [shape=none, margin=0];\nlegend [label=<<table border=\"0\" cellborder=\"1\" cellspacing=\"0\"><tr><td colspan=\"3\" bgcolor=\"lightgrey\"><b>Nomenclature<\/b><\/td><\/tr><tr><td bgcolor=\"grey95\">To Left<\/td><td bgcolor=\"grey95\">To Right<\/td><td bgcolor=\"grey95\">Definition<\/td><\/tr><tr><td>&#124;&#124;<\/td><td>&#124;&#124;<\/td><td>1 and only 1<\/td><\/tr><tr><td>&gt;&#124;<\/td><td>&#124;&lt;<\/td><td>1 or more<\/td><\/tr><tr><td>|0<\/td><td>0|<\/td><td>0 or 1<\/td><\/tr><tr><td>&gt;0<\/td><td>0&lt;<\/td><td>0 or more<\/td><\/tr><\/table>>];}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><p>Relationship suggestions are based on the available data and should always be reviewed before they are treated as database constraints.</p>
 </div>
 <div class="section level2">
 <h2 id="main-functions">Main functions<a class="anchor" aria-label="anchor" href="#main-functions"></a>
@@ -613,6 +612,8 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://app.codecov.io/gh/gbasulto/ERDbuilder" class="external-link"><img src="https://codecov.io/gh/gbasulto/ERDbuilder/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://CRAN.R-project.org/package=ERDbuilder" class="external-link"><img src="https://www.r-pkg.org/badges/version/ERDbuilder" alt="CRAN status"></a></li>
+<li><a href="https://github.com/gbasulto/ERDbuilder/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/gbasulto/ERDbuilder/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 

@@ -25,18 +25,18 @@ remotes::install_github("gbasulto/ERDbuilder")
 #> Downloading GitHub repo gbasulto/ERDbuilder@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpOarAR1\remotes2cec3de4133c\gbasulto-ERDbuilder-65eb0f7/DESCRIPTION'
+#>          checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION' ...  ✔  checking for file 'C:\Users\basulto\AppData\Local\Temp\RtmpoxHbSu\remotes5a9c791057d\gbasulto-ERDbuilder-f8917ca/DESCRIPTION'
 #>       ─  preparing 'ERDbuilder':
-#>   ✔  checking DESCRIPTION meta-information
+#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>       ─  checking for LF line-endings in source and make files and shell scripts
 #>   ─  checking for empty or unneeded directories
-#>      Omitted 'LazyData' from DESCRIPTION
+#>    Omitted 'LazyData' from DESCRIPTION
 #>      NB: this package now depends on R (>=        NB: this package now depends on R (>= 4.1.0)
-#>      WARNING: Added dependency on R >= 4.1.0 because package code uses the
+#>        WARNING: Added dependency on R >= 4.1.0 because package code uses the
 #>      pipe |> or function shorthand \(...) syntax added in R 4.1.0.
 #>      File(s) using such syntax:
 #>        'render_erd.R'
-#>   ─  building 'ERDbuilder_1.0.0.tar.gz'
+#> ─  building 'ERDbuilder_1.0.0.tar.gz'
 #>      
 #> 
 ```
