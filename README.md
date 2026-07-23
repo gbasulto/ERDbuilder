@@ -9,6 +9,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ERDbuilder)](https://CRAN.R-project.org/package=ERDbuilder)
 [![R-CMD-check](https://github.com/gbasulto/ERDbuilder/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gbasulto/ERDbuilder/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/gbasulto/ERDbuilder/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/gbasulto/ERDbuilder/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
 `ERDbuilder` creates Entity-Relationship Diagrams (ERDs) directly from R
