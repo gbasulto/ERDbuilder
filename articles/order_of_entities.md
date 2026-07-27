@@ -4,14 +4,14 @@ The order in which the attribute tables – or entities – appear in the
 ERD is determined by how the relationships are established. This example
 illustrates how an ERD with three entities can be rendered differently.
 The data is from bills in the US senate, which were downloaded using the
-package [`incidentally`](https://www.zacharyneal.com/incidentally). The
+package [`incidentally`](https://github.com/zpneal/incidentally). The
 complete and commented script is presented at the end.
 
 ## US Senate Bills
 
 For this example, US Senate bill data for Session 115 were utilized;
 they were downloaded with the
-[`incidentally`](https://www.zacharyneal.com/incidentally) package. The
+[`incidentally`](https://github.com/zpneal/incidentally) package. The
 data were pre-processed to have a convenient rectangular structure. The
 first five records of the three tables are displayed below.
 
