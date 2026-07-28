@@ -10,7 +10,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/gbasulto/ERDbuilder/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/gbasulto/ERDbuilder/blob/v2.0.0/DESCRIPTION)
 
 Wood J, Basulto-Elias G (2026). *ERDbuilder: Entity Relationship
 Diagrams Builder*. R package version 2.0.0,
