@@ -2,6 +2,8 @@
 
 ## ERDbuilder 2.0.0
 
+CRAN release: 2026-07-28
+
 - The function suggest_relationships() was added to identify likely
   relationships.
 - The function validate_erd() was added to check ERD validity.
